@@ -1,2 +1,2 @@
-# njproxy
+# proxy
 codeschool node proxy
