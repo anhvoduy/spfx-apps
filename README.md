@@ -1,2 +1,1 @@
-# SP APP
-sp app -2016
+Sample SharePoint App Development
