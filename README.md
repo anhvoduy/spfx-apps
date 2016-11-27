@@ -1,2 +1,1 @@
-# proxy
-codeschool node proxy
+Sample SharePoint App Development
