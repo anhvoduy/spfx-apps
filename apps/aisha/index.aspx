@@ -38,6 +38,11 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <!-- React-->
+    <script src="/Style%20Library/apps/aisha/libs/react/react.min.js"></script>
+    <script src="/Style%20Library/apps/aisha/libs/react/react-dom.min.js"></script>
+    <script src="/Style%20Library/apps/aisha/libs/react/react-dom-server.min.js"></script>    
 </head>
 
 <body>
@@ -406,7 +411,7 @@ online presense and style</h2>
 
     <!-- main js -->
     <script src="/Style%20Library/apps/aisha/js/main.js"></script>
-
+    <script src="/Style%20Library/apps/aisha/js/index.js"></script>
 </body>
 
 </html>
