@@ -15,7 +15,6 @@
     <link href='http://fonts.googleapis.com/css?family=Cabin:400,500,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
-
     <!-- Bootstrap -->    
     <link href="/Style%20Library/apps/aisha/css/bootstrap.min.css" rel="stylesheet">
 
@@ -31,7 +30,6 @@
     <!--main css-->
     <link href="/Style%20Library/apps/aisha/css/responsive.css" rel="stylesheet">
 
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -39,7 +37,14 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <!-- React-->
+    <!-- SharePoint -->
+    <script type="text/javascript" src="/_layouts/15/SP.RequestExecutor.js"></script>
+    <script type="text/javascript" src="/_layouts/15/SP.Core.js"></script>
+    <script type="text/javascript" src="/_layouts/15/SP.Runtime.js"></script>
+    <script type="text/javascript" src="/_layouts/15/SP.UI.Dialog.js"></script>
+    <script type="text/javascript" src="/_layouts/15/sp.js"></script>
+
+    <!-- React -->
     <script src="/Style%20Library/apps/aisha/libs/react/react.min.js"></script>
     <script src="/Style%20Library/apps/aisha/libs/react/react-dom.min.js"></script>
     <script src="/Style%20Library/apps/aisha/libs/react/react-dom-server.min.js"></script>    
@@ -353,7 +358,16 @@ online presense and style</h2>
         </div>
     </section>
     <!-- end call to action area -->
-
+	
+	<!-- Call the method to render the followed docs in SharePoint using React -->
+	<section id="followed_docs">
+		<div id="followedDocs">Followed Docs</div>
+		<script>
+            if(SP.SOD !== undefined){
+                SP.SOD.executeFunc('sp.js', 'SP.ClientContext', SpEncounters.GetFollowedSites.Init);
+            }
+		</script>
+	</section>
 
     <footer id="footer_area">
         <div class="container">
