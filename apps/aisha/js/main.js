@@ -10,4 +10,5 @@
 	
 }(jQuery));
 
+// init wow
 new WOW().init();

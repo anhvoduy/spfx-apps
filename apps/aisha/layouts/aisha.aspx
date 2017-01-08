@@ -407,10 +407,12 @@ online presense and style</h2>
 	<!-- react js -->
     <script src="/Style%20Library/apps/aisha/libs/react/react.min.js"></script>
     <script src="/Style%20Library/apps/aisha/libs/react/react-dom.min.js"></script>
-    <script src="/Style%20Library/apps/aisha/libs/react/react-dom-server.min.js"></script>
+
+    <!-- babel js -->
+    <script src="/Style%20Library/apps/aisha/libs/babel/babel.min.js"></script>    
     
-	<!-- main js -->
+	<!-- main js -->    
+	<script src="/Style%20Library/apps/aisha/js/aisha.js" type="text/babel"></script>
     <script src="/Style%20Library/apps/aisha/js/main.js" type="text/javascript"></script>
-	<script src="/Style%20Library/apps/aisha/js/aisha.js" type="text/javascript"></script>
 </body>
 </html>
