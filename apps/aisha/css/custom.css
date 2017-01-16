@@ -1,0 +1,7 @@
+div#sideNavBox {
+    display: none;
+}
+
+div#contentBox {
+    margin-left: 20px;
+}
