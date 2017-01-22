@@ -391,28 +391,21 @@ online presense and style</h2>
     </footer>
 
 	<!-- Aisha-->
-	<div id="aisha">
-		<span>2017-08-01</span>
-	</div>
-	
-    <!-- main jQuery-->
-    <script src="/Style%20Library/apps/aisha/js/jquery-1.11.3.min.js"></script>
+    
+    <!-- jQuery-->
+    <script src="/Style%20Library/apps/aisha/libs/jquery/jquery-1.11.3.min.js"></script>
 
     <!-- bootstrap js -->
-    <script src="/Style%20Library/apps/aisha/js/bootstrap.min.js"></script>
+    <script src="/Style%20Library/apps/aisha/libs/bootstrap/bootstrap.min.js"></script>
+
+    <!-- angular js -->
+    <script src="/Style%20Library/apps/aisha/libs/angular/angular.min.js"></script>
+    <script src="/Style%20Library/apps/aisha/libs/angular/angular-sanitize.min.js"></script>
 
     <!-- wow js -->
     <script src="/Style%20Library/apps/aisha/js/wow.min.js"></script>    
-
-	<!-- react js -->
-    <script src="/Style%20Library/apps/aisha/libs/react/react.min.js"></script>
-    <script src="/Style%20Library/apps/aisha/libs/react/react-dom.min.js"></script>
-
-    <!-- babel js -->
-    <script src="/Style%20Library/apps/aisha/libs/babel/babel.min.js"></script>    
-    
-	<!-- main js -->    
-	<script src="/Style%20Library/apps/aisha/js/aisha.js" type="text/babel"></script>
+	
+	<!-- main js -->
     <script src="/Style%20Library/apps/aisha/js/main.js" type="text/javascript"></script>
 </body>
 </html>
