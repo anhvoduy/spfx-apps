@@ -167,12 +167,14 @@
     .factory('aishaService', ['$http', '$q', 'appCommon', function ($http, $q, appCommon) {
         /* ---------------------------- constructor -------------------------------- */
         var aishaService = function () {
-            this._siteUrl = _spPageContextInfo.webAbsoluteUrl;
+            //this._siteUrl = _spPageContextInfo.webAbsoluteUrl;
+            this._siteUrl = '';
             this._digest = $("#__REQUESTDIGEST").val();
         }
         
         /* ---------------------------- global properties & functions -------------- */
-        var siteUrl = _spPageContextInfo.webAbsoluteUrl;
+        //var siteUrl = _spPageContextInfo.webAbsoluteUrl;
+        var siteUrl = '';
 
         var extendProperties = function (item) {
             var model = new Object();
@@ -402,8 +404,8 @@
             return q.promise;
         }
 
-        aishaService.prototype.editFeedbackQuestion = function (listTitle, feedbackQuestion) {
-            var url = _spPageContextInfo.webAbsoluteUrl;
+        aishaService.prototype.editFeedbackQuestion = function (listTitle, feedbackQuestion) {            
+            var url = siteUrl;
             var itemType = getItemTypeForListTitle(listTitle);
             var item = {
                 "__metadata": { "type": itemType },
@@ -492,7 +494,7 @@
         };
 
         aishaService.prototype.editFeedback = function (listTitle, feedback) {
-            var url = _spPageContextInfo.webAbsoluteUrl;
+            var url = siteUrl;
             var itemType = getItemTypeForListTitle(listTitle);
             var item = {
                 "__metadata": { "type": itemType },

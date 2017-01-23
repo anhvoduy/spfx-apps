@@ -79,6 +79,11 @@
     <script src="/Style%20Library/apps/aisha/libs/angular/angular.min.js"></script>
     <script src="/Style%20Library/apps/aisha/libs/angular/angular-sanitize.min.js"></script>    	
 	<!-- main js -->
-    <script src="/Style%20Library/apps/aisha/js/main.js" type="text/javascript"></script>        
+    <script src="/Style%20Library/apps/aisha/js/main.js" type="text/javascript"></script>
+    <script src="/Style%20Library/apps/aisha/js/components/common/common.js" type="text/javascript"></script>
+    <script src="/Style%20Library/apps/aisha/js/components/controllers/controllers.js" type="text/javascript"></script>
+    <script src="/Style%20Library/apps/aisha/js/components/directives/directives.js" type="text/javascript"></script>
+    <script src="/Style%20Library/apps/aisha/js/components/services/services.js" type="text/javascript"></script>
+    <script src="/Style%20Library/apps/aisha/js/components/utils/utils.js" type="text/javascript"></script>
 </body>
 </html>
