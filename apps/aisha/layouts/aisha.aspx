@@ -73,12 +73,16 @@
     <script src="/Style%20Library/apps/aisha/libs/jquery/jquery-1.11.3.min.js"></script>
     <!-- bootstrap js -->
     <script src="/Style%20Library/apps/aisha/libs/bootstrap/bootstrap.min.js"></script>
-    <!-- wow js -->
+    <!-- wow -->
     <script src="/Style%20Library/apps/aisha/libs/wow/wow.min.js"></script>
-    <!-- angular js -->
+    <!-- require -->
+    <script src="/Style%20Library/apps/aisha/libs/require/r.js"></script>
+    <!-- moment -->
+    <script src="/Style%20Library/apps/aisha/libs/moment/moment.min.js"></script>
+    <!-- angular -->
     <script src="/Style%20Library/apps/aisha/libs/angular/angular.min.js"></script>
     <script src="/Style%20Library/apps/aisha/libs/angular/angular-sanitize.min.js"></script>    	
-	<!-- main js -->
+	<!-- main -->
     <script src="/Style%20Library/apps/aisha/js/main.js" type="text/javascript"></script>
     <script src="/Style%20Library/apps/aisha/js/components/common/common.js" type="text/javascript"></script>
     <script src="/Style%20Library/apps/aisha/js/components/controllers/controllers.js" type="text/javascript"></script>
