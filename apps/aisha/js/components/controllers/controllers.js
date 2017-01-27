@@ -47,7 +47,7 @@
 			// declare models
 			$scope.model = 'init';
 			
-		}])	
+		}]);
 })();
 
 

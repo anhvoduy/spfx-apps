@@ -3,7 +3,7 @@
     angular.module('aisha.common', [])
     .factory('appCommon', ['$q', function ($q) {
         var appCommon = function () {            
-        }        
+        };        
 
         //if(!angular.isUndefined(_spPageContextInfo)){
         //    appCommon.prototype.spPageContextInfo = _spPageContextInfo;
@@ -14,14 +14,14 @@
             FeedbackTemplate: 'Feedback Templates',
             FeedbackOption: 'Feedback Options',
             FeedbackQuestion: 'Feedback Questions',
-        }
+        };
 
         appCommon.prototype.getListIdByListTitle = function (listTitle) {
             var guidId = '';
             return guidId;
-        }        
+        };
 
-        return new appCommon;
-    }])
+        return new appCommon();
+    }]);
 })();
 

@@ -89,5 +89,8 @@
     <script src="/Style%20Library/apps/aisha/js/components/directives/directives.js" type="text/javascript"></script>
     <script src="/Style%20Library/apps/aisha/js/components/services/services.js" type="text/javascript"></script>
     <script src="/Style%20Library/apps/aisha/js/components/utils/utils.js" type="text/javascript"></script>
+
+    <!-- build -->
+    <script src="/Style%20Library/apps/aisha/build/main.js" type="text/javascript"></script>
 </body>
 </html>
