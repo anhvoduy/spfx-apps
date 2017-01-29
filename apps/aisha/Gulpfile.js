@@ -27,8 +27,23 @@ gulp.task('checkcode', function(){
             .pipe($.jshint.reporter('fail'));
 });
 
+gulp.task('styles', function(){
+    log('Compiling Less -> Css');
+    return gulp
+            .src(config.less)
+            .pipe($.less())
+            .pipe($.autoprefixer({browers:['last 2 version', '> 5%']}))
+            .pipe(gulp.dest(config.tempCss));
+});
 
-// load by manually
+gulp.task('clean-styles', function(){
+    log('Clean Css in temporary');
+    return gulp
+            .src()
+            .pipe();            
+});
+
+// load by manually: checkcode()
 //var jshint = require('gulp-jshint');
 //var jscs = require('gulp-jscs');
 //var stylish = require('jshint-stylish');

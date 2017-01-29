@@ -7,7 +7,7 @@ To install gulp, bower locally: (dependecies/devDependencies)
 	npm install express --save
 	npm install morgan --save
 	npm install serve-favicon --save
-	
+		
 	npm install bower --save-dev
 	npm install gulp  --save-dev
 	npm install gulp-load-plugins  --save-dev
@@ -18,10 +18,15 @@ To install gulp, bower locally: (dependecies/devDependencies)
 	npm install gulp-if  --save-dev
 	npm install jshint-stylish  --save-dev	
 	
+	npm install gulp-less --save-dev
+	npm install gulp-autoprefixer --save-dev
+	
 	npm install concat --save-dev
 	npm install jshint --save-dev
 	npm install uglify --save-dev
 	npm install yargs --save-dev
+	npm install del --save-dev	
+	
 	
 To verify installation
 	gulp -v

@@ -3,11 +3,7 @@
     angular.module('aisha.common', [])
     .factory('appCommon', ['$q', function ($q) {
         var appCommon = function () {            
-        };        
-
-        //if(!angular.isUndefined(_spPageContextInfo)){
-        //    appCommon.prototype.spPageContextInfo = _spPageContextInfo;
-        //}
+        };
 
         appCommon.prototype.listInstance = {
             Feedback: 'Feedback',
