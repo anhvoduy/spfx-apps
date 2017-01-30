@@ -7,21 +7,23 @@ module.exports = function(){
          * files path
          */
         // all js files
-        alljs:[
+        allJs:[
             './js/**/*.js',
             './js/*.js'
         ],
 
-        less:[
+        allCss:[
             './css/**/*.css'                
         ],
 
 
-        // temporary        
+        // temporary
+        temp: temp,        
         tempCss: temp + 'css',
         tempJs: temp + 'jss',
 
-        // release        
+        // release
+        run: run,        
         runCss: run + 'css',
         runJs: run + 'js'
     }

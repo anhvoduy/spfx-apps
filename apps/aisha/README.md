@@ -20,13 +20,14 @@ To install gulp, bower locally: (dependecies/devDependencies)
 	
 	npm install gulp-less --save-dev
 	npm install gulp-autoprefixer --save-dev
+	npm install gulp-plumber --save-dev
 	
 	npm install concat --save-dev
 	npm install jshint --save-dev
 	npm install uglify --save-dev
 	npm install yargs --save-dev
 	npm install del --save-dev	
-	
+	npm install plumber --save-dev
 	
 To verify installation
 	gulp -v

@@ -5,3 +5,13 @@ div#sideNavBox {
 div#contentBox {
     margin-left: 20px;
 }
+
+.test-title-area {
+    font-size: 11;
+}
+
+
+.test-input-area {
+    font-size: 11;
+	font-family: Arial, Tahoma;
+}
