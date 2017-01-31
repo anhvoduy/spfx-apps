@@ -37,13 +37,13 @@ gulp.task('build-lib-css', function(){
 });
 
 gulp.task('build-app-css', function(){
-    log('compiling app css:' + 'app.min.css');
-    //TO DO: compress file: app.min.css
+    log('compiling app css:' + 'app.min.css');    
     return gulp
             .src(config.appCss)
             .pipe($.plumber())            
             .pipe($.less())
             .pipe($.autoprefixer({browers:['last 2 version', '> 5%']}))
+            .pipe($.concat('app.min.css'))
             .pipe($.csso())
             .pipe(gulp.dest(config.buildCss));
 });
