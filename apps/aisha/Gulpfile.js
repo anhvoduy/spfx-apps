@@ -95,15 +95,15 @@ gulp.task('watcher-js', function(){
     gulp.watch([config.appJs], ['clean-js', 'build-app-js']);
 });
 
+
+// Automation Build: clean -> build || watcher
+gulp.task('run-all', ['clean-css', 'clean-js', 'build-app-css', 'build-app-js'], function(){
+    log('run all: css, js');
+});
+
 gulp.task('watcher-all', ['watcher-css', 'watcher-js'], function(){
     log('watcher all: css, js');
 });
-
-// Automation Build: clean -> build
-gulp.task('run-all', ['clean-css', 'clean-js', 'build-app-css', 'build-app-js'], function(){
-    log('run all');
-});
-
 
 // load by manually: checkcode()
 //var jshint = require('gulp-jshint');

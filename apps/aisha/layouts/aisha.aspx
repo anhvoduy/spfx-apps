@@ -21,10 +21,11 @@
     <link href="/Style%20Library/apps/aisha/css/animate.min.css" rel="stylesheet">    
     <!--responsive -->
     <link href="/Style%20Library/apps/aisha/css/responsive.css" rel="stylesheet">
-
-    <!-- @Dev Environment -->
-    <!--
+    <!--style -->
     <link href="/Style%20Library/apps/aisha/css/style.css" rel="stylesheet">
+    
+    <!-- @Dev Environment -->
+    <!--    
     <link href="/Style%20Library/apps/aisha/css/custom.css" rel="stylesheet">
     -->
 

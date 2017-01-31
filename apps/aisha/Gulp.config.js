@@ -21,8 +21,7 @@ module.exports = function(){
             './libs/**/*.css',
             './libs/*.css'
         ],
-        appCss:[
-            './css/style.css',
+        appCss:[            
             './css/custom.css'
         ],
 

@@ -12,7 +12,12 @@
             FeedbackQuestion: 'Feedback Questions',
         };
 
-        appCommon.prototype.getListIdByListTitle = function (listTitle) {
+        appCommon.prototype.getListIdByTitle = function (listTitle) {
+            var guidId = '';
+            return guidId;
+        };
+
+        appCommon.prototype.getListIdById = function (listId) {
             var guidId = '';
             return guidId;
         };
