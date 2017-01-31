@@ -32,16 +32,13 @@ gulp.task('verify-code', function(){
 
 // compile css & js to build folder
 gulp.task('build-lib-css', function(){
-    log('compiling libs Css');
+    log('compiling libs css:' + 'libs.min.css');
+    //TO DO: compress file: libs.min.css
 });
 
 gulp.task('build-app-css', function(){
-    log('compiling app Css');
-});
-
-gulp.task('build-css', function(){
-    log('start to compile Less -> Css');
-    
+    log('compiling app css:' + 'app.min.css');
+    //TO DO: compress file: app.min.css
     return gulp
             .src(config.appCss)
             .pipe($.plumber())            
@@ -52,30 +49,23 @@ gulp.task('build-css', function(){
 });
 
 gulp.task('build-lib-js', function(){
-    log('compiling libs Js');
+    log('compiling libs js:' + 'libs.min.js');
     return gulp
             .src(config.libJs)
             .pipe($.plumber())
-            .pipe($.concat('libs.js'))
+            .pipe($.concat('libs.min.js'))
             .pipe($.uglify())
             .pipe(gulp.dest(config.buildJs));    
 });
 
 gulp.task('build-app-js', function(){
-    log('compiling app Js');
+    log('compiling app js:' + 'app.min.js');
     return gulp
             .src(config.appJs)
             .pipe($.plumber())
-            .pipe($.concat('app.js'))
+            .pipe($.concat('app.min.js'))
             .pipe($.uglify())
             .pipe(gulp.dest(config.buildJs));
-});
-
-gulp.task('build-js', [ 
-    // 'build-lib-js',
-    'build-app-js'
-    ], function(){
-    log('start to compile Js files');
 });
 
 // clean css & js in build folder
@@ -98,11 +88,11 @@ gulp.task('clean-js', function(done){
 
 // watch css & js from dev -> build
 gulp.task('watcher-css', function(){
-    gulp.watch([config.appCss], ['clean-css', 'build-css']);
+    gulp.watch([config.appCss], ['clean-css', 'build-app-css']);
 });
 
 gulp.task('watcher-js', function(){
-    gulp.watch([config.appJs], ['clean-js', 'build-js']);
+    gulp.watch([config.appJs], ['clean-js', 'build-app-js']);
 });
 
 gulp.task('watcher-all', ['watcher-css', 'watcher-js'], function(){
@@ -110,7 +100,7 @@ gulp.task('watcher-all', ['watcher-css', 'watcher-js'], function(){
 });
 
 // Automation Build: clean -> build
-gulp.task('run-all', ['clean-css', 'clean-js', 'build-css', 'build-js'], function(){
+gulp.task('run-all', ['clean-css', 'clean-js', 'build-app-css', 'build-app-js'], function(){
     log('run all');
 });
 

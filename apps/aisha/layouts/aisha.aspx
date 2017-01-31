@@ -96,6 +96,6 @@
     
     
     <!-- @Build Environment -->
-    <script src="/Style%20Library/apps/aisha/build/js/app.js"></script>                  
+    <script src="/Style%20Library/apps/aisha/build/js/app.min.js"></script>                  
 </body>
 </html>

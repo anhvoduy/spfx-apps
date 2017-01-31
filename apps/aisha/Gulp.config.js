@@ -35,7 +35,7 @@ module.exports = function(){
         // build folder
         build: build,
         buildCss: build + 'css',
-        buildJs: build + 'js'
+        buildJs: build + 'js'        
     }
     return config;
 };
