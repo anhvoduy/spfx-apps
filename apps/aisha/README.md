@@ -22,6 +22,12 @@ To install gulp, bower locally: (dependecies/devDependencies)
 	npm install gulp-autoprefixer --save-dev
 	npm install gulp-plumber --save-dev
 	
+	npm install gulp-filter --save-dev
+	npm install gulp-csso --save-dev
+	npm install gulp-uglify --save-dev
+	npm install gulp-concat --save-dev
+	
+	
 	npm install concat --save-dev
 	npm install jshint --save-dev
 	npm install uglify --save-dev
@@ -47,6 +53,20 @@ To describe some javascript libraries:
 	JSCS: javascript code style checker
 --> rule files: define JsHint & JSCS rules: .jshintrc, .jscsrc
 
+To describe inject Html: 
+
+
+To describe Minifying & Filtering
+	- filter assets and minify them
+	- remmove white spaces and comments
+	- mangles code
+	- optimize and reduce file sizes
+ libraries:
+	- gulp-filter: 
+	- gulp-csso (Css Optimizer): remove whitespaces and comments, trailing semicolons, transformation, structural optimization
+	- gulp-uglify: minifies Java Script, remove whitespaces and comments, mangles Java Script
+
+   
 	
    
  

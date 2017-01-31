@@ -1,31 +1,41 @@
 module.exports = function(){
     var temp = './temp/';
-    var run = './run/';
+    var build = './build/';
 
     var config = {
         /**
          * files path
          */
-        // all js files
-        allJs:[
+        // lib & app js files
+        libJs:[
+            './libs/**/*.js',
+            './libs/*.js'                
+        ],        
+        appJs:[
             './js/**/*.js',
             './js/*.js'
         ],
-
-        allCss:[
-            './css/**/*.css'                
+        
+        // lib & app css files
+        libCss:[
+            './libs/**/*.css',
+            './libs/*.css'
+        ],
+        appCss:[
+            './css/**/*.css',
+            './css/*.css'
         ],
 
 
-        // temporary
-        temp: temp,        
-        tempCss: temp + 'css',
-        tempJs: temp + 'jss',
+        // temporary folder
+        //temp: temp,        
+        //tempCss: temp + 'css',
+        //tempJs: temp + 'js',
 
-        // release
-        run: run,        
-        runCss: run + 'css',
-        runJs: run + 'js'
+        // build folder
+        build: build,
+        buildCss: build + 'css',
+        buildJs: build + 'js'
     }
     return config;
 };

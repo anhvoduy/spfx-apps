@@ -17,11 +17,11 @@ function log(msg){
     }
 };
 
-// check code js by convention rules
-gulp.task('checkcode', function(){
+// verify code js by convention rules
+gulp.task('verify-code', function(){
     log('Analyzing source with JSHint and JSCS');
     return gulp
-            .src(config.allJs)
+            .src(config.appJs)
             .pipe($.if(args.verbose, $.print()))
             .pipe($.jscs())
             .pipe($.jshint())
@@ -30,74 +30,89 @@ gulp.task('checkcode', function(){
 });
 
 
-function errorLogger(error){
-    log('------ Start of Error -----');
-    log(error);
-    log('------ End of Error -----');
-    this.emit('end');
-};
+// compile css & js to build folder
+gulp.task('build-lib-css', function(){
+    log('compiling libs Css');
+});
 
-// build css & js to temporary folder
+gulp.task('build-app-css', function(){
+    log('compiling app Css');
+});
+
 gulp.task('build-css', function(){
-    log('compiling Less -> Css');
-
+    log('start to compile Less -> Css');
+    
     return gulp
-            .src(config.allCss)
-            .pipe($.plumber())
+            .src(config.appCss)
+            .pipe($.plumber())            
             .pipe($.less())
-            //.on('error', errorLogger)
             .pipe($.autoprefixer({browers:['last 2 version', '> 5%']}))
-            .pipe(gulp.dest(config.tempCss));
+            .pipe($.csso())
+            .pipe(gulp.dest(config.buildCss));
 });
 
-gulp.task('build-js', function(){
-    log('compiling Js');
+gulp.task('build-lib-js', function(){
+    log('compiling libs Js');
+    return gulp
+            .src(config.libJs)
+            .pipe($.plumber())
+            .pipe($.concat('libs.js'))
+            .pipe($.uglify())
+            .pipe(gulp.dest(config.buildJs));    
 });
 
-//gulp.task('build-all', ['build-css', 'build-js'], function(){
-//    log('compile all Css & Js');
-//})
+gulp.task('build-app-js', function(){
+    log('compiling app Js');
+    return gulp
+            .src(config.appJs)
+            .pipe($.plumber())
+            .pipe($.concat('app.js'))
+            .pipe($.uglify())
+            .pipe(gulp.dest(config.buildJs));
+});
 
+gulp.task('build-js', [ 
+    // 'build-lib-js',
+    'build-app-js'
+    ], function(){
+    log('start to compile Js files');
+});
 
-// clean up files
+// clean css & js in build folder
 function cleanUp(path, done){
     log('cleaning path:' + path);
     del(path, done);
 };
 
-// clean css & js in temporary folder
 gulp.task('clean-css', function(done){
-    log('clean Css in temporary');
-    var files = config.tempCss + '/*.css';    
+    log('clean Css in build folder');
+    var files = config.buildCss + '/*.css';    
     cleanUp(files, done);
 });
 
 gulp.task('clean-js', function(done){
-    log('clean Js in temporary');
-    var files = config.tempJs + '/*.js';
+    log('clean Js in build folder');
+    var files = config.buildJs + '/*.js';
     cleanUp(files, done);
 });
 
-//gulp.task('clean-all', ['clean-css', 'clean-js'], function(){
-//    log('clean all Css & Js');
-//});
+// watch css & js from dev -> build
+gulp.task('watcher-css', function(){
+    gulp.watch([config.appCss], ['clean-css', 'build-css']);
+});
 
+gulp.task('watcher-js', function(){
+    gulp.watch([config.appJs], ['clean-js', 'build-js']);
+});
 
-// run all automation build
+gulp.task('watcher-all', ['watcher-css', 'watcher-js'], function(){
+    log('watcher all: css, js');
+});
+
+// Automation Build: clean -> build
 gulp.task('run-all', ['clean-css', 'clean-js', 'build-css', 'build-js'], function(){
     log('run all');
 });
-
-
-// watch to make sure automation build
-gulp.task('css-watcher', function(){
-    gulp.watch([config.allCss], ['clean-css', 'build-css']);
-});
-
-gulp.task('js-watcher', function(){
-    gulp.watch([config.allCss], ['clean-js', 'build-js']);
-});
-
 
 
 // load by manually: checkcode()

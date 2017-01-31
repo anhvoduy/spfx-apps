@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>:: Aisha HTML5 Responsive Template ::</title>    
+    <title>:: Aisha HTML5 Responsive Template ::</title>
+    <!-- @Dev Environment -->
     <!-- normalizar -->
     <link href="/Style%20Library/apps/aisha/css/normalize.css" rel="stylesheet">
     <!-- fonts -->
@@ -20,15 +21,14 @@
     <!--animation -->
     <link href="/Style%20Library/apps/aisha/css/animate.min.css" rel="stylesheet">    
     <!--responsive -->
-    <link href="/Style%20Library/apps/aisha/css/responsive.css" rel="stylesheet">
-
-    <!-- @Dev Environment -->	
-    <link href="/Style%20Library/apps/aisha/css/style.css" rel="stylesheet">
-    <link href="/Style%20Library/apps/aisha/css/custom.css" rel="stylesheet">
+    <link href="/Style%20Library/apps/aisha/css/responsive.css" rel="stylesheet"> 
+	<!--style -->
+    <link href="/Style%20Library/apps/aisha/css/style.css" rel="stylesheet">	
 
     <!-- @Build Environment -->
     <!--
-    <link href="/Style%20Library/apps/aisha/build/css/app.css" rel="stylesheet">
+    <link href="/Style%20Library/apps/aisha/build/css/libs.min.css" rel="stylesheet">
+    <link href="/Style%20Library/apps/aisha/build/css/style.min.css" rel="stylesheet">
     -->
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -67,35 +67,28 @@
 
 	<!-- footer area -->
 	<div footer-area></div>
-
-    <!-- jquery -->
-    <script src="/Style%20Library/apps/aisha/libs/jquery/jquery-1.11.3.min.js"></script>
-    <!-- bootstrap -->
-    <script src="/Style%20Library/apps/aisha/libs/bootstrap/bootstrap.min.js"></script>
-    <!-- wow -->
-    <script src="/Style%20Library/apps/aisha/libs/wow/wow.min.js"></script>
-    <!-- d3 -->
-    <script src="/Style%20Library/apps/aisha/libs/d3/d3.min.js"></script>
-    <!-- require -->
-    <script src="/Style%20Library/apps/aisha/libs/require/r.js"></script>
-    <!-- moment -->
-    <script src="/Style%20Library/apps/aisha/libs/moment/moment.min.js"></script>
-    <!-- angular -->    
-    <script src="/Style%20Library/apps/aisha/libs/angular/angular.min.js"></script>
-    <script src="/Style%20Library/apps/aisha/libs/angular/angular-sanitize.min.js"></script>
-	
-    <!-- @Dev Environment-->    
+    	
+	<!-- @Dev Environment-->    
     <!--
-    <script src="/Style%20Library/apps/aisha/js/main.js"></script>
-    <script src="/Style%20Library/apps/aisha/js/components/common/common.js"></script>
-    <script src="/Style%20Library/apps/aisha/js/components/controllers/controllers.js"></script>
-    <script src="/Style%20Library/apps/aisha/js/components/directives/directives.js"></script>
-    <script src="/Style%20Library/apps/aisha/js/components/services/services.js"></script>
-    <script src="/Style%20Library/apps/aisha/js/components/utils/utils.js"></script>
-    -->
+    <script src="/Style%20Library/apps/aisha/libs/jquery/jquery-1.11.3.min.js"></script>    
+    <script src="/Style%20Library/apps/aisha/libs/bootstrap/bootstrap.min.js"></script>    
+    <script src="/Style%20Library/apps/aisha/libs/wow/wow.min.js"></script>    
+    <script src="/Style%20Library/apps/aisha/libs/d3/d3.min.js"></script>    
+    <script src="/Style%20Library/apps/aisha/libs/require/r.js"></script>    
+    <script src="/Style%20Library/apps/aisha/libs/moment/moment.min.js"></script>    
+    <script src="/Style%20Library/apps/aisha/libs/angular/angular.min.js"></script>
+    <script src="/Style%20Library/apps/aisha/libs/angular/angular-sanitize.min.js"></script>    	
+	
+    <script src="/Style%20Library/apps/aisha/js/main.js" type="text/javascript"></script>
+    <script src="/Style%20Library/apps/aisha/js/components/common/common.js" type="text/javascript"></script>
+    <script src="/Style%20Library/apps/aisha/js/components/controllers/controllers.js" type="text/javascript"></script>
+    <script src="/Style%20Library/apps/aisha/js/components/directives/directives.js" type="text/javascript"></script>
+    <script src="/Style%20Library/apps/aisha/js/components/services/services.js" type="text/javascript"></script>
+    <script src="/Style%20Library/apps/aisha/js/components/utils/utils.js" type="text/javascript"></script>
+    -->    
     
-    
-    <!-- @Build Environment -->
-    <script src="/Style%20Library/apps/aisha/build/js/app.js"></script>                  
+    <!-- @Build Environment -->    
+    <link href="/Style%20Library/apps/aisha/build/js/libs.js" type="text/javascript">
+    <link href="/Style%20Library/apps/aisha/build/js/app.js" type="text/javascript">
 </body>
 </html>
