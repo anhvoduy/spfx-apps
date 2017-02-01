@@ -1,8 +1,7 @@
 var gulp = require('gulp');
 var args = require('yargs').argv;
 var del = require('del');
-// load by auto by lazy
-var $ = require('gulp-load-plugins')({lazy: true});
+var $ = require('gulp-load-plugins')({lazy: true}); // load by auto by lazy
 var config = require('./gulp.config')();
 
 function log(msg){    
@@ -104,38 +103,3 @@ gulp.task('run-all', ['clean-css', 'clean-js', 'build-app-css', 'build-app-js'],
 gulp.task('watcher-all', ['watcher-css', 'watcher-js'], function(){
     log('watcher all: css, js');
 });
-
-// load by manually: checkcode()
-//var jshint = require('gulp-jshint');
-//var jscs = require('gulp-jscs');
-//var stylish = require('jshint-stylish');
-//var util = require('gulp-util');
-//var gulpPrint = require('gulp-print');
-//var gulpIf = require('gulp-if');
-
-//function log(msg){
-//    //console.log(msg);
-//    if(typeof(msg)==='object'){
-//        for(var item in msg){
-//            if(msg.hasOwnProperty(item)){
-//                util.log(util.colors.green(msg[item]));
-//            }
-//        }
-//    } else {
-//        util.log(util.colors.green(msg));
-//    }
-//}
-
-//gulp.task('checkcode', function(){
-//    log('Analyzing source with JSHint and JSCS');
-//    return gulp
-//        .src([
-//            './js/**/*.js',
-//        ])
-//        .pipe(gulpIf(args.verbose, gulpPrint()))
-//        //.pipe(gulpPrint())
-//        .pipe(jscs())
-//        .pipe(jshint())
-//        .pipe(jshint.reporter('jshint-stylish',{verbose: true}))
-//        .pipe(jshint.reporter('fail'));
-//});
