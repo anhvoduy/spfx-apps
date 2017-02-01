@@ -5,3 +5,28 @@ div#sideNavBox {
 div#contentBox {
     margin-left: 20px;
 }
+
+.test-title-area {
+    font-size: 11;
+}
+
+
+.test-input-area {
+    font-size: 11;
+	font-family: Arial, Tahoma;
+}
+
+.test-desktop-aisha {
+	font-size: 18px;
+    font-weight: 300
+}
+
+.test-laptop-aisha {
+	font-size: 14px;
+    font-weight: 300
+}
+
+.test-laptop-aisha1 {
+	font-size: 16px;
+    font-weight: 300
+}
