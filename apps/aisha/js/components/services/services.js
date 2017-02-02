@@ -15,8 +15,8 @@
                 { title: 'Blogs', link: '#'},
                 { title: 'Portfolio', link: '#'},
                 { title: 'Contact', link: '#'}
-            ];
-            q.resolve(data.sort());
+            ];            
+            q.resolve(data);
             return q.promise;
         };
 
