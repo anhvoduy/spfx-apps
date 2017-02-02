@@ -104,5 +104,24 @@
 				wowInittialize();
             }
         };
+    })
+    .directive('skillPercent', function () {
+        return {
+            restrict: 'EA',
+            replace: true,
+            scope: {
+                skill: '='
+            },
+            templateUrl: function () {
+                return "/Style%20Library/apps/aisha/js/components/views/skillPercent.tpl.html";
+            },
+            link: function (scope, element, attrs, ngCtrl) {
+                wowInittialize();                
+                scope.percent = '0%';
+                if(scope.skill && scope.skill.progress){
+                    scope.percent = scope.skill.progress + '%';
+                }
+            }
+        };
     });
 })();
