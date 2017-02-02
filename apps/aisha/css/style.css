@@ -69,7 +69,8 @@ p {
 /************** header css ******************/
 
 #header_area {
-    background: url(../images/bg.jpg);
+    /*background: url(../images/mainbg.jpg);*/
+    background: url(../images/main1.jpg);
     padding-top: 35px;
     background-size: cover;
     background-position: center center
@@ -313,10 +314,13 @@ p {
 }
 
 .company_logo {
-    margin-top: 50px
+    /*margin-top: 50px*/
+    margin-top: 5px;
 }
 
-.company_logo h2 {}
+.company_logo h2 {
+    margin: 0px;
+}
 
 .company_address {
     padding: 10px 30px;

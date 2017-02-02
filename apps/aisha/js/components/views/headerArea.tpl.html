@@ -4,7 +4,7 @@
 			<div class="col-sm-4">
 				<div class="logo">
 					<h2>
-						<a href="http://laptrinh365.com/Pages/aisha.aspx">Lap trinh 365</a>
+						<a href="http://laptrinh365.com/Pages/aisha.aspx">Vo Duy Anh's Tech Blogs</a>
 					</h2>
 				</div>
 			</div>
@@ -41,9 +41,9 @@
 		<div class="row">
 			<div class="col-md-12">
 				<div class="header_area_text">
-					<h2 class="wow slideInDown" data-wow-duration="2s">We’re here to create your online presense and style</h2>
-					<p class="wow slideInUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse mattis orci dapibus risus dignissim, viverra pellentesque arcu ullamcorper. Mauris a tincidunt lectus. Proin nec venenatis quam. </p>
-					<a class="wow slideInUp" data-wow-duration="2s" href="">START  TODAY  with  us</a>
+					<h2 class="wow slideInDown" data-wow-duration="2s" ng-bind="header.slogan"></h2>
+					<p class="wow slideInUp" ng-bind-html="header.description"></p>
+					<a class="wow slideInUp" data-wow-duration="2s" ng-bind="header.submit.title" ng-href="header.submit.link"></a>
 				</div>
 			</div>
 		</div>
