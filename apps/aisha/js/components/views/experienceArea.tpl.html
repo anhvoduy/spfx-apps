@@ -3,10 +3,10 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="experience wow slideInLeft">
-                    <h2>My Experience</h2>
+                    <h2>My Experiences</h2>
                     <p ng-bind="experience.desc1"></p>
                     <p ng-bind="experience.desc2"></p>
-                    <a href="">View case studies</a>
+                    <a ng-bind="experience.caseStudy.title" ng-href="caseStudy.link"></a>
                 </div>
             </div>
             <div class="col-md-6">

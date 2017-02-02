@@ -13,7 +13,8 @@
                 slogan: 'We are here to create @mazing things.',
                 description: 
                     'It’s not only a Mission Impossible in the movies.' + 
-                    ' </br> In real life, we always try to make a mission possible done.',
+                    '</br>' + 
+                    'In real life, we always try to make a mission possible done.',
                 submit: {
                     title: 'START  TODAY  with  us',
                     link: '#'
@@ -41,7 +42,7 @@
             var q = $q.defer();
             var data = {
                 slogan: 'We are here to create @mazing things.',
-                description: 'It’s not only a Mission Impossible in the movies. </br> In real life, we always try make a mission possible done.',
+                description: 'It’s not only a Mission Impossible in the movies.',
                 submit: {
                     title: 'START  TODAY  with  us',
                     link: '#'
@@ -55,7 +56,7 @@
             var q = $q.defer();
             var data = {
                 slogan: 'We are here to create @mazing things.',
-                description: 'It’s not only a Mission Impossible in the movies. </br> In real life, we always try make a mission possible done.',
+                description: 'It’s not only a Mission Impossible in the movies.',
                 submit: {
                     title: 'START  TODAY  with  us',
                     link: '#'
@@ -68,13 +69,17 @@
         aishaService.prototype.getExperience = function () {
             var q = $q.defer();
             var data = {
-                desc1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat purus in ferment uectetur tortor id, pharetra lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat purus in ferment uectetur tortor id, pharetra lorem.',
-                desc2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat purus in ferment uectetur tortor id, pharetra lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam volutpat purus in ferment uectetur tortor id, pharetra lorem.',                
+                desc1: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                desc2: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                caseStudy: {
+                    title: 'View case studies',
+                    link: '#'                        
+                },
                 skills: [
-                    {title: 'Knockout Js', progress: 65},
-                    {title: 'React Js', progress: 60},
-                    {title: 'Angular Js', progress: 95},
-                    {title: 'Node Js', progress: 85},
+                    {title: 'Knockout Js', progress: 60},
+                    {title: 'React Js', progress: 55},
+                    {title: 'Angular Js', progress: 92},
+                    {title: 'Node Js', progress: 81},
                     {title: 'SharePoint Design Architecture', progress: 88},
                     {title: 'SharePoint App Development', progress: 85}
                 ]
@@ -87,7 +92,7 @@
             var q = $q.defer();
             var data = {
                 slogan: 'We are here to create @mazing things.',
-                description: 'It’s not only a Mission Impossible in the movies. </br> In real life, we always try make a mission possible done.',
+                description: 'It’s not only a Mission Impossible in the movies.',
                 submit: {
                     title: 'START  TODAY  with  us',
                     link: '#'
