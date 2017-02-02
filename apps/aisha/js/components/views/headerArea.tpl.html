@@ -21,17 +21,9 @@
 						</div>
 	
 						<div class="navbar-collapse collapse">
-							<ul class="nav navbar-nav navbar-right">
-								<li><a href="#">Home</a>
-								</li>
-								<li><a href="#">About</a>
-								</li>
-								<li><a href="#">blog</a>
-								</li>
-								<li><a href="#">Portfolio</a>
-								</li>
-								<li><a href="#">Contact</a>
-								</li>
+							<ul class="nav navbar-nav navbar-right" ng-repeat="nav in navBars">
+								<li><a href="#" ng-bind="nav.title"></a>
+								</li>								
 							</ul>
 						</div>
 					</div>
@@ -43,7 +35,7 @@
 				<div class="header_area_text">
 					<h2 class="wow slideInDown" data-wow-duration="2s" ng-bind="header.slogan"></h2>
 					<p class="wow slideInUp" ng-bind-html="header.description"></p>
-					<a class="wow slideInUp" data-wow-duration="2s" ng-bind="header.submit.title" ng-href="header.submit.link"></a>
+					<a class="wow slideInUp" data-wow-duration="2s" ng-bind="header.submit.title" ng-href="{{ header.submit.link }}"></a>
 				</div>
 			</div>
 		</div>

@@ -90,8 +90,14 @@
 		function ($scope, $q, appCommon, aishaService) {
 			// declare models & methods
 			var activate = function(){
-				aishaService.getActions().then(function(result){
-					$scope.actions = result;					
+				aishaService.getAction().then(function(result){
+					$scope.action = result;					
+				}, function(err){
+					console.log(err);
+				});
+
+				aishaService.getNavBars().then(function(result){
+					$scope.navBars = result;					
 				}, function(err){
 					console.log(err);
 				})
