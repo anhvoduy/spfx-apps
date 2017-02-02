@@ -25,7 +25,7 @@
             var q = $q.defer();
             var data = {
                 slogan: 'We are here to create @mazing things.',
-                description: 'It’s not only a Mission Impossible in the movies. </br> In real life, we always try make a mission possible done.',
+                description: 'It’s not only a Mission Impossible in the movies.',
                 submit: {
                     title: 'START  TODAY  with  us',
                     link: '#'
