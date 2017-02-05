@@ -16,6 +16,9 @@ function log(msg){
     }
 };
 
+gulp.task('help', $.taskListing);
+gulp.task('default', ['help']);
+
 // verify code js by convention rules
 gulp.task('verify-code', function(){
     log('Analyzing source with JSHint and JSCS');
@@ -30,12 +33,7 @@ gulp.task('verify-code', function(){
 
 
 // compile css & js to build folder
-gulp.task('build-lib-css', function(){
-    log('compiling libs css:' + 'libs.min.css');
-    //TO DO: compress file: libs.min.css
-});
-
-gulp.task('build-app-css', function(){
+gulp.task('build-css', function(){
     log('compiling app css:' + 'app.min.css');    
     return gulp
             .src(config.appCss)
@@ -47,24 +45,46 @@ gulp.task('build-app-css', function(){
             .pipe(gulp.dest(config.buildCss));
 });
 
-gulp.task('build-lib-js', function(){
-    log('compiling libs js:' + 'libs.min.js');
-    return gulp
-            .src(config.libJs)
-            .pipe($.plumber())
-            .pipe($.concat('libs.min.js'))
-            .pipe($.uglify())
-            .pipe(gulp.dest(config.buildJs));    
+gulp.task('build-css-lib', function(){
+    log('compiling libs css:' + 'libs.min.css');
+    //TO DO: compress file: libs.min.css
 });
 
-gulp.task('build-app-js', function(){
-    log('compiling app js:' + 'app.min.js');
+gulp.task('build-font', function(){
+    log('copying fonts');
+
+    return gulp
+            .src(config.fonts)
+            .pipe(gulp.dest(config.buildFont));
+});
+
+gulp.task('build-img', function(){
+    log('copying images & compression');
+
+    return gulp
+            .src(config.images)
+            .pipe($.imagemin({ optimizationLevel: 4 }))
+            .pipe(gulp.dest(config.buildImg));
+});
+
+gulp.task('build-js', function(){
+    log('compiling js:' + 'app.min.js');
     return gulp
             .src(config.appJs)
             .pipe($.plumber())
             .pipe($.concat('app.min.js'))
             .pipe($.uglify())
             .pipe(gulp.dest(config.buildJs));
+});
+
+gulp.task('build-js-lib', function(){
+    log('compiling js library:' + 'libs.min.js');
+    return gulp
+            .src(config.libJs)
+            .pipe($.plumber())
+            .pipe($.concat('libs.min.js'))
+            .pipe($.uglify())
+            .pipe(gulp.dest(config.buildJs));    
 });
 
 // clean css & js in build folder
@@ -74,30 +94,47 @@ function cleanUp(path, done){
 };
 
 gulp.task('clean-css', function(done){
-    log('clean Css in build folder');
-    var files = config.buildCss + '/*.css';    
-    cleanUp(files, done);
+    log('clean Css in folder:' + config.buildCss);    
+    cleanUp(config.buildCss + '/*.css', done);
+});
+
+gulp.task('clean-font', function(done){    
+    log('clean Fonts in folder:' + config.buildFont);
+    cleanUp(config.buildFont, done);
+});
+
+gulp.task('clean-img', function(done){    
+    log('clean Images in folder:' + config.buildImg);    
+    cleanUp(config.buildImg, done);
 });
 
 gulp.task('clean-js', function(done){
-    log('clean Js in build folder');
-    var files = config.buildJs + '/*.js';
-    cleanUp(files, done);
+    log('clean Js in folder:' + config.buildJs);    
+    cleanUp(config.buildJs + '/*.js', done);
 });
 
-// watch css & js from dev -> build
+// watch css, font, image, js from dev -> build
 gulp.task('watcher-css', function(){
-    gulp.watch([config.appCss], ['clean-css', 'build-app-css']);
+    gulp.watch([config.appCss], ['clean-css', 'build-css']);
 });
 
 gulp.task('watcher-js', function(){
-    gulp.watch([config.appJs], ['clean-js', 'build-app-js']);
+    gulp.watch([config.appJs], ['clean-js', 'build-js']);
 });
 
 
 // Automation Build: clean -> build || watcher
-gulp.task('run-all', ['clean-css', 'clean-js', 'build-app-css', 'build-app-js'], function(){
-    log('run all: css, js');
+gulp.task('clean-all', function(done){
+    var path = [].concat(config.build, config.temp);   
+    log('clean all');
+    del(path, done);
+});
+
+gulp.task('build-all', [
+    'clean-css', 'clean-font', 'clean-img', 'clean-js', 
+    'build-css', 'build-font', 'build-img', 'build-js'
+    ], function(){
+        log('build all: css, font, img, js');
 });
 
 gulp.task('watcher-all', ['watcher-css', 'watcher-js'], function(){
