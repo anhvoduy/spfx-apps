@@ -27,6 +27,8 @@ To install gulp, bower locally: (dependecies/devDependencies)
 	npm install gulp-uglify --save-dev
 	npm install gulp-concat --save-dev
 	
+	npm install gulp-task-listing --save-dev
+	npm install gulp-imagemin --save-dev
 	
 	npm install concat --save-dev
 	npm install jshint --save-dev
@@ -34,6 +36,9 @@ To install gulp, bower locally: (dependecies/devDependencies)
 	npm install yargs --save-dev
 	npm install del --save-dev	
 	npm install plumber --save-dev
+	
+	npm install serve-favicon -save
+	npm install compression -save
 	
 To verify installation
 	gulp -v
@@ -52,6 +57,12 @@ To describe some javascript libraries:
 	JsHint: javascript code analysis -> use to detect errors and potential problems
 	JSCS: javascript code style checker
 --> rule files: define JsHint & JSCS rules: .jshintrc, .jscsrc
+
+
+To describe build Assets & keeping organize structure
+	task listing & default tasks
+	image compression
+	copy fonts & css
 
 To describe inject Html: 
 

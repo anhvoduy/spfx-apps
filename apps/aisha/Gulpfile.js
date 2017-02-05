@@ -16,6 +16,9 @@ function log(msg){
     }
 };
 
+gulp.task('help', $.taskListing);
+gulp.task('default', ['help']);
+
 // verify code js by convention rules
 gulp.task('verify-code', function(){
     log('Analyzing source with JSHint and JSCS');
@@ -45,6 +48,23 @@ gulp.task('build-app-css', function(){
             .pipe($.concat('app.min.css'))
             .pipe($.csso())
             .pipe(gulp.dest(config.buildCss));
+});
+
+gulp.task('build-app-font', function(){
+    log('copying fonts');
+
+    return gulp
+            .src(config.fonts)
+            .pipe(gulp.dest(config.buildFont));
+});
+
+gulp.task('build-app-img', function(){
+    log('copying images & compression');
+
+    return gulp
+            .src(config.images)
+            .pipe($.imagemin({ optimizationLevel: 4 }))
+            .pipe(gulp.dest(config.buildImg));
 });
 
 gulp.task('build-lib-js', function(){
@@ -96,8 +116,11 @@ gulp.task('watcher-js', function(){
 
 
 // Automation Build: clean -> build || watcher
-gulp.task('run-all', ['clean-css', 'clean-js', 'build-app-css', 'build-app-js'], function(){
-    log('run all: css, js');
+gulp.task('run-all', [
+    'clean-css', 'clean-js', 
+    'build-app-css', 'build-app-font', 'build-app-img', 'build-app-js'
+    ], function(){
+        log('run all: css, js');
 });
 
 gulp.task('watcher-all', ['watcher-css', 'watcher-js'], function(){

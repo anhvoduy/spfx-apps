@@ -14,8 +14,7 @@ module.exports = function(){
         appJs:[
             './js/**/*.js',
             './js/*.js'
-        ],
-        
+        ],        
         // lib & app css files
         libCss:[
             './libs/**/*.css',
@@ -23,6 +22,14 @@ module.exports = function(){
         ],
         appCss:[            
             './css/custom.css'
+        ],
+        // fonts
+        fonts:[
+            './fonts/*',
+        ],
+        // images
+        images:[
+            './images/*',
         ],
 
 
@@ -34,7 +41,9 @@ module.exports = function(){
         // build folder
         build: build,
         buildCss: build + 'css',
-        buildJs: build + 'js'        
+        buildFont: build + 'font',
+        buildImg: build + 'img',
+        buildJs: build + 'js'
     }
     return config;
 };

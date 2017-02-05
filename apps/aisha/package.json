@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "sharepoint development app",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "compression": "^1.6.2",
+    "serve-favicon": "^2.3.2"
+  },
   "devDependencies": {
     "bower": "^1.8.0",
     "concat": "0.0.1-security",
@@ -14,12 +17,14 @@
     "gulp-csso": "^2.0.0",
     "gulp-filter": "^5.0.0",
     "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^3.1.1",
     "gulp-jscs": "^4.0.0",
     "gulp-jshint": "^2.0.4",
     "gulp-less": "^3.3.0",
     "gulp-load-plugins": "^1.4.0",
     "gulp-plumber": "^1.1.0",
     "gulp-print": "^2.0.1",
+    "gulp-task-listing": "^1.0.1",
     "gulp-uglify": "^2.0.1",
     "gulp-util": "^3.0.8",
     "jshint": "^2.9.4",
