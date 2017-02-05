@@ -28,7 +28,7 @@ To install gulp, bower locally: (dependecies/devDependencies)
 	npm install gulp-concat --save-dev
 	
 	npm install gulp-task-listing --save-dev
-	npm install gulp-imagemin --save-dev
+	npm install gulp-imagemin --save-dev	
 	
 	npm install concat --save-dev
 	npm install jshint --save-dev
@@ -37,8 +37,12 @@ To install gulp, bower locally: (dependecies/devDependencies)
 	npm install del --save-dev	
 	npm install plumber --save-dev
 	
+	
 	npm install serve-favicon -save
 	npm install compression -save
+	npm install imagemin --save
+	npm install imagemin-jpegoptim --save
+	npm install imagemin-jpeg-recompress --save
 	
 To verify installation
 	gulp -v
