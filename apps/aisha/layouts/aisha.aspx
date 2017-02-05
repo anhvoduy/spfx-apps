@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>:: Aisha HTML5 Responsive Template ::</title>    
-    <!-- normalizar -->
-    <link href="/Style%20Library/apps/aisha/css/normalize.css" rel="stylesheet">
-    <!-- fonts -->
+    <title>:: Aisha HTML5 Responsive Template ::</title>
+    <!-- google fonts -->
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Cabin:400,500,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <!-- normalizar -->
+    <link href="/Style%20Library/apps/aisha/css/normalize.css" rel="stylesheet">
     <!-- bootstrap -->
     <link href="/Style%20Library/apps/aisha/libs/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!--fontawesome -->
@@ -93,8 +93,7 @@
     <script src="/Style%20Library/apps/aisha/js/components/directives/directives.js"></script>
     <script src="/Style%20Library/apps/aisha/js/components/services/services.js"></script>
     <script src="/Style%20Library/apps/aisha/js/components/utils/utils.js"></script>
-    -->
-    
+    -->    
     
     <!-- @Build Environment -->
     <script src="/Style%20Library/apps/aisha/build/js/app.min.js"></script>                  
