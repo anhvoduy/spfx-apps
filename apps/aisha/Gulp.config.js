@@ -34,8 +34,10 @@ module.exports = function(){
 
 
         // temporary folder
-        //temp: temp,        
+        temp: temp,        
         //tempCss: temp + 'css',
+        //tempFont: temp + 'font',
+        //tempImage: temp + 'img',
         //tempJs: temp + 'js',
 
         // build folder
