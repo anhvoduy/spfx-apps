@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Store Demo</title>
+    <title>store</title>
     
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -538,6 +538,13 @@
       <script type="text/javascript" src="/Style%20Library/apps/store/asset/js/jquery.sticky.js"></script>
       
       <!-- jQuery easing -->
-      <script type="text/javascript" src="/Style%20Library/apps/store/asset/js/jquery.easing.1.3.min.js"></script>                
+      <script type="text/javascript" src="/Style%20Library/apps/store/asset/js/jquery.easing.1.3.min.js"></script>
+      
+      <!-- Main Script -->
+      <script type="text/javascript" src="/Style%20Library/apps/store/asset/js/main.js"></script>
+      
+      <!-- Slider -->
+      <script type="text/javascript" src="/Style%20Library/apps/store/asset/js/bxslider.min.js"></script>
+      <script type="text/javascript" src="/Style%20Library/apps/store/asset/js/script.slider.js"></script>      
   </body>
 </html>
