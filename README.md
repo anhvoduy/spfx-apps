@@ -1,2 +1,1 @@
-Sample SharePoint App Development
-Copy Right 2017
+Sample SharePoint App Development - Publish 2017
