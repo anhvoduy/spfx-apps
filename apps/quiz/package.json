@@ -8,8 +8,11 @@
   },
   "author": "anhduyvo",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": {    
+  },
+  "devDependencies": {
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "babel-preset-env": "^1.1.8"
   }
 }
