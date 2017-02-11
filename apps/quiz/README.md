@@ -17,4 +17,9 @@ Props are supplied as attributes
 To composse component:
 	a component can be nested inside other components
 
+State:
+	used when a component needs to change independently of its parents
+	components with state have more complexity
+	
+
 
