@@ -8,13 +8,19 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Quiz</title>
 
-    <!--style -->
+    <!-- reference css -->
+    <link href="/Style%20Library/apps/quiz/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- app -->
     <link href="/Style%20Library/apps/quiz/css/style.css" rel="stylesheet">
 
     <!-- load from CDN: react, babel -->
     <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
     <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+    <!-- reference libraries -->
+    <script src="/Style%20Library/apps/quiz/libs/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="/Style%20Library/apps/quiz/libs/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>    
 
     <!--app -->
     <script src="/Style%20Library/apps/quiz/app/index.js" type="text/babel"></script>
