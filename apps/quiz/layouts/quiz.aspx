@@ -11,7 +11,14 @@
     <!-- reference css -->
     <link href="/Style%20Library/apps/quiz/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- app -->
-    <link href="/Style%20Library/apps/quiz/css/style.css" rel="stylesheet">
+    <link href="/Style%20Library/apps/quiz/css/style.css" rel="stylesheet">    
+</head>
+
+<body>
+    <div id="root">
+        <!-- This div's content will be managed by React. -->
+    </div>
+    <div>React's CopyRight 2017</div>
 
     <!-- load from CDN: react, babel -->
     <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
@@ -24,12 +31,5 @@
 
     <!--app -->
     <script src="/Style%20Library/apps/quiz/app/index.js" type="text/babel"></script>
-</head>
-
-<body>
-    <div id="root">
-        <!-- This div's content will be managed by React. -->
-    </div>
-    <div>React's CopyRight 2017</div>
 </body>
 </html>

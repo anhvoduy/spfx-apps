@@ -7,15 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Quiz</title>
-    <!-- style -->
+    
+    <!-- reference css -->
     <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <!-- style -->
+    <link href="css/style.css" rel="stylesheet">    
+</head>
+
+<body>
+    <div id="root">
+        <!-- This div's content will be managed by React. -->        
+    </div>
+    <div>Hello World's React</div>
 
     <!-- load from libs: react, babel -->
     <script src="libs/react/react.min.js"></script>
     <script src="libs/react/react-dom.min.js"></script>
     <script src="libs/babel/babel.min.js"></script>
 
+    <!-- reference libraries -->
     <script src="libs/jquery/jquery-1.11.3.min.js"></script>
     <script src="libs/bootstrap/js/bootstrap.min.js"></script>
     
@@ -26,12 +36,5 @@
             document.getElementById('root')
         );
     </script>
-</head>
-
-<body>
-    <div id="root">
-        <!-- This div's content will be managed by React. -->        
-    </div>
-    <div>Hello World's React</div>
 </body>
 </html>
