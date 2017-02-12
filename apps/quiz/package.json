@@ -1,0 +1,25 @@
+{
+  "name": "quiz",
+  "version": "1.0.0",
+  "description": "sharepoint quiz app",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "anhduyvo",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.1.8",
+    "jsx-transform": "^2.3.0",
+    "lodash": "^4.17.4",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-tools": "^0.13.3"
+  }
+}

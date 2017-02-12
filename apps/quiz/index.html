@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Quiz</title>
+    
+    <!-- reference css -->
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- style -->
+    <link href="css/app.css" rel="stylesheet">    
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Author Book</h1>
+            <p>select the book written by Author</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="app">
+            <!-- This div's content will be managed by React. -->
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <p class="credit text-muted">
+                All images from <a href="http://laptrinh365.com">laptrinh365.com</a> 
+                <br />
+                React's CopyRight 2017
+            </p>            
+        </div>        
+    </div>
+
+    <!-- load from libs: react, babel -->
+    <script src="libs/react/react.min.js" type="text/javascript"></script>
+    <script src="libs/react/react-dom.min.js"></script>
+    <script src="libs/babel/babel.min.js"></script>
+    <script src="libs/lodash/lodash.min.js"></script>
+
+    <!-- reference libraries -->
+    <script src="libs/jquery/jquery-1.11.3.min.js"></script>
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>    
+    
+    <!-- app -->    
+    <script src="app/app.js" type="text/babel"></script>
+    <!--<script src="app/sample.js" type="text/babel"></script>-->
+</body>
+</html>

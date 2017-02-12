@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ustora Demo</title>
+    <title>store-shop</title>
     
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -12,15 +12,15 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
     
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/Style%20Library/apps/store/asset/css/bootstrap.min.css">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="asset/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Style%20Library/apps/store/asset/css/font-awesome.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="asset/css/owl.carousel.css">
-    <link rel="stylesheet" href="asset/css/style.css">
-    <link rel="stylesheet" href="asset/css/responsive.css">
+    <link rel="stylesheet" href="/Style%20Library/apps/store/asset/css/owl.carousel.css">
+    <link rel="stylesheet" href="/Style%20Library/apps/store/asset/css/style.css">
+    <link rel="stylesheet" href="/Style%20Library/apps/store/asset/css/responsive.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -93,7 +93,7 @@
           <div class="block-slider block-slider4">
               <ul class="" id="bxslider-home4">
                   <li>
-                      <img src="asset/img/h4-slide.png" alt="Slide">
+                      <img src="/Style%20Library/apps/store/asset/img/h4-slide.png" alt="Slide">
                       <div class="caption-group">
                           <h2 class="caption title">
                               iPhone <span class="primary">6 <strong>Plus</strong></span>
@@ -103,7 +103,7 @@
                       </div>
                   </li>
                   <li>
-                      <img src="asset/img/h4-slide2.png" alt="Slide">
+                      <img src="/Style%20Library/apps/store/asset/img/h4-slide2.png" alt="Slide">
                       <div class="caption-group">
                           <h2 class="caption title">
                               by one, get one <span class="primary">50% <strong>off</strong></span>
@@ -113,7 +113,7 @@
                       </div>
                   </li>
                   <li>
-                      <img src="asset/img/h4-slide3.png" alt="Slide">
+                      <img src="/Style%20Library/apps/store/asset/img/h4-slide3.png" alt="Slide">
                       <div class="caption-group">
                           <h2 class="caption title">
                               Apple <span class="primary">Store <strong>Ipod</strong></span>
@@ -123,7 +123,7 @@
                       </div>
                   </li>
                   <li>
-                      <img src="asset/img/h4-slide4.png" alt="Slide">
+                      <img src="/Style%20Library/apps/store/asset/img/h4-slide4.png" alt="Slide">
                       <div class="caption-group">
                           <h2 class="caption title">
                               Apple <span class="primary">Store <strong>Ipod</strong></span>
@@ -179,7 +179,7 @@
                         <div class="product-carousel">
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="asset/img/product-1.jpg" alt="">
+                                    <img src="/Style%20Library/apps/store/asset/img/product-1.jpg" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -194,7 +194,7 @@
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="asset/img/product-2.jpg" alt="">
+                                    <img src="/Style%20Library/apps/store/asset/img/product-2.jpg" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -208,7 +208,7 @@
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="asset/img/product-3.jpg" alt="">
+                                    <img src="/Style%20Library/apps/store/asset/img/product-3.jpg" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -223,7 +223,7 @@
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="asset/img/product-4.jpg" alt="">
+                                    <img src="/Style%20Library/apps/store/asset/img/product-4.jpg" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -238,7 +238,7 @@
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="asset/img/product-5.jpg" alt="">
+                                    <img src="/Style%20Library/apps/store/asset/img/product-5.jpg" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -253,7 +253,7 @@
                             </div>
                             <div class="single-product">
                                 <div class="product-f-image">
-                                    <img src="asset/img/product-6.jpg" alt="">
+                                    <img src="/Style%20Library/apps/store/asset/img/product-6.jpg" alt="">
                                     <div class="product-hover">
                                         <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                         <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -280,14 +280,14 @@
                 <div class="col-md-12">
                     <div class="brand-wrapper">
                         <div class="brand-list">
-                            <img src="asset/img/brand1.png" alt="">
-                            <img src="asset/img/brand2.png" alt="">
-                            <img src="asset/img/brand3.png" alt="">
-                            <img src="asset/img/brand4.png" alt="">
-                            <img src="asset/img/brand5.png" alt="">
-                            <img src="asset/img/brand6.png" alt="">
-                            <img src="asset/img/brand1.png" alt="">
-                            <img src="asset/img/brand2.png" alt="">                            
+                            <img src="/Style%20Library/apps/store/asset/img/brand1.png" alt="">
+                            <img src="/Style%20Library/apps/store/asset/img/brand2.png" alt="">
+                            <img src="/Style%20Library/apps/store/asset/img/brand3.png" alt="">
+                            <img src="/Style%20Library/apps/store/asset/img/brand4.png" alt="">
+                            <img src="/Style%20Library/apps/store/asset/img/brand5.png" alt="">
+                            <img src="/Style%20Library/apps/store/asset/img/brand6.png" alt="">
+                            <img src="/Style%20Library/apps/store/asset/img/brand1.png" alt="">
+                            <img src="/Style%20Library/apps/store/asset/img/brand2.png" alt="">                            
                         </div>
                     </div>
                 </div>
@@ -304,7 +304,7 @@
                         <h2 class="product-wid-title">Top Sellers</h2>
                         <a href="" class="wid-view-more">View All</a>
                         <div class="single-wid-product">
-                            <a href="single-product.html"><img src="asset/img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
+                            <a href="single-product.html"><img src="/Style%20Library/apps/store/asset/img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
                             <h2><a href="single-product.html">Sony Smart TV - 2015</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
@@ -318,7 +318,7 @@
                             </div>                            
                         </div>
                         <div class="single-wid-product">
-                            <a href="single-product.html"><img src="asset/img/product-thumb-2.jpg" alt="" class="product-thumb"></a>
+                            <a href="single-product.html"><img src="/Style%20Library/apps/store/asset/img/product-thumb-2.jpg" alt="" class="product-thumb"></a>
                             <h2><a href="single-product.html">Apple new mac book 2015</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
@@ -332,7 +332,7 @@
                             </div>                            
                         </div>
                         <div class="single-wid-product">
-                            <a href="single-product.html"><img src="asset/img/product-thumb-3.jpg" alt="" class="product-thumb"></a>
+                            <a href="single-product.html"><img src="/Style%20Library/apps/store/asset/img/product-thumb-3.jpg" alt="" class="product-thumb"></a>
                             <h2><a href="single-product.html">Apple new i phone 6</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
@@ -352,7 +352,7 @@
                         <h2 class="product-wid-title">Recently Viewed</h2>
                         <a href="#" class="wid-view-more">View All</a>
                         <div class="single-wid-product">
-                            <a href="single-product.html"><img src="asset/img/product-thumb-4.jpg" alt="" class="product-thumb"></a>
+                            <a href="single-product.html"><img src="/Style%20Library/apps/store/asset/img/product-thumb-4.jpg" alt="" class="product-thumb"></a>
                             <h2><a href="single-product.html">Sony playstation microsoft</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
@@ -366,7 +366,7 @@
                             </div>                            
                         </div>
                         <div class="single-wid-product">
-                            <a href="single-product.html"><img src="asset/img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
+                            <a href="single-product.html"><img src="/Style%20Library/apps/store/asset/img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
                             <h2><a href="single-product.html">Sony Smart Air Condtion</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
@@ -380,7 +380,7 @@
                             </div>                            
                         </div>
                         <div class="single-wid-product">
-                            <a href="single-product.html"><img src="asset/img/product-thumb-2.jpg" alt="" class="product-thumb"></a>
+                            <a href="single-product.html"><img src="/Style%20Library/apps/store/asset/img/product-thumb-2.jpg" alt="" class="product-thumb"></a>
                             <h2><a href="single-product.html">Samsung gallaxy note 4</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
@@ -400,7 +400,7 @@
                         <h2 class="product-wid-title">Top New</h2>
                         <a href="#" class="wid-view-more">View All</a>
                         <div class="single-wid-product">
-                            <a href="single-product.html"><img src="asset/img/product-thumb-3.jpg" alt="" class="product-thumb"></a>
+                            <a href="single-product.html"><img src="/Style%20Library/apps/store/asset/img/product-thumb-3.jpg" alt="" class="product-thumb"></a>
                             <h2><a href="single-product.html">Apple new i phone 6</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
@@ -414,7 +414,7 @@
                             </div>                            
                         </div>
                         <div class="single-wid-product">
-                            <a href="single-product.html"><img src="asset/img/product-thumb-4.jpg" alt="" class="product-thumb"></a>
+                            <a href="single-product.html"><img src="/Style%20Library/apps/store/asset/img/product-thumb-4.jpg" alt="" class="product-thumb"></a>
                             <h2><a href="single-product.html">Samsung gallaxy note 4</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
@@ -428,7 +428,7 @@
                             </div>                            
                         </div>
                         <div class="single-wid-product">
-                            <a href="single-product.html"><img src="asset/img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
+                            <a href="single-product.html"><img src="/Style%20Library/apps/store/asset/img/product-thumb-1.jpg" alt="" class="product-thumb"></a>
                             <h2><a href="single-product.html">Sony playstation microsoft</a></h2>
                             <div class="product-wid-rating">
                                 <i class="fa fa-star"></i>
@@ -525,33 +525,27 @@
                 </div>
             </div>
         </div>
-    </div> <!-- End footer bottom area -->
+    </div> 
+    <!-- End footer bottom area -->
    
       <!-- Latest jQuery from server -->
       <script type="text/javascript" src="https://code.jquery.com/jquery.min.js"></script>    
 
       <!-- Bootstrap JS from Server -->     
-      <script type="text/javascript" src="asset/js/bootstrap.min.js"></script>    
+      <script type="text/javascript" src="/Style%20Library/apps/store/asset/js/bootstrap.min.js"></script>    
       
       <!-- jQuery sticky menu -->
-      <script type="text/javascript" src="asset/js/owl.carousel.min.js"></script>
-      <script type="text/javascript" src="asset/js/jquery.sticky.js"></script>
+      <script type="text/javascript" src="/Style%20Library/apps/store/asset/js/owl.carousel.min.js"></script>
+      <script type="text/javascript" src="/Style%20Library/apps/store/asset/js/jquery.sticky.js"></script>
       
       <!-- jQuery easing -->
-      <script type="text/javascript" src="asset/js/jquery.easing.1.3.min.js"></script>
+      <script type="text/javascript" src="/Style%20Library/apps/store/asset/js/jquery.easing.1.3.min.js"></script>
       
       <!-- Main Script -->
-      <script type="text/javascript" src="asset/js/main.js"></script>      
+      <script type="text/javascript" src="/Style%20Library/apps/store/asset/js/main.js"></script>      
       
       <!-- Slider -->
-      <script type="text/javascript" src="asset/js/bxslider.min.js"></script>
-      <script type="text/javascript" src="asset/js/script.slider.js"></script>
-
-      <!-- Angular Libs -->
-      <script type="text/javascript" src="asset/libs/angular/angular.min.js"></script>
-      <script type="text/javascript" src="asset/libs/angular/angular-ui-router.min.js"></script>
-
-      <!-- Publish App Components -->
-      <script type="text/javascript" src="app/app.js"></script>      
+      <script type="text/javascript" src="/Style%20Library/apps/store/asset/js/bxslider.min.js"></script>
+      <script type="text/javascript" src="/Style%20Library/apps/store/asset/js/script.slider.js"></script>          
   </body>
 </html>
