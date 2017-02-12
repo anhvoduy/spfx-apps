@@ -67,14 +67,14 @@
 
         aishaService.prototype.getClientSay = function () {
             var q = $q.defer();
-            var data = {
-                slogan: 'We are here to create @mazing things.',
-                description: 'It’s not only a Mission Impossible in the movies.',
-                submit: {
-                    title: 'START  TODAY  with  us',
-                    link: '#'
-                }
-            };
+            var data = [
+				{
+					
+				},
+				{
+					
+				},
+			];
             q.resolve(data);
             return q.promise;
         };

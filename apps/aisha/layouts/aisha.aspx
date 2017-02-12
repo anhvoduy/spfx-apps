@@ -83,6 +83,9 @@
     <script src="/Style%20Library/apps/aisha/libs/moment/moment.min.js"></script>
     <!-- angular -->    
     <script src="/Style%20Library/apps/aisha/libs/angular/angular.min.js"></script>
+    <script src="/Style%20Library/apps/aisha/libs/angular/angular-loader.min.js"></script>
+    <script src="/Style%20Library/apps/aisha/libs/angular/angular-messages.min.js"></script>
+    <script src="/Style%20Library/apps/aisha/libs/angular/angular-touch.min.js"></script>
     <script src="/Style%20Library/apps/aisha/libs/angular/angular-sanitize.min.js"></script>
 	
     <!-- @Dev Environment-->    
