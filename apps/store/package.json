@@ -1,8 +1,8 @@
 {
-  "name": "aisha",
+  "name": "store",
   "version": "1.0.0",
-  "description": "sharepoint aisha app",
-  "main": "js/main.js",
+  "description": "sharepoint store app",
+  "main": "asset/main.js",
   "dependencies": {
     "compression": "^1.6.2",
     "express": "^4.14.1",
@@ -11,8 +11,7 @@
     "path": "^0.12.7",
     "serve-favicon": "^2.3.2"
   },
-  "devDependencies": {
-    "bower": "^1.8.0",
+  "devDependencies": {    
     "concat": "0.0.1-security",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
