@@ -11,7 +11,7 @@
     <!-- reference css -->
     <link href="/Style%20Library/apps/quiz/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- app -->
-    <link href="/Style%20Library/apps/quiz/css/style.css" rel="stylesheet">    
+    <link href="/Style%20Library/apps/quiz/css/app.css" rel="stylesheet">    
 </head>
 
 <body>
