@@ -1,36 +1,109 @@
 /** JSX React.DOM */
 (function(){
     'use strict';
-    var postData = {
-      title: 'React Js',
-      questions:[
-        { 
-            name: 'What is react js?',
-            answer: 'Java Script from FaceBook'
+    var data = [
+        {
+            name: 'Mark Twain', 
+            imageUrl: 'images/authors/marktwain.jpg',
+            books: ['The Adventures of Huckleberry Finn']
         },
-        { 
-            name: 'How to use react js?',
-            answer: 'Very fast rendering & support Virtual DOM' 
+        {
+            name: 'Joseph Conrad',
+            imageUrl: 'images/authors/josephconrad.png',
+            books: ['Heart of Darkness']
         },
-        { 
-            name: 'Comparision between: react + angular + ember + knockout',
-            answer: 'React Js is best'
+        {
+            name: 'J.K. Rowling',
+            imageUrl: 'images/authors/jkrowling.jpg',
+            imageSource: 'Wikimedia Commons',
+            imageAttribution: 'Daniel Ogren',
+            books: ['Harry Potter and the Sorcerers Stone']
+        },
+        {
+            name: 'Stephen King',
+            imageUrl: 'images/authors/stephenking.jpg',
+            imageSource: 'Wikimedia Commons',
+            imageAttribution: 'Pinguino',
+            books: ['The Shining','IT']
+        },
+        {
+            name: 'Charles Dickens',
+            imageUrl: 'images/authors/charlesdickens.jpg',
+            imageSource: 'Wikimedia Commons',
+            books: ['David Copperfield', 'A Tale of Two Cities']
+        },
+        {
+            name: 'William Shakespeare',
+            imageUrl: 'images/authors/williamshakespeare.jpg',
+            imageSource: 'Wikimedia Commons',
+            books: ['Hamlet', 'Macbeth', 'Romeo and Juliet']
         }
-      ]
+    ];
+    
+    data.selectGame = function(){
+        var books = _.shuffle(this.reduce(function(p, c, i){
+            return p.concat(c.books);
+        }, [])).slice(0, 4);
+
+        var answer = books[_.random(books.length - 1)];
+        
+        return {
+            books: books,
+            author: _.find(this, function(author){
+                return author.books.some(function(title){
+                    return title === answer;
+                });
+            })
+        };
     };    
 
     var Quiz = React.createClass({
+        propTypes: {
+            books: React.PropTypes.array.isRequired
+        },
+        getInitialState: function(){
+            //debugger;
+            //return {
+            //    author: this.props.data[0],
+            //    books: this.props.data[0].books
+            //};
+            return this.props.data.selectGame();
+        },
         render: function(){
             return (
               <div>
-                <h3>Demo - Quiz: {this.props.data.title} </h3>                
+                  <div className="row">
+                        <div className="col-md-4">
+                            <img src={this.state.author.imageUrl} className="authorimage"/>
+                        </div>
+                        <div className="col-md-7">
+                            {this.state.books.map(function(b){
+                                return <Book title={b} />;
+                            }, this)}                            
+                        </div>
+                        <div className="col-md-1">                            
+                        </div>
+                  </div>                  
               </div>
             );
         }
     });
 
+    var Book = React.createClass({
+        propTypes:{
+            title: React.PropTypes.string.isRequired                
+        },
+        render: function(){
+            return (
+                <div className="answer">
+                    <h4>{this.props.title}</h4>
+                </div>
+            );
+        }
+    });
+
     ReactDOM.render(
-        <Quiz data={postData}></Quiz>,
+        <Quiz data={data} />,
         document.getElementById('app')
     );
 })();
