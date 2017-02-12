@@ -1,4 +1,9 @@
-ReactDOM.render(
-  <h1>Hello, world!</h1>,
-  document.getElementById('root')
-);
+/** JSX: author*/
+(function(){
+    'use strict';
+
+    ReactDOM.render(
+        <Quiz data={postData}></Quiz>,
+        document.getElementById('author')
+    );
+})();
