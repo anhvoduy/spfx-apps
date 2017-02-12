@@ -4,37 +4,37 @@
     var data = [
         {
             name: 'Mark Twain', 
-            imageUrl: 'images/authors/marktwain.jpg',
+            imageUrl: '/Style%20Library/apps/quiz/images/authors/marktwain.jpg',
             books: ['The Adventures of Huckleberry Finn']
         },
         {
             name: 'Joseph Conrad',
-            imageUrl: 'images/authors/josephconrad.png',
+            imageUrl: '/Style%20Library/apps/quiz/images/authors/josephconrad.png',
             books: ['Heart of Darkness']
         },
         {
             name: 'J.K. Rowling',
-            imageUrl: 'images/authors/jkrowling.jpg',
+            imageUrl: '/Style%20Library/apps/quiz/images/authors/jkrowling.jpg',
             imageSource: 'Wikimedia Commons',
             imageAttribution: 'Daniel Ogren',
             books: ['Harry Potter and the Sorcerers Stone']
         },
         {
             name: 'Stephen King',
-            imageUrl: 'images/authors/stephenking.jpg',
+            imageUrl: '/Style%20Library/apps/quiz/images/authors/stephenking.jpg',
             imageSource: 'Wikimedia Commons',
             imageAttribution: 'Pinguino',
             books: ['The Shining','IT']
         },
         {
             name: 'Charles Dickens',
-            imageUrl: 'images/authors/charlesdickens.jpg',
+            imageUrl: '/Style%20Library/apps/quiz/images/authors/charlesdickens.jpg',
             imageSource: 'Wikimedia Commons',
             books: ['David Copperfield', 'A Tale of Two Cities']
         },
         {
             name: 'William Shakespeare',
-            imageUrl: 'images/authors/williamshakespeare.jpg',
+            imageUrl: '/Style%20Library/apps/quiz/images/authors/williamshakespeare.jpg',
             imageSource: 'Wikimedia Commons',
             books: ['Hamlet', 'Macbeth', 'Romeo and Juliet']
         }
