@@ -29,8 +29,8 @@
     <script src="/Style%20Library/apps/quiz/libs/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
     <script src="/Style%20Library/apps/quiz/libs/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>    
 
-    <!--app -->
+    <!--app -->    
+    <script src="/Style%20Library/apps/quiz/app/app.js" type="text/babel"></script>
     <!--<script src="/Style%20Library/apps/quiz/app/sample.js" type="text/babel"></script>-->
-    <script src="/Style%20Library/apps/quiz/app/app.js" type="text/babel"></script>    
 </body>
 </html>
