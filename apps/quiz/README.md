@@ -3,7 +3,7 @@ open command prompt in quiz folder:
 	npm install babel-preset-env --save-dev
 	npm --version
 
-	
+----------------------------React Component Definition-------------------------------	
 DOM: Document Object Model
 	Model + Component = DOM
 	Component -> Virtual DOM Component
