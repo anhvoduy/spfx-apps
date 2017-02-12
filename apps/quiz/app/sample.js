@@ -61,6 +61,6 @@ ReactDOM.render(
 
     ReactDOM.render(
         <Quiz data={postData}></Quiz>,
-        document.getElementById('root')
+        document.getElementById('app')
     );
 })();

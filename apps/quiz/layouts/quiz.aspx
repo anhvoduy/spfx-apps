@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div id="root">
+    <div id="app">
         <!-- This div's content will be managed by React. -->
     </div>
     <div>React's CopyRight 2017</div>
@@ -30,6 +30,7 @@
     <script src="/Style%20Library/apps/quiz/libs/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>    
 
     <!--app -->
-    <script src="/Style%20Library/apps/quiz/app/index.js" type="text/babel"></script>
+    <!--<script src="/Style%20Library/apps/quiz/app/sample.js" type="text/babel"></script>-->
+    <script src="/Style%20Library/apps/quiz/app/index.js" type="text/babel"></script>    
 </body>
 </html>
