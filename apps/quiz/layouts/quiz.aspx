@@ -31,6 +31,6 @@
 
     <!--app -->
     <!--<script src="/Style%20Library/apps/quiz/app/sample.js" type="text/babel"></script>-->
-    <script src="/Style%20Library/apps/quiz/app/index.js" type="text/babel"></script>    
+    <script src="/Style%20Library/apps/quiz/app/app.js" type="text/babel"></script>    
 </body>
 </html>
