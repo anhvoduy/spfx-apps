@@ -1,111 +1,111 @@
 ﻿// aisha directives
 (function () {
-    angular.module('aisha.directives', [])
-    .directive('headerArea', function () {
+    angular.module('aisha.directives', ['aisha.common'])
+    .directive('headerArea',['appCommon', function (appCommon) {
         return {
             restrict: 'EA',
             replace: true,
             controller: 'headerAreaController',
             templateUrl: function () {
-                return "/Style%20Library/apps/aisha/js/components/views/headerArea.tpl.html";
+                return String.format('{0}{1}',appCommon.baseUrl, "js/components/views/headerArea.tpl.html");
             },
             link: function (scope, element, attrs, ngCtrl) {				
                 wowInittialize();
             }
         };
-    })
-    .directive('featureArea', function () {
+    }])
+    .directive('featureArea',['appCommon', function (appCommon) {
         return {
             restrict: 'EA',
             replace: true,
             controller: 'featureAreaController',
             templateUrl: function () {
-                return "/Style%20Library/apps/aisha/js/components/views/featureArea.tpl.html";
+                return String.format('{0}{1}',appCommon.baseUrl, "js/components/views/featureArea.tpl.html");
             },
             link: function (scope, element, attrs, ngCtrl) {
 				wowInittialize();
             }
         };
-    })
-    .directive('storyArea', function () {
+    }])
+    .directive('storyArea',['appCommon', function (appCommon) {
         return {
             restrict: 'EA',
             replace: true,
             controller: 'storyAreaController',
             templateUrl: function () {
-                return "/Style%20Library/apps/aisha/js/components/views/storyArea.tpl.html";
+                return String.format('{0}{1}',appCommon.baseUrl, "js/components/views/storyArea.tpl.html");
             },
             link: function (scope, element, attrs, ngCtrl) {
 				wowInittialize();
             }
         };
-    })
-    .directive('clientSayArea', function () {
+    }])
+    .directive('clientSayArea',['appCommon', function (appCommon) {
         return {
             restrict: 'EA',
             replace: true,
             controller: 'clientSayAreaController',
-            templateUrl: function () {
-                return "/Style%20Library/apps/aisha/js/components/views/clientSayArea.tpl.html";
+            templateUrl: function () {                
+                return String.format('{0}{1}',appCommon.baseUrl, "js/components/views/clientSayArea.tpl.html");
             },
             link: function (scope, element, attrs, ngCtrl) {
 				wowInittialize();
             }
         };
-    })
-    .directive('experienceArea', function () {
+    }])
+    .directive('experienceArea',['appCommon', function (appCommon) {
         return {
             restrict: 'EA',
             replace: true,
             controller: 'experienceAreaController',
-            templateUrl: function () {
-                return "/Style%20Library/apps/aisha/js/components/views/experienceArea.tpl.html";
+            templateUrl: function () {                
+                return String.format('{0}{1}',appCommon.baseUrl, "js/components/views/experienceArea.tpl.html");
             },
             link: function (scope, element, attrs, ngCtrl) {
 				wowInittialize();
             }
         };
-    })
-    .directive('blogArea', function () {
+    }])
+    .directive('blogArea',['appCommon', function (appCommon) {
         return {
             restrict: 'EA',
             replace: true,
             controller: 'blogAreaController',
             templateUrl: function () {
-                return "/Style%20Library/apps/aisha/js/components/views/blogArea.tpl.html";
+                return String.format('{0}{1}',appCommon.baseUrl, "js/components/views/blogArea.tpl.html");
             },
             link: function (scope, element, attrs, ngCtrl) {
 				wowInittialize();
             }
         };
-    })
-    .directive('actionArea', function () {
+    }])
+    .directive('actionArea',['appCommon', function (appCommon) {
         return {
             restrict: 'EA',
             replace: true,
             controller: 'actionAreaController',
             templateUrl: function () {
-                return "/Style%20Library/apps/aisha/js/components/views/actionArea.tpl.html";
+                return String.format('{0}{1}',appCommon.baseUrl, "js/components/views/actionArea.tpl.html");
             },
             link: function (scope, element, attrs, ngCtrl) {
 				wowInittialize();
             }
         };
-    })
-    .directive('footerArea', function () {
+    }])
+    .directive('footerArea',['appCommon', function (appCommon) {
         return {
             restrict: 'EA',
             replace: true,
             controller: 'footerAreaController',
             templateUrl: function () {
-                return "/Style%20Library/apps/aisha/js/components/views/footerArea.tpl.html";
+                return String.format('{0}{1}',appCommon.baseUrl, "js/components/views/footerArea.tpl.html");
             },
             link: function (scope, element, attrs, ngCtrl) {
 				wowInittialize();
             }
         };
-    })
-    .directive('skillPercent', function () {
+    }])
+    .directive('skillPercent',['appCommon', function (appCommon) {
         return {
             restrict: 'EA',
             replace: true,
@@ -113,7 +113,7 @@
                 skill: '='
             },
             templateUrl: function () {
-                return "/Style%20Library/apps/aisha/js/components/views/skillPercent.tpl.html";
+                return String.format('{0}{1}',appCommon.baseUrl, "js/components/views/skillPercent.tpl.html");
             },
             link: function (scope, element, attrs, ngCtrl) {
                 wowInittialize();                
@@ -123,5 +123,5 @@
                 }
             }
         };
-    });
+    }]);
 })();

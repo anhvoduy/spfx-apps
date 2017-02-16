@@ -17,7 +17,7 @@ server.getPort = function(){
 server.use('/css', express.static(path.join(__dirname, 'css')));
 server.use('/fonts', express.static(path.join(__dirname, 'fonts')));
 server.use('/images', express.static(path.join(__dirname, 'images')));
-server.use('/app', express.static(path.join(__dirname, 'js')));
+server.use('/js', express.static(path.join(__dirname, 'js')));
 server.use('/libs', express.static(path.join(__dirname, 'libs')));
 
 http.createServer(server).listen(server.getPort(), function(){
