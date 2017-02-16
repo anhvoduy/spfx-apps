@@ -40,7 +40,7 @@
         aishaService.prototype.getFeature = function () {
             var q = $q.defer();
             var data = {
-                slogan: 'We are here to create @mazing things.',
+                title: 'About Me',
                 description: 'It’s not only a Mission Impossible in the movies.',
                 submit: {
                     title: 'START  TODAY  with  us',
@@ -54,12 +54,14 @@
         aishaService.prototype.getStory = function () {
             var q = $q.defer();
             var data = {
-                slogan: 'We are here to create @mazing things.',
-                description: 'It’s not only a Mission Impossible in the movies.',
-                submit: {
-                    title: 'START  TODAY  with  us',
-                    link: '#'
-                }
+                image: String.format('{0}{1}', appCommon.baseUrl, "images/bg1.jpg"),
+                title: 'About Me',
+                contents: [
+                    {desc: 'I spent more than 10 years on IT Fields in many roles Developer, Technical Leader, Project Manager, Sale and Consultant.'},
+                    {desc: 'Work on new technologies focus to responssive design and js developer both client side and server side: Knockout Js, Angular Js, React Js and Nodejs. That supports a powerful and modern web application.'},
+                    {desc: 'My best skill is SharePoint with many types of projects: SharePoint 2010, 2013, 2016 and SharePoint Online about Content Management, Document Management, Search Application, Business Intelligence.'},
+                    {desc: 'Love team works and communication, reviewing and checking code that make all good quality of project. Help team and members improve skills so that project improves quality.'}
+                ]
             };
             q.resolve(data);
             return q.promise;
@@ -105,7 +107,7 @@
             var q = $q.defer();
             var data = [
                 { 
-                    image: '/Style%20Library/apps/aisha/images/1.jpg',
+                    image: String.format('{0}{1}', appCommon.baseUrl, "images/1.jpg"),
                     title: 'IOS and Android comparison',
                     created: 'March 4, 2014',
                     commentsCount: 3,
@@ -114,7 +116,7 @@
                     'The product team wanted to make sure hat users were clear about the value...',
                 },
                 { 
-                    image: '/Style%20Library/apps/aisha/images/2.jpg',
+                    image: String.format('{0}{1}', appCommon.baseUrl, "images/2.jpg"),
                     title: 'Angular and React comparison',
                     created: 'May 25, 2015',
                     commentsCount: 3,
@@ -123,7 +125,7 @@
                     'The product team wanted to make sure hat users were clear about the value...',
                 },
                 { 
-                    image: '/Style%20Library/apps/aisha/images/3.jpg',
+                    image: String.format('{0}{1}', appCommon.baseUrl, "images/3.jpg"),
                     title: 'Node Js and .Net Core comparison',
                     created: 'Jun 26, 2016',
                     commentsCount: 3,
@@ -132,7 +134,7 @@
                     'The product team wanted to make sure hat users were clear about the value...',
                 },
                 { 
-                    image: '/Style%20Library/apps/aisha/images/4.jpg',
+                    image: String.format('{0}{1}', appCommon.baseUrl, "images/4.jpg"),
                     title: 'Grunt and Gulp comparison',
                     created: 'Sep 9, 2016',
                     commentsCount: 3,

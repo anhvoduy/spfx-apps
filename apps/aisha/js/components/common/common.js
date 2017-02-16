@@ -4,6 +4,13 @@
     .factory('appCommon', ['$q', function ($q) {
         var appCommon = function () {            
         };
+        
+        appCommon.prototype.baseUrl = function(){
+            // sharepoint mode
+            //return '/Style%20Library/apps/aisha/';
+            // dev local mode
+            return '';
+        };
 
         appCommon.prototype.listInstance = {
             Feedback: 'Feedback',

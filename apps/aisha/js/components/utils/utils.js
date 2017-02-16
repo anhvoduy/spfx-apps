@@ -1,4 +1,13 @@
-﻿/* ------------------------------ check Browser & IOS -----------------------------------*/
+﻿String.format = function() {
+    var s = arguments[0];
+    for (var i = 0; i < arguments.length - 1; i += 1) {
+        var reg = new RegExp('\\{' + i + '\\}', 'gm');
+        s = s.replace(reg, arguments[i + 1]);
+    }
+    return s;
+};
+
+/* ------------------------------ check Browser & IOS -----------------------------------*/
 navigator.sayswho = (function () {
     var ua = navigator.userAgent, tem,
     M = ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
