@@ -40,7 +40,7 @@
         aishaService.prototype.getFeature = function () {
             var q = $q.defer();
             var data = {
-                slogan: 'We are here to create @mazing things.',
+                title: 'About Me',
                 description: 'It’s not only a Mission Impossible in the movies.',
                 submit: {
                     title: 'START  TODAY  with  us',
@@ -54,12 +54,14 @@
         aishaService.prototype.getStory = function () {
             var q = $q.defer();
             var data = {
-                slogan: 'We are here to create @mazing things.',
-                description: 'It’s not only a Mission Impossible in the movies.',
-                submit: {
-                    title: 'START  TODAY  with  us',
-                    link: '#'
-                }
+                image: String.format('{0}{1}', appCommon.baseUrl, "images/bg1.jpg"),
+                title: 'About Me',
+                contents: [
+                    {desc: 'I spent more than 10 years on IT Fields in many roles Developer, Technical Leader, Project Manager, Sale and Consultant.'},
+                    {desc: 'Work on new technologies focus to responssive design and js developer both client side and server side: Knockout Js, Angular Js, React Js and Nodejs. That supports a powerful and modern web application.'},
+                    {desc: 'My best skill is SharePoint with many types of projects: SharePoint 2010, 2013, 2016 and SharePoint Online about Content Management, Document Management, Search Application, Business Intelligence.'},
+                    {desc: 'Love team works and communication, reviewing and checking code that make all good quality of project. Help team and members improve skills so that project improves quality.'}
+                ]
             };
             q.resolve(data);
             return q.promise;
