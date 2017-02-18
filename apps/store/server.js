@@ -10,6 +10,31 @@ server.get('/', function (req, res) {
   	fs.createReadStream(path.resolve(__dirname, 'index.html')).pipe(res);	
 });
 
+server.get('/cart.html', function (req, res) {
+	res.writeHead(200, {"Content-Type": "text/html"});	
+  	fs.createReadStream(path.resolve(__dirname, 'cart.html')).pipe(res);	
+});
+
+server.get('/checkout.html', function (req, res) {
+	res.writeHead(200, {"Content-Type": "text/html"});	
+  	fs.createReadStream(path.resolve(__dirname, 'checkout.html')).pipe(res);	
+});
+
+server.get('/index.html', function (req, res) {
+	res.writeHead(200, {"Content-Type": "text/html"});	
+  	fs.createReadStream(path.resolve(__dirname, 'index.html')).pipe(res);	
+});
+
+server.get('/shop.html', function (req, res) {
+	res.writeHead(200, {"Content-Type": "text/html"});	
+  	fs.createReadStream(path.resolve(__dirname, 'shop.html')).pipe(res);	
+});
+
+server.get('/single-product.html', function (req, res) {
+	res.writeHead(200, {"Content-Type": "text/html"});	
+  	fs.createReadStream(path.resolve(__dirname, 'single-product.html')).pipe(res);	
+});
+
 server.getPort = function(){
 	return 8080;
 };
