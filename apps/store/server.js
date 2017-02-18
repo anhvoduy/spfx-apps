@@ -15,9 +15,11 @@ server.getPort = function(){
 };
 
 server.use('/app', express.static(path.join(__dirname, 'app')));
-server.use('/libs', express.static(path.join(__dirname, 'libs')));
 server.use('/css', express.static(path.join(__dirname, 'css')));
-server.use('/images', express.static(path.join(__dirname, 'images')));
+server.use('/fonts', express.static(path.join(__dirname, 'fonts')));
+server.use('/img', express.static(path.join(__dirname, 'img')));
+server.use('/js', express.static(path.join(__dirname, 'js')));
+server.use('/libs', express.static(path.join(__dirname, 'libs')));
 
 http.createServer(server).listen(server.getPort(), function(){
 	console.log('Web Server is running on port: ' + server.getPort());
