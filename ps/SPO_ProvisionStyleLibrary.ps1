@@ -7,8 +7,8 @@
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SharePoint.Client.UserProfiles")
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SharePoint.Client.WorkflowServices")
 
-$SiteUrl = "https://publicisgroupe.sharepoint.com/sites/search01"
-$AdminUsername = "adm-moishar@publicisgroupe.onmicrosoft.com"
+$SiteUrl = "https://development365.sharepoint.com/"
+$AdminUsername = "voduyanh@development365.onmicrosoft.com"
 
 Write-Host "Please enter password for $($SiteUrl):"
 $AdminPassword = Read-Host -AsSecureString
