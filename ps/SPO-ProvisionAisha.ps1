@@ -7,7 +7,7 @@
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SharePoint.Client.UserProfiles")
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SharePoint.Client.WorkflowServices")
 
-$SiteUrl = "https://development365.sharepoint.com/sites/dev"
+$SiteUrl = "https://development365.sharepoint.com"
 $AdminUsername = "voduyanh@development365.onmicrosoft.com"
 
 Write-Host "Please enter password for $($SiteUrl):"
@@ -20,7 +20,7 @@ $lcid = "1033"
 # Local Folder & Document Library
 #$localFolderPath = "D:\Projects\sharepoint\spapp\apps\aisha"
 $localFolderPath = "D:\Projects\sharepoint\spapp\apps\aisha\build"
-$onlineFolderPath = $SiteUrl + "/Style%20Library" + "/apps" + "/aisha"
+$onlineFolderPath = $SiteUrl + "/Style%20Library" + "/apps" + "/aisha/build"
 $documentLibrary = "Style Library"
 
 # connect/authenticate to SharePoint Online and get ClientContext object.. 
@@ -89,7 +89,7 @@ function CreateFolder([Microsoft.SharePoint.Client.Web] $web, $folderRelativeUrl
 # create file
 function CreateFile($file, $folderRelativeUrl){
     $url = $folderRelativeUrl + "/" + $file.Name
-    Write-Host "Upload File:" $file.FullName
+    Write-Host "From location:" $file.FullName
     Write-Host "To location:" $url
 
     # retrieve document library
