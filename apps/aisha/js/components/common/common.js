@@ -7,9 +7,9 @@
         
         appCommon.prototype.baseUrl = function(){
             // sharepoint mode
-            //return '/Style%20Library/apps/aisha/';
+            return '/Style%20Library/apps/aisha/';
             // dev local mode
-            return '';
+            //return '';
         };
 
         appCommon.prototype.listInstance = {
