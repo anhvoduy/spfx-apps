@@ -7,6 +7,11 @@ var path = require('path');
 var server = express();
 server.get('/', function (req, res) {
 	res.writeHead(200, {"Content-Type": "text/html"});	
+  	fs.createReadStream(path.resolve(__dirname, 'layouts/store-index.html')).pipe(res);		
+});
+
+server.get('/index.html', function (req, res) {
+	res.writeHead(200, {"Content-Type": "text/html"});	
   	fs.createReadStream(path.resolve(__dirname, 'index.html')).pipe(res);	
 });
 
@@ -18,11 +23,6 @@ server.get('/cart.html', function (req, res) {
 server.get('/checkout.html', function (req, res) {
 	res.writeHead(200, {"Content-Type": "text/html"});	
   	fs.createReadStream(path.resolve(__dirname, 'checkout.html')).pipe(res);	
-});
-
-server.get('/index.html', function (req, res) {
-	res.writeHead(200, {"Content-Type": "text/html"});	
-  	fs.createReadStream(path.resolve(__dirname, 'index.html')).pipe(res);	
 });
 
 server.get('/shop.html', function (req, res) {

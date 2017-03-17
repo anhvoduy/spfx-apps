@@ -7,21 +7,21 @@
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SharePoint.Client.UserProfiles")
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SharePoint.Client.WorkflowServices")
 
-$SiteUrl = "https://publicisgroupe.sharepoint.com/sites/search01"
-$AdminUsername = "adm-moishar@publicisgroupe.onmicrosoft.com"
+$SiteUrl = "https://development365.sharepoint.com"
+$AdminUsername = "voduyanh@development365.onmicrosoft.com"
 
 Write-Host "Please enter password for $($SiteUrl):"
 $AdminPassword = Read-Host -AsSecureString
-#$AdminPassword = "fearlessS$5"
+#$AdminPassword = "AdminPassword"
 
 # Default Language is English
 $lcid = "1033"
 
 # Local Folder & Document Library
-$localFolderPath = "E:\SharePoint_CEP\tfs\Customer Engagement Portal\Mainline\Publicis.CEP.Branding\Modules\SiteAssets"
-$documentLibrary = $SiteUrl + "/Style%20Library"
-$listTitle = "Style Library"
-$folderSiteAssets = $documentLibrary + "/SiteAssets";
+#$localFolderPath = "D:\Projects\sharepoint\spapp\apps\aisha"
+$localFolderPath = "D:\Projects\sharepoint\spapp\apps\aisha\build"
+$onlineFolderPath = $SiteUrl + "/Style%20Library" + "/apps" + "/aisha/build"
+$documentLibrary = "Style Library"
 
 # connect/authenticate to SharePoint Online and get ClientContext object.. 
 $ctx = New-Object Microsoft.SharePoint.Client.ClientContext($SiteUrl)
@@ -78,11 +78,10 @@ function ReadFiles ($folderPath, $folderRelativeUrl){
     }
 }
 
-
 # create folder
 function CreateFolder([Microsoft.SharePoint.Client.Web] $web, $folderRelativeUrl){    
     $folder = $web.Folders.Add($folderRelativeUrl);
-        $ctx.Load($folder);    
+    $ctx.Load($folder);    
     $ctx.ExecuteQuery();
     Write-Host "Create Folder is success." -ForegroundColor Green
 }
@@ -90,11 +89,11 @@ function CreateFolder([Microsoft.SharePoint.Client.Web] $web, $folderRelativeUrl
 # create file
 function CreateFile($file, $folderRelativeUrl){
     $url = $folderRelativeUrl + "/" + $file.Name
-    Write-Host "Upload File:" $file.FullName
+    Write-Host "From location:" $file.FullName
     Write-Host "To location:" $url
 
     # retrieve document library
-    $library = $ctx.Web.Lists.GetByTitle($listTitle)
+    $library = $ctx.Web.Lists.GetByTitle($documentLibrary)
     $ctx.Load($library)
     $ctx.ExecuteQuery()
 
@@ -133,17 +132,17 @@ if (!$ctx.ServerObjectIsNull.Value) {
     #Write-List -lists $lists -web $web  
 
     #create folder SiteAssets in document library    
-    CreateFolder -web $web -folderRelativeUrl $folderSiteAssets
-
-    # read folders
-    Write-Host "Reading Site Asset in Local Folder:" $localFolderPath -ForegroundColor Green    
+    CreateFolder -web $web -folderRelativeUrl $onlineFolderPath
+    
+    ## read folders
+    Write-Host "Reading local folder:" $localFolderPath -ForegroundColor Green
     $folders  = ([System.IO.DirectoryInfo] (Get-Item $localFolderPath)).EnumerateDirectories()
     ForEach($folder in $folders){
         $folderPath = $localFolderPath + "\" + $folder.Name
-        $folderRelativeUrl = $folderSiteAssets + "/" + $folder.Name
+        $folderRelativeUrl = $onlineFolderPath + "/" + $folder.Name
         CreateFolder -web $web -folderRelativeUrl $folderRelativeUrl
         
         Write-Host "Path:" $folderPath -ForegroundColor Cyan
         ReadFolders -folderPath $folderPath -folderRelativeUrl $folderRelativeUrl
-    }        
+    }
 }
