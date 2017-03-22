@@ -67,6 +67,13 @@ gulp.task('build-img', function(){
             .pipe(gulp.dest(config.buildImg));
 });
 
+gulp.task('buid-html', function(){
+	log('compiling html template cache');	
+	return gulp
+			.src(config.appHtml)
+			.pipe(gulp.dest(config.buildHtml));
+});
+
 gulp.task('build-js', function(){
     log('compiling js:' + 'app.min.js');
     return gulp
@@ -108,6 +115,11 @@ gulp.task('clean-img', function(done){
     cleanUp(config.buildImg, done);
 });
 
+gulp.task('clean-html', function(done){
+    log('clean html in folder:' + config.buildHtml);
+    cleanUp(config.buildHtml + '/*.html', done);
+});
+
 gulp.task('clean-js', function(done){
     log('clean Js in folder:' + config.buildJs);    
     cleanUp(config.buildJs + '/*.js', done);
@@ -131,10 +143,10 @@ gulp.task('clean-all', function(done){
 });
 
 gulp.task('build-all', [
-    'clean-css', 'clean-font', 'clean-img', 'clean-js', 
-    'build-css', 'build-font', 'build-img', 'build-js'
+    'clean-css', 'clean-font', 'clean-img', 'clean-html', 'clean-js',
+    'build-css', 'build-font', 'build-img', 'buid-html', 'build-js'
     ], function(){
-        log('build all: css, font, img, js');
+        log('build all: css, font, img, js, html');
 });
 
 gulp.task('watcher-all', ['watcher-css', 'watcher-js'], function(){

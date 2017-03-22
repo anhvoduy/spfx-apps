@@ -14,7 +14,11 @@ module.exports = function(){
         appJs:[
             './js/**/*.js',
             './js/*.js'
-        ],        
+        ],
+		appHtml:[
+            './js/**/*.html',
+            './js/*.html'
+        ],
         // lib & app css files
         libCss:[
             './libs/**/*.css',
@@ -44,8 +48,9 @@ module.exports = function(){
         build: build,
         buildCss: build + 'css',
         buildFont: build + 'font',
-        buildImg: build + 'img',
-        buildJs: build + 'js'
+        buildImg: build + 'img',		
+        buildJs: build + 'js',
+		buildHtml: build + 'html'
     }
     return config;
 };
