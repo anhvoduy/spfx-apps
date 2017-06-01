@@ -13,12 +13,11 @@ const app = document.getElementById('app');
 
 //ReactDOM.render(<Layout/>, app);
 ReactDOM.render(
-    <Router history={hashHistory}>
-        <Route path="/" component={Layout}>
-            <IndexRoute component={Featured}></IndexRoute>
-            <Route path="archived" name="archived" component={Archived}></Route>
-            <Route path="settings" name="settings" component={Settings}></Route>
-            <Route path="layout" name="layout" component={Layout}></Route>
-        </Route>
-    </Router>
-, app);
+  <Router history={hashHistory}>
+    <Route path="/" component={Layout}>
+      <IndexRoute component={Featured}></IndexRoute>
+      <Route path="archived(/:article)" name="archived" component={Archived}></Route>
+      <Route path="settings" name="settings" component={Settings}></Route>
+    </Route>
+  </Router>,
+app);
