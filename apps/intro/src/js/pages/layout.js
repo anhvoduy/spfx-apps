@@ -1,9 +1,15 @@
 import React from "react";
+import { Link } from "react-router";
 
 export default class Layout extends React.Component {
 	render() {
 		return (
-			<h1>Layout</h1>
+            <div>
+                <h1>laptrinh365.com</h1>
+                { this.props.children }
+                <Link to="archived">archived</Link>
+                <Link to="settings">settings</Link>
+            </div>			
 		);
 	}
 }
