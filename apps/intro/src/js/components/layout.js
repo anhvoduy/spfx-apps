@@ -6,7 +6,8 @@ export default class Layout extends React.Component {
 	constructor(){
 		super();
 		this.state = {
-			title: "Welcome React Js Tutorial"
+			title: "Welcome React Js Tutorial",
+			footer: "Copyright React Js 2017"
 		};
 	}
 	
@@ -18,7 +19,7 @@ export default class Layout extends React.Component {
 		return (
 			<div>
 				<Header changeTitle={this.changeTitle.bind(this)} title={this.state.title} />
-				<Footer />
+				<Footer footer={this.state.footer} />
 			</div>
 		);
 	}
