@@ -30,12 +30,13 @@ export default class Featured extends React.Component {
 		const randomAd = adText[Math.round( Math.random() * (adText.length-1) )];
     	console.log("featured");
 
-		return (
-			// <h1>Featured</h1>
+		return (			
 			<div>
 				<div class="row">
 					<div class="col-lg-12">
-						<div class="well text-center">{ randomAd }</div>
+						<div class="well text-center">
+							{ randomAd }
+						</div>
 					</div>
 				</div>
 

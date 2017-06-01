@@ -11,7 +11,6 @@ import Settings from "./pages/settings";
 
 const app = document.getElementById('app');
 
-//ReactDOM.render(<Layout/>, app);
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Layout}>

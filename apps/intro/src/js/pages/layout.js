@@ -15,6 +15,7 @@ export default class Layout extends React.Component {
 		return (
             <div>                
                 <Nav location={location} />
+                
                 <div class="container" style={containerStyle}>
                     <div class="row">
                         <div class="col-lg-12">
@@ -23,14 +24,7 @@ export default class Layout extends React.Component {
                         </div>
                     </div>
                     
-                    <Footer/>
-
-                    {/*
-                        <h1>laptrinh365.com</h1>
-                        { this.props.children }
-                        <Link to="archived">archived</Link>
-                        <Link to="settings">settings</Link>
-                    */}
+                    <Footer/>                    
                 </div>
             </div>            
 		);
