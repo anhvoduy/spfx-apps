@@ -7,4 +7,6 @@
 	npm install -S react-router
 	npm install -S history@1
 	
+	npm install -S bootstrap-without-jquery
+	
 	

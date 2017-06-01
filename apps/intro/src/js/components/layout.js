@@ -1,4 +1,17 @@
 import React from "react";
+
+export default class Layout extends React.Component {
+	render() {
+		return (
+			<h1>ReactKiller.net</h1>
+		);
+	}
+}
+
+/*
+layout 1
+
+import React from "react";
 import Footer from "./footer";
 import Header from "./header";
 
@@ -29,3 +42,4 @@ export default class Layout extends React.Component {
 		);
 	}
 }
+*/
