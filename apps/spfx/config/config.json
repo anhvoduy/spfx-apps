@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/welcome/WelcomeWebPart.js",
+      "manifest": "./src/webparts/welcome/WelcomeWebPart.manifest.json",
+      "outputPath": "./dist/welcome.bundle.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "welcomeStrings": "webparts/welcome/loc/{locale}.js"
+  }
+}

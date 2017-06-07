@@ -1,0 +1,26 @@
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "ccf811b5-eeb7-4e41-8a9c-fce28966dc59",
+  "alias": "WelcomeWebPart",
+  "componentType": "WebPart",
+  "version": "*", // The "*" signifies that the version should be taken from the package.json
+  "manifestVersion": 2,
+
+  /**
+   * This property should only be set to true if it is certain that the webpart does not
+   *  allow arbitrary scripts to be called
+   */
+  "safeWithCustomScriptDisabled": false,
+
+  "preconfiguredEntries": [{
+    "groupId": "ccf811b5-eeb7-4e41-8a9c-fce28966dc59",
+    "group": { "default": "Under Development" },
+    "title": { "default": "welcome" },
+    "description": { "default": "welcome spfx" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "welcome"
+    }
+  }]
+}
