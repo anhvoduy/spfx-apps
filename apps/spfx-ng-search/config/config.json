@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/spfxNgSearch/SpfxNgSearchWebPart.js",
+      "manifest": "./src/webparts/spfxNgSearch/SpfxNgSearchWebPart.manifest.json",
+      "outputPath": "./dist/spfx-ng-search.bundle.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "spfxNgSearchStrings": "webparts/spfxNgSearch/loc/{locale}.js"
+  }
+}

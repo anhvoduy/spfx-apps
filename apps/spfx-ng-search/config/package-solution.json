@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "name": "spfx-ng-search-client-side-solution",
+    "id": "a406e099-fc4c-43c3-b131-a4c406425b2a",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-ng-search.sppkg"
+  }
+}

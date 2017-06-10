@@ -1,0 +1,20 @@
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "e80c39c0-e0fb-4823-a9f5-955224e11428",
+  "alias": "SpfxNgSearchWebPart",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+
+  "preconfiguredEntries": [{
+    "groupId": "e80c39c0-e0fb-4823-a9f5-955224e11428",
+    "group": { "default": "Under Development" },
+    "title": { "default": "SPFX Angular Search" },
+    "description": { "default": "SPFX Angular search" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "spfxNgSearch"
+    }
+  }]
+}
