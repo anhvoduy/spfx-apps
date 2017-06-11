@@ -1,9 +1,9 @@
 import * as angular from 'angular';
 import SearchController from './searchController';
-import DataService from './dataService';
+import SearchService from './searchService';
 
 const todoapp: angular.IModule = angular.module('todoapp', []);
 
-todoapp
+todoapp    
     .controller('SearchController', SearchController)
-    .service('DataService', DataService);
+    .service('SearchService', SearchService);

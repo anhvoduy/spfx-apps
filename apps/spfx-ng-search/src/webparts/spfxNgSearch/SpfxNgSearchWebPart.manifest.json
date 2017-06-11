@@ -11,10 +11,11 @@
     "groupId": "e80c39c0-e0fb-4823-a9f5-955224e11428",
     "group": { "default": "Under Development" },
     "title": { "default": "SPFX Angular Search" },
-    "description": { "default": "SPFX Angular search" },
+    "description": { "default": "SPFX Angular Search" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "spfxNgSearch"
+      "name": "spfx-ng-search",
+      "description": "SPFX Angular Search"
     }
   }]
 }

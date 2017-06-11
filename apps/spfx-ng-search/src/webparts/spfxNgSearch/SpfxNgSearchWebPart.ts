@@ -10,6 +10,9 @@ import styles from './SpfxNgSearch.module.scss';
 import * as strings from 'spfxNgSearchStrings';
 import { ISpfxNgSearchWebPartProps } from './ISpfxNgSearchWebPartProps';
 
+/* Link
+ * https://dev.office.com/sharepoint/docs/spfx/web-parts/guidance/build-client-side-web-parts-with-angular-1-x
+ */
 export default class SpfxNgSearchWebPart extends BaseClientSideWebPart<ISpfxNgSearchWebPartProps> {
 
   public render(): void {
