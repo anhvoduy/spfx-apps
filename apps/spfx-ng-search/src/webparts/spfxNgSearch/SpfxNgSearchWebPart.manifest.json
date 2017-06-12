@@ -15,7 +15,8 @@
     "officeFabricIconFontName": "Page",
     "properties": {
       "name": "spfx-ng-search",
-      "description": "SPFX Angular Search"
+      "description": "SPFX Angular Search",
+      "contentTypes": ""
     }
   }]
 }
