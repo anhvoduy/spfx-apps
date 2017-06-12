@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "libraryName": "spfx-ng-search",
+    "framework": "none",
+    "version": "1.0.2",
+    "libraryId": "a406e099-fc4c-43c3-b131-a4c406425b2a"
+  }
+}

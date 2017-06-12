@@ -1,0 +1,24 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/spfxNgSearch/SpfxNgSearchWebPart.js",
+      "manifest": "./src/webparts/spfxNgSearch/SpfxNgSearchWebPart.manifest.json",
+      "outputPath": "./dist/spfx-ng-search.bundle.js"
+    },
+    {
+      "entry": "./lib/webparts/spfxNgTodo/SpfxNgTodoWebPart.js",
+      "manifest": "./src/webparts/spfxNgTodo/SpfxNgTodoWebPart.manifest.json",
+      "outputPath": "./dist/spfx-ng-todo.bundle.js"
+    }
+  ],
+  "externals": {
+    "angular": {
+      "path": "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js",
+      "globalName": "angular"
+    }
+  },
+  "localizedResources": {
+    "spfxNgSearchStrings": "webparts/spfxNgSearch/loc/{locale}.js",
+    "spfxNgTodoStrings": "webparts/spfxNgTodo/loc/{locale}.js"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "22d43c59-7da5-499e-a642-cb55d6100184",
+  "alias": "SpfxNgTodoWebPart",
+  "componentType": "WebPart",
+  "version": "0.0.1",
+  "manifestVersion": 2,
+
+  "preconfiguredEntries": [{
+    "groupId": "22d43c59-7da5-499e-a642-cb55d6100184",
+    "group": { "default": "Under Development" },
+    "title": { "default": "SPFX Angular Todo" },
+    "description": { "default": "SPFX Angular Todo" },
+    "officeFabricIconFontName": "MultiSelect",
+    "properties": {
+      "name": "spfx-ng-todo",
+      "description": "SPFX Angular Todo",
+      "hideFinishedTasks": false
+    }
+  }]
+}
