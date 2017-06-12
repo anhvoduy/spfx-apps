@@ -12,10 +12,11 @@
     "group": { "default": "Under Development" },
     "title": { "default": "SPFX Angular Todo" },
     "description": { "default": "SPFX Angular Todo" },
-    "officeFabricIconFontName": "Page",
+    "officeFabricIconFontName": "MultiSelect",
     "properties": {
       "name": "spfx-ng-todo",
-      "description": "SPFX Angular Todo"
+      "description": "SPFX Angular Todo",
+      "hideFinishedTasks": false
     }
   }]
 }
