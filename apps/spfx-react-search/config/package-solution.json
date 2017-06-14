@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "name": "spfx-react-search-client-side-solution",
+    "id": "2c6e3046-abfb-4c84-b418-a850ebe93cf2",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-react-search.sppkg"
+  }
+}

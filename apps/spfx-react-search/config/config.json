@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/spfxReactSearch/SpfxReactSearchWebPart.js",
+      "manifest": "./src/webparts/spfxReactSearch/SpfxReactSearchWebPart.manifest.json",
+      "outputPath": "./dist/spfx-react-search.bundle.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "spfxReactSearchStrings": "webparts/spfxReactSearch/loc/{locale}.js"
+  }
+}
