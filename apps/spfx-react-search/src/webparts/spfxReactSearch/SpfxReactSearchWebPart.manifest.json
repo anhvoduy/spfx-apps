@@ -1,0 +1,27 @@
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "2940177a-b0f0-4a16-9cdd-6c27a60e211a",
+  "alias": "SpfxReactSearchWebPart",
+  "componentType": "WebPart",
+  "version": "*", // The "*" signifies that the version should be taken from the package.json
+  "manifestVersion": 2,
+
+  /**
+   * This property should only be set to true if it is certain that the webpart does not
+   *  allow arbitrary scripts to be called
+   */
+  "safeWithCustomScriptDisabled": false,
+
+  "preconfiguredEntries": [{
+    "groupId": "2940177a-b0f0-4a16-9cdd-6c27a60e211a",
+    "group": { "default": "Under Development" },
+    "title": { "default": "spfx react search" },
+    "description": { "default": "spfx react search" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "name": "spfx-react-search",
+      "description": "spfx react search"
+    }
+  }]
+}
