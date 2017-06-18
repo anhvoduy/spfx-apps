@@ -1,0 +1,13 @@
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/spfxReactRedux/SpfxReactReduxWebPart.js",
+      "manifest": "./src/webparts/spfxReactRedux/SpfxReactReduxWebPart.manifest.json",
+      "outputPath": "./dist/spfx-react-redux.bundle.js"
+    }
+  ],
+  "externals": {},
+  "localizedResources": {
+    "spfxReactReduxStrings": "webparts/spfxReactRedux/loc/{locale}.js"
+  }
+}
