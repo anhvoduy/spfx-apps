@@ -16,7 +16,8 @@
     "@types/react-dom": "0.14.18",
     "@types/webpack-env": ">=1.12.1 <1.14.0",
     "react": "15.4.2",
-    "react-dom": "15.4.2"
+    "react-dom": "15.4.2",
+    "redux": "^3.7.0"
   },
   "devDependencies": {
     "@microsoft/sp-build-web": "~1.0.1",
