@@ -17,6 +17,7 @@
     "@types/webpack-env": ">=1.12.1 <1.14.0",
     "react": "15.4.2",
     "react-dom": "15.4.2",
+    "react-redux": "^5.0.5",
     "redux": "^3.7.0"
   },
   "devDependencies": {
