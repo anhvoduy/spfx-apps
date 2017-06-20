@@ -1,5 +1,6 @@
 import * as React from 'react';
 import * as ReactDom from 'react-dom';
+//import { Provider } from 'redux';
 import { Version } from '@microsoft/sp-core-library';
 import {
   BaseClientSideWebPart,
