@@ -5,9 +5,9 @@ const path = require("path");
 const server = express();
 server.set('port', process.env.PORT || 3000);
 
-server.get('/', function (req, res) {
-    res.send('Hello World!')
-})
 server.use(express.static('public'))
+server.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname + 'index.html'));
+})
 
 module.exports = server;
