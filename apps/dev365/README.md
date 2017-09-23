@@ -1,3 +1,4 @@
 open command prompt:
-npm install
-npm start
+- npm install
+- npm start
+- http://demo-dev365.azurewebsites.net/
