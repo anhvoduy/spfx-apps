@@ -1,0 +1,20 @@
+{
+  "name": "laptrinh365.com",
+  "version": "1.0.0",
+  "description": "open command prompt in aisha folder:",
+  "main": "Gulp.config.js",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "VO DUY ANH",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4",
+    "http": "0.0.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+
+  }
+}

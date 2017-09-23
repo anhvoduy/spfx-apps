@@ -1,0 +1,17 @@
+<section id="caal_to_action_area">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="call_to_action_text wow slideInLeft" data-wow-duration="2s">
+                    <h2 ng-bind="action.title"></h2>
+                    <p ng-bind="action.desc"></p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="call_project text-right wow slideInRight" data-wow-duration="2s">
+                    <a ng-bind="action.contact.title" ng-href="{{ action.contact.link }}"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
