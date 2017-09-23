@@ -1,0 +1,20 @@
+<section id="story_area" class="section_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="story_image wow slideInLeft" data-wow-duration="2s">
+                    <img ng-src="{{ story.image }}" alt=""/>                    
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="story_text wow slideInRight" data-wow-duration="2s">
+                    <h2>{{ story.title }}</h2>
+                    <p ng-repeat="content in story.contents">
+                        <span>{{ content.desc }}</span>
+                    </p>                    
+                    <!--<a href="">More about our team</a>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
