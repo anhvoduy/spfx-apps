@@ -1,0 +1,128 @@
+/* Medium Layout: 1280px. */
+
+@media only screen and (min-width: 992px) and (max-width: 1280px) {}
+/* Tablet Layout: 768px. */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .header_area_text {
+        padding-right: 160px
+    }
+    .single_feature i {
+        left: 38%
+    }
+    .story_image {
+        margin-bottom: 20px;
+    }
+    .skills {
+        margin-top: 50px
+    }
+    .company_address {
+        padding: 10px 26px;
+    }
+}
+/* Mobile Layout: 320px. */
+
+@media only screen and (max-width: 767px) {
+    #header_area {
+        padding-top: 5px;
+    }
+    .navbar-toggle {
+        background-color: #4ECB8C;
+    }
+    .header_area_text h2 {
+        font-size: 30px;
+    }
+    .header_area_text {
+        padding-right: 0px
+    }
+    .navbar-toggle .icon-bar {
+        background-color: #fff;
+    }
+    .header_area_text {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .header_area_text a,
+    .story_text a,
+    .experience a,
+    .call_project a {
+        padding: 8px 10px;
+        margin-top: 0px;
+    }
+    .single_feature {
+        margin-bottom: 60px
+    }
+    .single_feature i {
+        left: 40%
+    }
+    .story_text h2,
+    .experience h2 {
+        margin-bottom: 10px;
+        margin-top: 10px
+    }
+    .clients_say p::before {
+        display: none
+    }
+    .say {
+        width: 85%
+    }
+    .c_img {
+        width: 15%
+    }
+    .clients_say p {
+        padding: 10px;
+    }
+    .clients_say {
+        margin-bottom: 60px;
+    }
+    .skills h2 {
+        margin-top: 20px;
+        margin-bottom: 10px
+    }
+    .single_blog h2 {
+        font-size: 16px;
+    }
+    .single_blog p {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    .single_blog {
+        margin-bottom: 30px;
+    }
+    .call_to_action_text h2 {
+        font-size: 22px;
+    }
+    .call_to_action_text p {
+        font-size: 12px;
+        margin-top: 5px
+    }
+    .text-right {
+        text-align: left
+    }
+    p {
+        font-size: 12px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    .company_address p {
+        font-size: 12px;
+    }
+    .company_address h2 {
+        font-size: 16px
+    }
+    .company_address {
+        padding: 10px 15px;
+    }
+}
+/* Wide Mobile Layout: 480px. */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .single_feature i {
+        left: 46%;
+        top: -22%
+    }
+    .single_blog img {
+        width: 100%
+    }
+}
