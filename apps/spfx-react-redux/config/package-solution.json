@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "name": "spfx-react-redux-client-side-solution",
+    "id": "f98e2e8b-6d9b-4c6d-bb77-5a5853ca121f",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-react-redux.sppkg"
+  }
+}
