@@ -80,11 +80,4 @@ To describe Minifying & Filtering
 	- gulp-filter: 
 	- gulp-csso (Css Optimizer): remove whitespaces and comments, trailing semicolons, transformation, structural optimization
 	- gulp-uglify: minifies Java Script, remove whitespaces and comments, mangles Java Script
-
-   
 	
-   
- 
-   
-   
-

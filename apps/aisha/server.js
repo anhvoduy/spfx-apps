@@ -1,25 +1,13 @@
-﻿// Dependencies
-var http = require('http');
-var express = require('express');
-var fs = require('fs');
-var path = require('path');
+﻿const express = require('express');
+const http = require('http');
+const path = require("path");
 
-var server = express();
+const server = express();
+server.set('port', process.env.PORT || 3000);
+
+server.use(express.static('public'))
 server.get('/', function (req, res) {
-	res.writeHead(200, {"Content-Type": "text/html"});	
-  	fs.createReadStream(path.resolve(__dirname, 'index.html')).pipe(res);	
-});
+    res.sendFile(path.join(__dirname + 'index.html'));
+})
 
-server.getPort = function(){
-	return 8080;
-};
-
-server.use('/css', express.static(path.join(__dirname, 'css')));
-server.use('/fonts', express.static(path.join(__dirname, 'fonts')));
-server.use('/images', express.static(path.join(__dirname, 'images')));
-server.use('/js', express.static(path.join(__dirname, 'js')));
-server.use('/libs', express.static(path.join(__dirname, 'libs')));
-
-http.createServer(server).listen(server.getPort(), function(){
-	console.log('Web Server is running on port: ' + server.getPort());
-});
+module.exports = server;

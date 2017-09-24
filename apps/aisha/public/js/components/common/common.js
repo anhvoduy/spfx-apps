@@ -5,11 +5,9 @@
         var appCommon = function () {            
         };
         
-        appCommon.prototype.baseUrl = function(){
-            // sharepoint mode
-            return '/Style%20Library/apps/aisha/';
-            // dev local mode
-            //return '';
+        appCommon.prototype.baseUrl = function(){            
+            //return '/Style%20Library/apps/aisha/'; // sharepoint mode            
+            return ''; // dev local mode
         };
 
         appCommon.prototype.listInstance = {
