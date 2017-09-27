@@ -2,7 +2,21 @@
   "solution": {
     "name": "spfx-search-document-client-side-solution",
     "id": "eb7656ce-d8ae-4f87-8d77-4dbb4a726177",
-    "version": "1.0.0.0"
+    "version": "1.0.0.0",
+    "features": [{
+      "title": "asset-deployment-webpart-client-side-solution",
+      "description": "asset-deployment-webpart-client-side-solution",
+      "id": "523fe887-ced5-4036-b564-8dad5c6c6e24",
+      "version": "1.0.0.0",
+      "assets": {
+        "elementManifests": [
+          "elements.xml"
+        ],
+        "elementFiles":[
+          "schema.xml"
+        ]
+      }
+    }]
   },
   "paths": {
     "zippedPackage": "solution/spfx-search-document.sppkg"
