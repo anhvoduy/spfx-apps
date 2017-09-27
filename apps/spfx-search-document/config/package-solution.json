@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "name": "spfx-search-document-client-side-solution",
+    "id": "eb7656ce-d8ae-4f87-8d77-4dbb4a726177",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-search-document.sppkg"
+  }
+}
