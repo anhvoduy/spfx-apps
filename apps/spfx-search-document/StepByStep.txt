@@ -1,0 +1,8 @@
+## step by step
+https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part
+
+yo @microsoft/sharepoint
+
+gulp trust-dev-cert
+
+gulp serve
