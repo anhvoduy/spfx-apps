@@ -10,10 +10,14 @@ yo @microsoft/sharepoint
 gulp trust-dev-cert
 
 gulp serve
-
+gulp serve --nobrowser
 
 ### package & deploy solution
 
 gulp bundle
 
 gulp package-solution
+
+gulp --ship
+
+gulp package-solution --ship
