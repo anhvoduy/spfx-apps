@@ -23,3 +23,10 @@ npm install -g @microsoft/generator-sharepoint
     gulp package-solution
     gulp --ship
     gulp package-solution --ship
+	
+### Notes:
+- check to delete files below before running gulp serve
+SpfxNgSearch.module.scss.ts
+SpfxNgTodo.module.scss.ts
+
+	
