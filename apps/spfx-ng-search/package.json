@@ -1,6 +1,6 @@
 {
   "name": "spfx-ng-search",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "private": true,
   "engines": {
     "node": ">=0.10.0"
@@ -16,10 +16,12 @@
     "@microsoft/sp-build-web": "~1.0.1",
     "@microsoft/sp-module-interfaces": "~1.0.0",
     "@microsoft/sp-webpart-workbench": "~1.0.0",
-    "@types/angular": "^1.6.18",
+    "@types/angular": "^1.6.32",
     "@types/chai": ">=3.4.34 <3.6.0",
     "@types/mocha": ">=2.2.33 <2.6.0",
-    "gulp": "~3.9.1"
+    "css-loader": "^0.28.7",
+    "gulp": "~3.9.1",
+    "style-loader": "^0.18.2"
   },
   "scripts": {
     "build": "gulp bundle",

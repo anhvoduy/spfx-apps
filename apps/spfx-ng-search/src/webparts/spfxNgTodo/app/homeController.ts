@@ -25,7 +25,7 @@ export default class HomeController {
 
     private init(hideFinishedTasks?: boolean): void {
         this.hideFinishedTasks = hideFinishedTasks;
-        this.loadTodos();        
+        this.loadTodos();
     }
 
     private loadTodos(): void {
@@ -104,7 +104,7 @@ export default class HomeController {
                         .then((todos: any[]): void => {
                             this.todoCollection = todos;
                         });
-                })
+                });
         }
     }
 }

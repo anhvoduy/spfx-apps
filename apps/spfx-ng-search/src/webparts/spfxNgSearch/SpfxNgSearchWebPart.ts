@@ -19,7 +19,7 @@ import {
 import { SPComponentLoader } from '@microsoft/sp-loader';
 import { SPHttpClient }  from '@microsoft/sp-http';
 import { escape } from '@microsoft/sp-lodash-subset';
-
+                      
 import styles from './SpfxNgSearch.module.scss';
 import * as strings from 'spfxNgSearchStrings';
 import { ISpfxNgSearchWebPartProps } from './ISpfxNgSearchWebPartProps';
