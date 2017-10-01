@@ -17,6 +17,8 @@
 
     <!-- Add your JavaScript to the following file -->
     <script type="text/javascript" src="../Scripts/App.js"></script>
+    <script type="text/javascript" src="https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/angular/angular.min.js"></script>
+    <script type="text/javascript" src="https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/app.js"></script>
 </asp:Content>
 
 <%-- The markup in the following Content element will be placed in the TitleArea of the page --%>
