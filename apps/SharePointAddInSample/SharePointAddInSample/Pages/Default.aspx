@@ -18,12 +18,15 @@
     <!-- Add your JavaScript to the following file -->
     <script type="text/javascript" src="../Scripts/App.js"></script>
     <script type="text/javascript" src="https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/angular/angular.min.js"></script>
+    
+    <!-- Development Mode -->
     <script type="text/javascript" src="https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/app.js"></script>
+    <!-- Production Mode -->    
 </asp:Content>
 
 <%-- The markup in the following Content element will be placed in the TitleArea of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server">
-    Page Title
+    Sample SharePoint AddIn
 </asp:Content>
 
 <%-- The markup and script in the following Content element will be placed in the <body> of the page --%>
@@ -36,4 +39,10 @@
         </p>
     </div>
 
+    <div id="appSample">
+        <div sample-search>
+            <!-- The following content will be replaced with the user name when you run the app - see App.js -->
+            initializing...
+        </div>
+    </div>
 </asp:Content>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="SharePoint Add-in Feature" Id="e76cbaad-1f3a-4265-b558-4bc2b536ff52" Scope="Web" Title="SharePointAddInSample Feature1" Version="1.0.0.1">
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Description="SharePoint Add-in Feature" Id="e76cbaad-1f3a-4265-b558-4bc2b536ff52" Scope="Web" Title="SharePointAddInSample Feature1" Version="1.0.0.6">
   <ElementManifests>
     <ElementManifest Location="Pages\Elements.xml" />
     <ElementFile Location="Pages\Default.aspx" />

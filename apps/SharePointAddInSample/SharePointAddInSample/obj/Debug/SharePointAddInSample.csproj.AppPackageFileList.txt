@@ -1,1 +1,1 @@
-C:\Users\duyanh\source\repos\SharePointAddInSample\SharePointAddInSample\bin\Debug\app.publish\1.0.0.1\SharePointAddInSample.app
+D:\Projects\sharepoint\spapp\apps\SharePointAddInSample\SharePointAddInSample\bin\Debug\app.publish\1.0.0.6\SharePointAddInSample.app

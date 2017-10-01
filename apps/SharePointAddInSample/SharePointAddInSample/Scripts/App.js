@@ -21,7 +21,7 @@ function initializePage()
     // This function is executed if the above call is successful
     // It replaces the contents of the 'message' element with the user name
     function onGetUserNameSuccess() {
-        $('#message').text('### SharePoint AddIn Sample: Hello World ---- ' + user.get_title());
+        $('#message').text('### SharePoint AddIn Sample: Hello World Sample: by ' + user.get_title());
     }
 
     // This function is executed if the above call fails
