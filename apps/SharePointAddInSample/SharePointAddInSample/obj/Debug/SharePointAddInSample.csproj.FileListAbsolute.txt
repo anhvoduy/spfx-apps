@@ -1,8 +1,0 @@
-C:\Users\duyanh\source\repos\SharePointAddInSample\SharePointAddInSample\bin\Debug\SharePointAddInSample.pdb
-C:\Users\duyanh\source\repos\SharePointAddInSample\SharePointAddInSample\obj\Debug\SharePointAddInSample.csproj.CoreCompileInputs.cache
-C:\Users\duyanh\source\repos\SharePointAddInSample\SharePointAddInSample\obj\Debug\SharePointAddInSample.dll
-C:\Users\duyanh\source\repos\SharePointAddInSample\SharePointAddInSample\obj\Debug\SharePointAddInSample.pdb
-D:\Projects\sharepoint\spapp\apps\SharePointAddInSample\SharePointAddInSample\bin\Debug\SharePointAddInSample.pdb
-D:\Projects\sharepoint\spapp\apps\SharePointAddInSample\SharePointAddInSample\obj\Debug\SharePointAddInSample.csproj.CoreCompileInputs.cache
-D:\Projects\sharepoint\spapp\apps\SharePointAddInSample\SharePointAddInSample\obj\Debug\SharePointAddInSample.dll
-D:\Projects\sharepoint\spapp\apps\SharePointAddInSample\SharePointAddInSample\obj\Debug\SharePointAddInSample.pdb
