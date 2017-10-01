@@ -12,8 +12,24 @@
             restrict: 'EA',
             replace: true,
             transclude: true,
-            controller: 'sampleSearchController',
-            template: '<div> sample search template </div>',
+            controller: 'sampleSearchController',			
+			template: function () {
+				var template = 
+				'<div id="#instantSearch" class="instantSearch">											' +
+				'	<div class="bar">        																' +
+				'		<input type="text" ng-model="searchString" placeholder="Enter your search terms" /> ' +
+				'	</div>																					' +
+				'	<ul>        																			' +
+				'		<li ng-repeat="i in items | searchFor:searchString">								' +
+				'			<a href="{{i.url}}">															' +
+				'				<img ng-src="{{i.image}}" />												' +
+				'			</a>																			' +
+				'			<p>{{i.DisplayName}}</p>														' +
+				'		</li>																				' +
+				'	</ul>            																		' +
+				'</div>																						';
+				return template;
+            },
             link: function (scope, element, attrs, ngCtrl) {
                 console.log('init directive sample-search.....');
             }
