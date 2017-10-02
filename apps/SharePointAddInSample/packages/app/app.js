@@ -3,7 +3,9 @@
 	angular.module('appSample',[])
 	.directive('sampleSearch', sampleSearch)
 	.controller('sampleSearchController', sampleSearchController)
+	.factory('searchService', searchService)
 	.filter('searchFor', searchFor);
+
 	
 	// directives    
     sampleSearch.$inject = [];
@@ -15,19 +17,21 @@
             controller: 'sampleSearchController',			
 			template: function () {
 				var template = 
-				'<div id="#instantSearch" class="instantSearch">											' +
-				'	<div class="bar">        																' +
-				'		<input type="text" ng-model="searchString" placeholder="Enter your search terms" /> ' +
-				'	</div>																					' +
-				'	<ul>        																			' +
-				'		<li ng-repeat="i in items | searchFor:searchString">								' +
-				'			<a href="{{i.url}}">															' +
-				'				<img ng-src="{{i.image}}" />												' +
-				'			</a>																			' +
-				'			<p>{{i.title}}</p>																' +
-				'		</li>																				' +
-				'	</ul>            																		' +
-				'</div>																						';
+				'<form id="formInstantSearch">																											   '+
+				'	<div id="#instantSearch" class="instantSearch">																				 	       '+
+				'		<div class="bar">        																									 	   '+				
+				'			<input type="text" ng-model="searchString" ng-change="changeSearch(searchString)" placeholder="Enter your search terms" ng-keyup="$event.keyCode == 13 && submitSearch(searchString)"/>'+
+				'		</div>																														 	   '+
+				'		<ul>        																												 	   '+
+				'			<li ng-repeat="i in items | searchFor:searchString">																	 	   '+
+				'				<a href="{{i.url}}">																								 	   '+
+				'					<img ng-src="{{i.image}}" />																					 	   '+
+				'				</a>																												 	   '+
+				'				<p>{{i.title}}</p>																									 	   '+
+				'			</li>																													 	   '+
+				'		</ul>            																											 	   '+
+				'	</div>																															 	   '+
+				'</form>																															 	   ';
 				return template;
             },
             link: function (scope, element, attrs, ngCtrl) {
@@ -36,11 +40,12 @@
         };
     };
 
+
     // controllers
     sampleSearchController.$inject = ['$scope'];
     function sampleSearchController($scope){
 		// models
-		$scope.searchString = '';		
+		$scope.searchString = '';
 		$scope.items = [
 			{
 				url: 'https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/img/logo.png',
@@ -81,15 +86,31 @@
 		
 		// functions
         var activate = function(){
-			console.log('--- activate: controller ---');			
-		}		
+			console.log('- activate():');
+		}
+		
+		$scope.changeSearch = function(keyword){
+			console.log('- changeSearch():', keyword);
+		}
+
+		$scope.submitSearch = function(keyword){
+			console.log('- submitSearch():', keyword);
+		}
 		
 		// start
         activate();
-	}
+	};
+
+
+	// services
+	searchService.$inject = ['$http', '$q'];
+	function searchService($http, $q){
+
+	};
 	
+
 	// instance search filter
-	function searchFor(){		
+	function searchFor(){
 		return function(arr, searchString){
 			if(!searchString) return arr;
 
@@ -111,3 +132,15 @@
       angular.bootstrap(appSample, ['appSample']);
     });
 })();
+
+
+/*
+(function(){
+	$(document).ready(function() {
+		$("#aspnetForm").submit(function(e){
+			e.preventDefault();
+			return false;
+		});
+	});	
+})();
+*/
