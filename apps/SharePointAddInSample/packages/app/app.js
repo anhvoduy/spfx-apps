@@ -16,11 +16,11 @@
             transclude: true,
             controller: 'sampleSearchController',			
 			template: function () {
-				var template = 
-				'<form id="formInstantSearch">																											   '+
+				var template = 				
 				'	<div id="#instantSearch" class="instantSearch">																				 	       '+
 				'		<div class="bar">        																									 	   '+				
-				'			<input type="text" ng-model="searchString" ng-change="changeSearch(searchString)" placeholder="Enter your search terms" ng-keyup="$event.keyCode == 13 && submitSearch(searchString)"/>'+
+				'			<input type="text" ng-model="searchString" ng-change="changeSearch(searchString)"                                              '+
+				'                  placeholder="Enter your search terms" ng-keyup="$event.keyCode == 13 && submitSearch(searchString)"/>                   '+
 				'		</div>																														 	   '+
 				'		<ul>        																												 	   '+
 				'			<li ng-repeat="i in items | searchFor:searchString">																	 	   '+
@@ -30,8 +30,7 @@
 				'				<p>{{i.title}}</p>																									 	   '+
 				'			</li>																													 	   '+
 				'		</ul>            																											 	   '+
-				'	</div>																															 	   '+
-				'</form>																															 	   ';
+				'	</div>																															 	   ';				
 				return template;
             },
             link: function (scope, element, attrs, ngCtrl) {
@@ -42,9 +41,10 @@
 
 
     // controllers
-    sampleSearchController.$inject = ['$scope'];
-    function sampleSearchController($scope){
+    sampleSearchController.$inject = ['$scope', '$q', 'searchService'];
+    function sampleSearchController($scope, $q, searchService){
 		// models
+		var siteUrl = _spPageContextInfo.siteAbsoluteUrl;		
 		$scope.searchString = '';
 		$scope.items = [
 			{
@@ -90,12 +90,19 @@
 		}
 		
 		$scope.changeSearch = function(keyword){
-			console.log('- changeSearch():', keyword);
+			//console.log('- changeSearch():', keyword);
 		}
 
 		$scope.submitSearch = function(keyword){
 			console.log('- submitSearch():', keyword);
-		}
+						
+			searchService.getData(siteUrl, keyword).then(function(result){
+				if(result)
+					console.log(result.d.query.PrimaryQueryResult);
+			}, function(error){
+				console.log(error);
+			})
+		};
 		
 		// start
         activate();
@@ -105,7 +112,31 @@
 	// services
 	searchService.$inject = ['$http', '$q'];
 	function searchService($http, $q){
+		// constructor
+		var searchService = function () {
+		}
+		
+		// methods
+        searchService.prototype.getData = function (siteUrl, keyword) {
+            var url = String.format("{0}/_api/search/query?querytext='{1}'", siteUrl, keyword);
 
+            var q = $q.defer();
+            $http({
+                url: url,
+                method: 'GET',
+                headers: {
+                    "Content-Type": "application/json;odata=verbose",
+                    "Accept": "application/json;odata=verbose"
+                }
+            }).success(function (result) {
+                q.resolve(result);
+            }).error(function (error, status) {
+                q.reject(error);
+            });
+            return q.promise;
+        }
+		
+		return new searchService;
 	};
 	
 
@@ -134,7 +165,7 @@
 })();
 
 
-/*
+// prevent default form submit
 (function(){
 	$(document).ready(function() {
 		$("#aspnetForm").submit(function(e){
@@ -143,4 +174,3 @@
 		});
 	});	
 })();
-*/
