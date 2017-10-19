@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="b53f5781-759a-4af3-8278-a272ca49c6e4" 
+        solutionId="b53f5781-759a-4af3-8278-a272ca49c6e4" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="SharePointAddInCalendar"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="79ab36c1-5688-4477-99f6-9d02c35d3dcd" />
+  </features>
+</package>
