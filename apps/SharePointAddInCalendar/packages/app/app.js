@@ -1,6 +1,6 @@
 (function(){
 	'use strict';
-	angular.module('appSample',[])
+	angular.module('appCalendar',[])
 	.directive('mainCalendar', mainCalendar)
 	.controller('mainCalendarController', mainCalendarController)
 	.factory('searchService', searchService)

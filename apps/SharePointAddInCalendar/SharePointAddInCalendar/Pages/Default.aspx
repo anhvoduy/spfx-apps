@@ -22,7 +22,7 @@
     <%--<script type="text/javascript" src="../Scripts/App.js"></script>--%>
 
     <!-- Development Mode -->
-    <script type="text/javascript" src="https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/app.js"></script>
+    <script type="text/javascript" src="https://development365.sharepoint.com/Style%20Library/SharePointAddInCalendar/app.js"></script>
 </asp:Content>
 
 <%-- The markup in the following Content element will be placed in the TitleArea of the page --%>
