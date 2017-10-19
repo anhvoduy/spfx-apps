@@ -3,7 +3,7 @@
 <App xmlns="http://schemas.microsoft.com/sharepoint/2012/app/manifest"
      Name="SharePointAddInCalendar"
      ProductID="{7f22d06c-7f4c-4642-a4e7-4f1afa157bc7}"
-     Version="1.0.0.1"
+     Version="1.0.0.2"
      SharePointMinVersion="16.0.0.0"
 >
   <Properties>

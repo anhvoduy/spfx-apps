@@ -86,11 +86,11 @@
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
-    <None Include="Features\Feature1\Feature1.feature">
+    <None Include="Features\FeatureAddInCalendar\FeatureAddInCalendar.feature">
       <FeatureId>{79ab36c1-5688-4477-99f6-9d02c35d3dcd}</FeatureId>
     </None>
-    <None Include="Features\Feature1\Feature1.Template.xml">
-      <DependentUpon>Feature1.feature</DependentUpon>
+    <None Include="Features\FeatureAddInCalendar\FeatureAddInCalendar.Template.xml">
+      <DependentUpon>FeatureAddInCalendar.feature</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
