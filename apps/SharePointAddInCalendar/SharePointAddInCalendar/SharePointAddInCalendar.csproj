@@ -42,11 +42,23 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="Develop\app.js" />
+    <Content Include="Develop\Elements.xml" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Content\fullcalendar.css" />
+    <Content Include="Scripts\fullcalendar.js" />
+    <Content Include="Content\fullcalendar.min.css" />
+    <Content Include="Scripts\fullcalendar.min.js" />
+    <Content Include="Content\fullcalendar.print.css" />
+    <Content Include="Content\fullcalendar.print.min.css" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <None Include="Develop\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{bedaca81-0681-4d5b-8acb-6fe0946d6fcb}</SharePointProjectItemId>
+    </None>
     <None Include="packages.config" />
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{7f22d06c-7f4c-4642-a4e7-4f1afa157bc7}</SharePointProjectItemId>

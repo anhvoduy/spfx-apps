@@ -2,5 +2,9 @@
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="Content">
     <File Path="Content\App.css" Url="Content/App.css" ReplaceContent="TRUE" />
+    <File Path="Content\fullcalendar.css" Url="Content/fullcalendar.css" ReplaceContent="TRUE" />
+    <File Path="Content\fullcalendar.min.css" Url="Content/fullcalendar.min.css" ReplaceContent="TRUE" />
+    <File Path="Content\fullcalendar.print.min.css" Url="Content/fullcalendar.print.min.css" ReplaceContent="TRUE" />
+    <File Path="Content\fullcalendar.print.css" Url="Content/fullcalendar.print.css" ReplaceContent="TRUE" />
   </Module>
 </Elements>

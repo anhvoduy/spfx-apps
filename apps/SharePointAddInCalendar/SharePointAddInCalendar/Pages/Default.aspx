@@ -10,12 +10,16 @@
 <asp:Content ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
     <!-- Add your JS library to the following file -->
     <script type="text/javascript" src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/moment.min.js"></script>
+    <script type="text/javascript" src="../Scripts/fullcalendar.min.js"></script>
     <script type="text/javascript" src="../Scripts/angular.min.js"></script>
 
     <SharePoint:ScriptLink name="sp.js" runat="server" OnDemand="true" LoadAfterUI="true" Localizable="false" />
     <meta name="WebPartPageExpansion" content="full" />
 
     <!-- Add your CSS styles to the following file -->
+    <link rel="Stylesheet" type="text/css" href="../Content/fullcalendar.min.css" />
+    <link rel="Stylesheet" type="text/css" href="../Content/fullcalendar.print.min.css" media='print'/>
     <link rel="Stylesheet" type="text/css" href="../Content/App.css" />
 
     <!-- Production Mode -->
@@ -38,4 +42,5 @@
             initializing...
         </div>
     </div>
+    <div id='calendar'></div>
 </asp:Content>

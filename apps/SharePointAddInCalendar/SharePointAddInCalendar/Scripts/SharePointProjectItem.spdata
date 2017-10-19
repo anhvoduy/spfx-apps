@@ -10,5 +10,8 @@
     <ProjectItemFile Source="angular.min.js.map" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="angular.js" Target="Scripts\" Type="ElementFile" />
     <ProjectItemFile Source="angular.min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="fullcalendar.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="fullcalendar.min.js" Target="Scripts\" Type="ElementFile" />
+    <ProjectItemFile Source="moment.min.js" Target="Scripts\" Type="ElementFile" />
   </Files>
 </ProjectItem>
