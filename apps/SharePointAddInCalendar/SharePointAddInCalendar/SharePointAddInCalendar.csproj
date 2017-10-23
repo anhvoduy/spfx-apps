@@ -42,11 +42,12 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Develop\app.js" />
-    <Content Include="Develop\directives\calendarDirective.js" />
+    <Content Include="Develop\app.js" />	
+    <Content Include="Develop\controllers\calendarController.js" />
+	<Content Include="Develop\directives\calendarDirective.js" />
+	<Content Include="Develop\services\calendarService.js" />
     <Content Include="Develop\Elements.xml" />
-    <Content Include="Content\fullcalendar.css" />
-    <Content Include="Develop\services\calendarService.js" />
+    <Content Include="Content\fullcalendar.css" />    
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\fullcalendar.js" />
@@ -112,10 +113,7 @@
       <SubType>Designer</SubType>
     </AppManifestFile>
   </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <Content Include="Develop\controllers\calendarController.js" />
-  </ItemGroup>
+  <ItemGroup />  
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
