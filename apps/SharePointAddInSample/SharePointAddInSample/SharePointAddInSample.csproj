@@ -42,11 +42,18 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="Develop\app.js" />
+    <Content Include="Develop\Elements.xml" />
+    <Content Include="Develop\img\logo.png" />
+    <Content Include="Images\logo.png" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <None Include="Develop\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d010d33c-e292-41f6-9618-8d55512bea78}</SharePointProjectItemId>
+    </None>
     <None Include="packages.config" />
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{d29faac6-d304-49f8-b3a9-7dfb83b23a1b}</SharePointProjectItemId>
@@ -86,11 +93,11 @@
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
     </None>
-    <None Include="Features\Feature1\Feature1.feature">
+    <None Include="Features\SharePointAddInSample\SharePointAddInSample.feature">
       <FeatureId>{e76cbaad-1f3a-4265-b558-4bc2b536ff52}</FeatureId>
     </None>
-    <None Include="Features\Feature1\Feature1.Template.xml">
-      <DependentUpon>Feature1.feature</DependentUpon>
+    <None Include="Features\SharePointAddInSample\SharePointAddInSample.Template.xml">
+      <DependentUpon>SharePointAddInSample.feature</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

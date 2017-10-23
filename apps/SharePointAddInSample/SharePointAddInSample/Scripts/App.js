@@ -1,4 +1,5 @@
-﻿'use strict';
+﻿/*
+'use strict';
 
 ExecuteOrDelayUntilScriptLoaded(initializePage, "sp.js");
 
@@ -29,3 +30,5 @@ function initializePage()
         alert('Failed to get user name. Error:' + args.get_message());
     }
 }
+*/
+
