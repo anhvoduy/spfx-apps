@@ -39,7 +39,5 @@
 
 <%-- The markup and script in the following Content element will be placed in the <body> of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">    
-    <div id='calendar'>
-        <ng-calendar />
-    </div>
+    <div id='calendar'></div>
 </asp:Content>

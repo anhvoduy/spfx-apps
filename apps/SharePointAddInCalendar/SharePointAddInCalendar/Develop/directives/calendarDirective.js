@@ -93,9 +93,9 @@
             replace: true,
             transclude: true,
             controller: 'calendarController',
-            link: function (scope, element, attrs, ngCtrl) {
-                console.log('init directive .....');
-                element('#calendar').fullCalendar(calendar);
+            link: function (scope, element, attrs, ngCtrl) {                
+                // render calendar
+                $('#calendar').fullCalendar(calendar);
             }
         }
     }    
