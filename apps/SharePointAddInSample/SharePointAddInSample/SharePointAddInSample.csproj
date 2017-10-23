@@ -42,11 +42,16 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="Develop\app.js" />
+    <Content Include="Develop\Elements.xml" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <None Include="Develop\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d010d33c-e292-41f6-9618-8d55512bea78}</SharePointProjectItemId>
+    </None>
     <None Include="packages.config" />
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{d29faac6-d304-49f8-b3a9-7dfb83b23a1b}</SharePointProjectItemId>

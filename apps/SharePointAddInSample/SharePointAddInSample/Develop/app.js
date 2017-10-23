@@ -47,40 +47,40 @@
 		var siteUrl = _spPageContextInfo.siteAbsoluteUrl;		
 		$scope.searchString = '';
 		$scope.items = [
-			{
-				url: 'https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/img/logo.png',
+            {
+				url: '../Images/logo.png',
 				title: '50 Must-have plugins for extending Twitter Bootstrap',				
-				image: 'https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/img/logo.png'
+				image: '../Images/logo.png'
 			},
 			{
-				url: 'https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/img/logo.png',
+				url: '../Images/logo.png',
 				title: 'Making a Super Simple Registration System With PHP and MySQL',
-				image: 'https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/img/logo.png'
+				image: '../Images/logo.png'
 			},
 			{
-				url: 'https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/img/logo.png',
+				url: '../Images/logo.png',
 				title: 'Create a slide-out footer with this neat z-index trick',
-				image: 'https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/img/logo.png'
+				image: '../Images/logo.png'
 			},
 			{
-				url: 'https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/img/logo.png',
+				url: '../Images/logo.png',
 				title: 'How to Make a Digital Clock with jQuery and CSS3',
-				image: 'https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/img/logo.png'
+				image: '../Images/logo.png'
 			},
 			{
-				url: 'https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/img/logo.png',
+				url: '../Images/logo.png',
 				title: 'Smooth Diagonal Fade Gallery with CSS3 Transitions',
-				image: 'https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/img/logo.png'
+				image: '../Images/logo.png'
 			},
 			{
-				url: 'https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/img/logo.png',
+				url: '../Images/logo.png',
 				title: 'Mini AJAX File Upload Form',
-				image: 'https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/img/logo.png'
+				image: '../Images/logo.png'
 			},
 			{
-				url: 'https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/img/logo.png',
+				url: '../Images/logo.png',
 				title: 'Your First Backbone.js App – Service Chooser',
-				image: 'https://development365.sharepoint.com/Style%20Library/SharePointAddInSample/img/logo.png'
+				image: '../Images/logo.png'
 			}
 		];
 		
@@ -167,10 +167,19 @@
 
 // prevent default form submit
 (function(){
-	$(document).ready(function() {
-		$("#aspnetForm").submit(function(e){
-			e.preventDefault();
-			return false;
-		});
-	});	
+	//$(document).ready(function() {
+	//	$("#aspnetForm").submit(function(e){
+	//		e.preventDefault();
+	//		return false;
+	//	});
+	//});
+
+    angular.element(document).ready(function () {
+        document.getElementById('#aspnetForm').submit(function (e) {
+            e.preventDefault();
+            return false;
+        });
+    });
 })();
+
+
