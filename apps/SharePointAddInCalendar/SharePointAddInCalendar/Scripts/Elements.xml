@@ -9,5 +9,8 @@
     <File Path="Scripts\fullcalendar.js" Url="Scripts/fullcalendar.js" ReplaceContent="TRUE" />
     <File Path="Scripts\fullcalendar.min.js" Url="Scripts/fullcalendar.min.js" ReplaceContent="TRUE" />
     <File Path="Scripts\moment.min.js" Url="Scripts/moment.min.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular.min.js.map" Url="Scripts/angular.min.js.map" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular.js" Url="Scripts/angular.js" ReplaceContent="TRUE" />
+    <File Path="Scripts\angular.min.js" Url="Scripts/angular.min.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

@@ -10,6 +10,7 @@
 <asp:Content ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
     <!-- Add your JS library to the following file -->
     <script type="text/javascript" src="../Scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../Scripts/angular.min.js"></script>
     <script type="text/javascript" src="../Scripts/moment.min.js"></script>
     <script type="text/javascript" src="../Scripts/fullcalendar.min.js"></script>    
 
@@ -22,10 +23,13 @@
     <link rel="Stylesheet" type="text/css" href="../Content/App.css" />
 
     <!-- Production Mode -->
-    <script type="text/javascript" src="../Scripts/App.js"></script>
+    <%--<script type="text/javascript" src="../Scripts/App.js"></script>--%>
 
     <!-- Development Mode -->
-    <%--<script type="text/javascript" src="~/Style%20Library/SharePointAddInCalendar/app.js"></script>--%>
+    <script type="text/javascript" src="https://development365.sharepoint.com/Style%20Library/SharePointAddInCalendar/app.js"></script>
+    <script type="text/javascript" src="https://development365.sharepoint.com/Style%20Library/SharePointAddInCalendar/controllers/calendarController.js"></script>
+    <script type="text/javascript" src="https://development365.sharepoint.com/Style%20Library/SharePointAddInCalendar/directives/calendarDirective.js"></script>
+    <script type="text/javascript" src="https://development365.sharepoint.com/Style%20Library/SharePointAddInCalendar/services/calendarService.js"></script>
 </asp:Content>
 
 <%-- The markup in the following Content element will be placed in the TitleArea of the page --%>
@@ -35,5 +39,7 @@
 
 <%-- The markup and script in the following Content element will be placed in the <body> of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">    
-    <div id='calendar'></div>
+    <div id='calendar'>
+        <ng-calendar />
+    </div>
 </asp:Content>
