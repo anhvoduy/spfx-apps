@@ -174,12 +174,10 @@
 	//	});
 	//});
 
-    angular.element(document).ready(function () {
-        document.getElementById('#aspnetForm').submit(function (e) {
-            e.preventDefault();
-            return false;
-        });
-    });
+    angular.element('#aspnetForm').submit(function (e) {
+        e.preventDefault();
+        return false;
+    });    
 })();
 
 
