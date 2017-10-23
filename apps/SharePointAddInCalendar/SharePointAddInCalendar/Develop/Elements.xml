@@ -2,6 +2,7 @@
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="Develop">
     <File Path="Develop\app.js" Url="Develop/app.js" ReplaceContent="TRUE" />
+	<File Path="Develop\controllers\calendarController.js" Url="Develop/controllers/calendarController.js" ReplaceContent="TRUE" />
     <File Path="Develop\services\calendarService.js" Url="Develop/services/calendarService.js" ReplaceContent="TRUE" />
     <File Path="Develop\directives\calendarDirective.js" Url="Develop/directives/calendarDirective.js" ReplaceContent="TRUE" />
   </Module>
