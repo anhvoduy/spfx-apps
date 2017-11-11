@@ -85,7 +85,7 @@ if (!$ctx.ServerObjectIsNull.Value) {
     $ctx.Load($subWebs)
     $ctx.ExecuteQuery()
     foreach ($subWeb in $subWebs){
-        Write-Host "============ SubWeb:" $subWeb.Title -ForegroundColor Green
+        Write-Host "============ SubWeb:" $subWeb.Title "============" -ForegroundColor Green
 
         # load list in sub web
         Update-List -web $subWeb
