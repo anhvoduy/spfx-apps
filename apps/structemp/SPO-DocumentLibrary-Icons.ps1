@@ -12,7 +12,7 @@ $AdminUsername = "IT.Admin@structemp.co.uk"
 
 Write-Host "Please enter password for $($SiteUrl):"
 $AdminPassword = Read-Host -AsSecureString
-#$AdminPassword = "sonyv@io2020"
+#$AdminPassword = ""
 
 # Default Language is English
 $lcid = "1033"
