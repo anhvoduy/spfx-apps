@@ -42,12 +42,12 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Develop\app.js" />	
+    <Content Include="Develop\app.js" />
     <Content Include="Develop\controllers\calendarController.js" />
-	<Content Include="Develop\directives\calendarDirective.js" />
-	<Content Include="Develop\services\calendarService.js" />
+    <Content Include="Develop\directives\calendarDirective.js" />
+    <Content Include="Develop\services\calendarService.js" />
     <Content Include="Develop\Elements.xml" />
-    <Content Include="Content\fullcalendar.css" />    
+    <Content Include="Content\fullcalendar.css" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\fullcalendar.js" />
@@ -62,7 +62,9 @@
     <None Include="Develop\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{bedaca81-0681-4d5b-8acb-6fe0946d6fcb}</SharePointProjectItemId>
     </None>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{7f22d06c-7f4c-4642-a4e7-4f1afa157bc7}</SharePointProjectItemId>
     </None>
@@ -113,7 +115,7 @@
       <SubType>Designer</SubType>
     </AppManifestFile>
   </ItemGroup>
-  <ItemGroup />  
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
