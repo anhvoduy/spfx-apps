@@ -1,0 +1,14 @@
+<sites>
+	<site Url="https://structemp.sharepoint.com/sites/Projects/" >
+		<globalnav>
+			<nav Title="Menu1" Url="https://www.google.com"/>
+			<nav Title="Menu2" Url="https://www.Bing.com"/>
+			<nav Title="Menu3" Url="https://www.Yahoo.com"/>      
+		</globalnav>
+		<currentnav>
+			<nav Title="Menu Left" Url="https://www.google.com"/>
+			<nav Title="Menu Left" Url="https://www.Bing.com"/>
+			<nav Title="Menu3" Url="https://www.Yahoo.com"/>
+		</currentnav>
+    </site>    
+  </sites>
