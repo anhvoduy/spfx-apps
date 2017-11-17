@@ -11,7 +11,7 @@
                 center: 'title',
                 right: 'month,agendaWeek,agendaDay'
             },
-            defaultDate: '2017-10-12',
+            defaultDate: moment(Date.now()).format('DD-MM-YYYY'),
             navLinks: true, // can click day/week names to navigate views
             selectable: true,
             selectHelper: true,
