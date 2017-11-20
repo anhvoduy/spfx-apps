@@ -41,7 +41,7 @@
 	<site Url="https://structemp.sharepoint.com/sites/Projects/spo-develop/" >		
 		<currentnav>
 			<nav Title="HomePage" Url="/sites/Projects/spo-develop/" />
-			<nav Title="Project Info" Url="/sites/Projects/spo-develop/Lists/Tasks/AllItems.aspx">
+			<nav Title="Project Info" Url="/sites/Projects/spo-develop/Lists/Tasks/gantt.aspx">
 				<link Title="All Tasks" Url="/sites/Projects/spo-develop/Lists/Tasks/AllItems.aspx"/>
 				<link Title="My Tasks" Url="/sites/Projects/spo-develop/Lists/Tasks/MyItems.aspx"/>
 				<link Title="Calendar" Url="/sites/Projects/spo-develop/Lists/Tasks/calendar.aspx"/>
