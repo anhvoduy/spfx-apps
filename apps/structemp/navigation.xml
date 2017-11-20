@@ -1,34 +1,59 @@
 <sites>
 	<site Url="https://structemp.sharepoint.com/sites/Projects/" >
 		<globalnav>
-			<nav Title="Search Engine" Url="https://www.google.com">
-				<link Title="Google" Url="https://www.google.com"/>
-				<link Title="Bing" Url="https://www.bing.com"/>
-				<link Title="Yahoo" Url="https://www.yahoo.com"/>
+			<nav Title="Projects" Url="https://structemp.sharepoint.com/sites/Projects/"/>
+			<nav Title="225 City Road" Url="https://structemp.sharepoint.com/sites/Projects/17P002/">
+				<link Title="Belmont" Url="https://structemp.sharepoint.com/sites/Projects/17P003/"/>
+				<link Title="BrightWork Project" Url="https://structemp.sharepoint.com/sites/Projects/17P100/"/>
+				<link Title="Cambridge Assessment" Url="https://structemp.sharepoint.com/sites/Projects/17P010/"/>
 			</nav>
-			<nav Title="24h" Url="https://www.24h.com.vn"/>
-			<nav Title="Microsoft" Url="https://www.microsoft.com"/>
+			<nav Title="Charlotte Street" Url="https://structemp.sharepoint.com/sites/Projects/17P009/">
+				<link Title="Hounslow Civic Centre" Url="https://structemp.sharepoint.com/sites/Projects/17P011/"/>
+				<link Title="Morley House" Url="https://structemp.sharepoint.com/sites/Projects/17P008/"/>
+				<link Title="MPS HAMMERSMITH" Url="https://structemp.sharepoint.com/sites/Projects/17P007/"/>
+			</nav>
+			<nav Title="Nile Street" Url="https://structemp.sharepoint.com/sites/Projects/17P006/">
+				<link Title="Swiss Cottage" Url="https://structemp.sharepoint.com/sites/Projects/17P001/"/>
+				<link Title="Wembley W03" Url="https://structemp.sharepoint.com/sites/Projects/17P004/"/>
+				<link Title="Wembley W06" Url="https://structemp.sharepoint.com/sites/Projects/17P005/"/>
+			</nav>
+			<nav Title="SPO Develop" Url="https://structemp.sharepoint.com/sites/Projects/spo-develop/">
+				<link Title="Structemp Project" Url="https://structemp.sharepoint.com/sites/Projects/17P00200/"/>
+			</nav>
 		</globalnav>
 		<currentnav>
-			<nav Title="Menu Google" Url="https://www.google.com"/>
-			<nav Title="Menu Bing" Url="https://www.Bing.com"/>
-			<nav Title="Menu Yahoo" Url="https://www.Yahoo.com"/>
+			<nav Title="HomePage" Url="/sites/Projects/" />
+			<nav Title="Project Info" Url="/sites/Projects/Lists/Tasks/AllItems.aspx">
+				<link Title="All Tasks" Url="/sites/Projects/Lists/Tasks/AllItems.aspx"/>
+				<link Title="My Tasks" Url="/sites/Projects/Lists/Tasks/MyItems.aspx"/>
+				<link Title="Calendar" Url="/sites/Projects/Lists/Tasks/calendar.aspx"/>
+				<link Title="Gantt Chart" Url="/sites/Projects/Lists/Tasks/gantt.aspx"/>				
+			</nav>
+			<nav Title="Project Documents" Url="/sites/Projects/WorkInProjectDocument/Forms/AllItems.aspx">
+				<link Title="01-Work In Project Documents" Url="/sites/Projects/WorkInProjectDocument/Forms/AllItems.aspx"/>
+				<link Title="02-Shared Documents" Url="/sites/Projects/PublishDocument/Forms/Publish%20Documents.aspx"/>
+			</nav>
+			<nav Title="Project Customers" />
+			<nav Title="Site Content" Url="/sites/Projects/_layouts/15/viewlsts.aspx"/>
+			<nav Title="Site Settings" Url="/sites/Projects/_layouts/15/settings.aspx"/>
 		</currentnav>
     </site>
-	<site Url="https://structemp.sharepoint.com/sites/Projects/spo-develop/" >
-		<globalnav>
-			<nav Title="Search Engine" Url="https://www.google.com">
-				<link Title="Google" Url="https://www.google.com"/>
-				<link Title="Bing" Url="https://www.bing.com"/>
-				<link Title="Yahoo" Url="https://www.yahoo.com"/>
-			</nav>
-			<nav Title="Bing" Url="https://www.Bing.com"/>
-			<nav Title="Yahoo" Url="https://www.Yahoo.com"/>      
-		</globalnav>
+	<site Url="https://structemp.sharepoint.com/sites/Projects/spo-develop/" >		
 		<currentnav>
-			<nav Title="Menu Google" Url="https://www.google.com"/>
-			<nav Title="Menu Bing" Url="https://www.Bing.com"/>
-			<nav Title="Menu Yahoo" Url="https://www.Yahoo.com"/>
+			<nav Title="HomePage" Url="/sites/Projects/spo-develop/" />
+			<nav Title="Project Info" Url="/sites/Projects/spo-develop/Lists/Tasks/AllItems.aspx">
+				<link Title="All Tasks" Url="/sites/Projects/spo-develop/Lists/Tasks/AllItems.aspx"/>
+				<link Title="My Tasks" Url="/sites/Projects/spo-develop/Lists/Tasks/MyItems.aspx"/>
+				<link Title="Calendar" Url="/sites/Projects/spo-develop/Lists/Tasks/calendar.aspx"/>
+				<link Title="Gantt Chart" Url="/sites/Projects/spo-develop/Lists/Tasks/gantt.aspx"/>				
+			</nav>
+			<nav Title="Project Documents" Url="/sites/Projects/spo-develop/WorkInProjectDocument/Forms/AllItems.aspx">
+				<link Title="01-Work In Project Documents" Url="/sites/Projects/spo-develop/WorkInProjectDocument/Forms/AllItems.aspx"/>
+				<link Title="02-Shared Documents" Url="/sites/Projects/spo-develop/PublishDocument/Forms/Publish%20Documents.aspx"/>
+			</nav>
+			<nav Title="Project Customers" />
+			<nav Title="Site Content" Url="/sites/Projects/spo-develop/_layouts/15/viewlsts.aspx"/>
+			<nav Title="Site Settings" Url="/sites/Projects/spo-develop/_layouts/15/settings.aspx"/>
 		</currentnav>
 	</site>
   </sites>
