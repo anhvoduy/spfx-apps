@@ -48,10 +48,10 @@ function FindNavigationNodeByTitle([Microsoft.SharePoint.Client.NavigationNodeCo
     }    
 }
 
-function AddNavigationSubNode([Microsoft.SharePoint.Client.NavigationNodeCollection]$parentNode,[string]$title,[string]$url){    
+function AddNavigationSubNode([Microsoft.SharePoint.Client.NavigationNode]$parentNode,[string]$title,[string]$url){    
     try
     {
-        Write-Host "- Start executing AddNavigationSubNode() with Title:" $_.ChildNodes[$i].Title -ForegroundColor Cyan;
+        Write-Host "- Start executing AddNavigationSubNode() with Title:" $title -ForegroundColor Cyan;
         Write-Host "- Title:" $title;
         Write-Host "- Link:" $url;
         $context = $parentNode.Context;
@@ -80,6 +80,7 @@ function AddNavigationNode([Microsoft.SharePoint.Client.NavigationNodeCollection
         $node.Url = $url;
         $node.AsLastNode = $false;
         $context.Load($topNavigationBar.Add($node));
+        $context.ExecuteQuery();
         Write-Host "- Executed AddNavigationNode() with Title:" $title " success" -ForegroundColor Green
     }
     catch{
@@ -137,8 +138,8 @@ function Update-Global-Navigation($web){
 
             # update TopNavigationBar.Item.SubItems from xml definition
             if($_.ChildNodes.Count -gt 0){
-                # select current parent node
-                $parentNode = FindNavigationNodeByTitle -nodeCollection $topNavigationBar -title $node.Title;
+                # select current parent node by title
+                $parentNode = FindNavigationNodeByTitle -nodeCollection $topNavigationBar -title $_.Title;
                 if($parentNode){
                     for ($i=0; $i -lt $_.ChildNodes.Count; $i++) {
                         AddNavigationSubNode -parentNode $parentNode -title $_.ChildNodes[$i].Title -url $_.ChildNodes[$i].Url;
