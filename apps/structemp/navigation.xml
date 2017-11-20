@@ -1,14 +1,34 @@
 <sites>
 	<site Url="https://structemp.sharepoint.com/sites/Projects/" >
 		<globalnav>
-			<nav Title="Menu1" Url="https://www.google.com"/>
-			<nav Title="Menu2" Url="https://www.Bing.com"/>
-			<nav Title="Menu3" Url="https://www.Yahoo.com"/>      
+			<nav Title="Search Engine" Url="https://www.google.com">
+				<link Title="Google" Url="https://www.google.com"/>
+				<link Title="Bing" Url="https://www.bing.com"/>
+				<link Title="Yahoo" Url="https://www.yahoo.com"/>
+			</nav>
+			<nav Title="24h" Url="https://www.24h.com.vn"/>
+			<nav Title="Microsoft" Url="https://www.microsoft.com"/>
 		</globalnav>
 		<currentnav>
-			<nav Title="Menu Left" Url="https://www.google.com"/>
-			<nav Title="Menu Left" Url="https://www.Bing.com"/>
-			<nav Title="Menu3" Url="https://www.Yahoo.com"/>
+			<nav Title="Menu Google" Url="https://www.google.com"/>
+			<nav Title="Menu Bing" Url="https://www.Bing.com"/>
+			<nav Title="Menu Yahoo" Url="https://www.Yahoo.com"/>
 		</currentnav>
-    </site>    
+    </site>
+	<site Url="https://structemp.sharepoint.com/sites/Projects/spo-develop/" >
+		<globalnav>
+			<nav Title="Search Engine" Url="https://www.google.com">
+				<link Title="Google" Url="https://www.google.com"/>
+				<link Title="Bing" Url="https://www.bing.com"/>
+				<link Title="Yahoo" Url="https://www.yahoo.com"/>
+			</nav>
+			<nav Title="Bing" Url="https://www.Bing.com"/>
+			<nav Title="Yahoo" Url="https://www.Yahoo.com"/>      
+		</globalnav>
+		<currentnav>
+			<nav Title="Menu Google" Url="https://www.google.com"/>
+			<nav Title="Menu Bing" Url="https://www.Bing.com"/>
+			<nav Title="Menu Yahoo" Url="https://www.Yahoo.com"/>
+		</currentnav>
+	</site>
   </sites>

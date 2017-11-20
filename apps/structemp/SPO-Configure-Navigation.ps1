@@ -33,59 +33,195 @@ function Get-SPOContext([string]$Url,[string]$UserName,$SecurePassword)
    return $context
 }
 
+function FindNavigationNodeByTitle([Microsoft.SharePoint.Client.NavigationNodeCollection] $nodeCollection, [String]$title){    
+    try
+    {
+        Write-Host "- Start querying FindNavigationNodeByTitle() by Title:" $title -ForegroundColor Cyan;
+        $context = $nodeCollection.Context;
+        $context.Load($nodeCollection);
+        $context.ExecuteQuery();
+        $node = $nodeCollection | Where-Object { $_.Title -eq $title };
+        return $node;
+    }
+    catch{
+        Write-Host "Error while select FindNavigationNodeByTitle():" $_.Exception.Message -ForegroundColor Red
+    }    
+}
+
+function AddNavigationSubNode([Microsoft.SharePoint.Client.NavigationNodeCollection]$parentNode,[string]$title,[string]$url){    
+    try
+    {
+        Write-Host "- Start executing AddNavigationSubNode() with Title:" $_.ChildNodes[$i].Title -ForegroundColor Cyan;
+        Write-Host "- Title:" $title;
+        Write-Host "- Link:" $url;
+        $context = $parentNode.Context;
+        $node = New-Object Microsoft.SharePoint.Client.NavigationNodeCreationInformation;
+        $node.Title = $title;
+        $node.Url = $url;
+        $node.AsLastNode = $true;
+        $context.Load($parentNode.Children.Add($node));
+        $context.ExecuteQuery();
+        Write-Host "- Executed AddNavigationSubNode() with Title:" $title " success" -ForegroundColor Green
+    }
+    catch{
+        Write-Host "Error while executing AddNavigationSubNode() with Title:" $_.Exception.Message -ForegroundColor Red
+    }
+}
+
+function AddNavigationNode([Microsoft.SharePoint.Client.NavigationNodeCollection]$topNavigationBar,[string]$title,[string]$url){    
+    try
+    {
+        Write-Host "- Start executing AddNavigationNode() with Title:" $title -ForegroundColor Cyan;
+        Write-Host "- Title:" $title;
+        Write-Host "- Link:" $url;
+        $context = $topNavigationBar.Context;
+        $node = New-Object Microsoft.SharePoint.Client.NavigationNodeCreationInformation;
+        $node.Title = $title;
+        $node.Url = $url;
+        $node.AsLastNode = $false;
+        $context.Load($topNavigationBar.Add($node));
+        Write-Host "- Executed AddNavigationNode() with Title:" $title " success" -ForegroundColor Green
+    }
+    catch{
+        Write-Host "Error while executing AddNavigationNode() with Title:" $_.Exception.Message -ForegroundColor Red
+    }
+}
+
+
 function Update-Global-Navigation($web){
-    Write-Host "- start to update GlobalNavigation at sub site:" $web.Url -ForegroundColor Cyan
+    Write-Host " 2.Start to update GlobalNavigation at sub site:" $web.Title -ForegroundColor Magenta
+
     $context = Get-SPOContext -Url $web.Url -UserName $AdminUsername -SecurePassword $AdminPassword
+    Write-Host "- authenticate to SharePoint Online success at Url:" $web.Url -ForegroundColor Green
+
     $topNavigationBar = $context.Web.Navigation.TopNavigationBar
     $context.Load($topNavigationBar)
-    $context.ExecuteQuery()
-    Write-Host "- loading TopNavigationBar success" -ForegroundColor Green
-    Write-Host "- total items:" $topNavigationBar.Count
-    Write-Host "- AreItemsAvailable:" $topNavigationBar.AreItemsAvailable
+    $context.ExecuteQuery()    
+    Write-Host "- loading TopNavigationBar success with TopNavigationBar.Count(s):" $topNavigationBar.Count    
 
-    # clean up old navigation
-    if($topNavigationBar.AreItemsAvailable -eq $true -and $topNavigationBar.Count -gt 0){
-        foreach ($nav in $topNavigationBar){
-            Write-Host "- clean up TopNavigationBar.Item:" $nav.Title
-            $nav.DeleteObject()            
+    # clean up old TopNavigationBar
+    if($topNavigationBar.AreItemsAvailable -eq $true -and $topNavigationBar.Count -gt 0){        
+        do
+        {                        
+            [Microsoft.SharePoint.Client.NavigationNode] $topNavigationItem = $topNavigationBar[0];
+            Write-Host "- clean up topNavigationItem.Title:" $topNavigationItem.Title;
+            $topNavigationItem.DeleteObject();            
+            $context.ExecuteQuery();
         }
-        $context.ExecuteQuery()
+        while($topNavigationBar.Count -gt 0);
         Write-Host "- clean up TopNavigationBar is success" -ForegroundColor Green
     }
 
+    # looking for TopNavigationBar from xml definition
+    Write-Host "- looking for TopNavigationBar from xml definition"
+    $isGlobalNavigation = $false;
+    $globalNavigation = {};
+    $xmlContent.sites.site | ForEach-Object {
+        # format url before comparison
+        if($_.Url.LastIndexOf('/')){
+            $_.Url = $_.Url.TrimEnd('/');
+        }
+
+        if($_.Url -eq $web.Url){
+            Write-Host '- Found xml definition for site collection:' $_.Url;
+            $isGlobalNavigation = $true;
+            $globalNavigation = $_.globalnav;
+        }
+    }
+
     # update TopNavigationBar from xml definition
-    Write-Host "- update TopNavigationBar from xml definition"
+    if($isGlobalNavigation -eq $true -and $globalNavigation.ChildNodes.Count -gt 0){
+        $globalNavigation.ChildNodes | ForEach-Object{
+            # update TopNavigationBar.Items from xml definition            
+            AddNavigationNode -topNavigationBar $topNavigationBar -title $_.Title -url $_.Url;
+
+            # update TopNavigationBar.Item.SubItems from xml definition
+            if($_.ChildNodes.Count -gt 0){
+                # select current parent node
+                $parentNode = FindNavigationNodeByTitle -nodeCollection $topNavigationBar -title $node.Title;
+                if($parentNode){
+                    for ($i=0; $i -lt $_.ChildNodes.Count; $i++) {
+                        AddNavigationSubNode -parentNode $parentNode -title $_.ChildNodes[$i].Title -url $_.ChildNodes[$i].Url;
+                    }
+                }
+            }
+        }
+    }
 }
 
 function Update-Current-Navigation($web){
-    Write-Host "- start to update CurrentNavigation at sub site:" $web.Url -ForegroundColor Cyan    
+    Write-Host " 3.Start to update CurrentNavigation at sub site:" $web.Title -ForegroundColor Magenta
+    
     $context = Get-SPOContext -Url $web.Url -UserName $AdminUsername -SecurePassword $AdminPassword
-    $quickLaunch = $context.Web.Navigation.QuickLaunch
-    $context.Load($quickLaunch)
-    $context.ExecuteQuery()
-    Write-Host "- loading QuickLaunch success" -ForegroundColor Green
-    Write-Host "- total items:" $quickLaunch.Count 
+    Write-Host "- authenticate to SharePoint Online success at Url:" $web.Url -ForegroundColor Green
 
-    # clean up old navigation
+    $quickLaunch = $context.Web.Navigation.QuickLaunch;
+    $context.Load($quickLaunch);
+    $context.ExecuteQuery();
+    Write-Host "- loading QuickLaunch success with QuickLaunch.Count(s):" $quickLaunch.Count
+    #Write-Host "- QuickLaunch.AreItemsAvailable:" $quickLaunch.AreItemsAvailable
+
+    # clean up old QuickLaunch
     if($quickLaunch.AreItemsAvailable -eq $true -and $quickLaunch.Count -gt 0){
-        foreach ($nav in $quickLaunch){
-            Write-Host "- clean up QuickLaunch.Item:" $nav.Title
-            $nav.DeleteObject()            
+        do
+        {
+            Write-Host "- clean up QuickLaunch.Item:" $quickLaunch[0].Title;
+            $quickLaunch[0].DeleteObject();            
+            $context.ExecuteQuery();
         }
-        $context.ExecuteQuery()
+        while($quickLaunch.Count -gt 0);
         Write-Host "- clean up QuickLaunch is success" -ForegroundColor Green
+    }    
+        
+    # looking for QuickLaunch from xml definition
+    Write-Host "- looking for QuickLaunch from xml definition"
+    $isLeftNavigation = $false;
+    $leftNavigation = {};
+    $xmlContent.sites.site | ForEach-Object {
+        # format url before comparison
+        if($_.Url.LastIndexOf('/')){
+            $_.Url = $_.Url.TrimEnd('/');
+        }
+
+        if($_.Url -eq $web.Url){
+            Write-Host '- Found xml definition for site collection:' $_.Url;
+            $isLeftNavigation = $true;
+            $leftNavigation = $_.currentnav;
+        }
     }
 
-    # update QuickLaunch from xml definition
-    Write-Host "- update QuickLaunch from xml definition"
+    # update for QuickLaunch from xml definition
+    if($isLeftNavigation -eq $true -and $leftNavigation.ChildNodes.Count -gt 0){
+        $leftNavigation.ChildNodes | ForEach-Object{
+            Write-Host "- Start updating QuickLaunch - Item.Title:" $_.Title
+            Write-Host "- Item.Title:" $_.Title;
+            Write-Host "- Item.SubHeading:" $_.SubHeading;
+            Write-Host "- Item.Link:" $_.Url;
+
+            $navigationNode = New-Object Microsoft.SharePoint.Client.NavigationNodeCreationInformation
+            $navigationNode.Title = $_.Title;
+		    $navigationNode.Url = $_.Url;
+		    $navigationNode.AsLastNode = $true;
+            $context.Load($quickLaunch.Add($navigationNode));
+
+            try
+            {
+                $context.ExecuteQuery();
+                Write-Host "- Update QuickLaunch - Item.Title:" $_.Title " success" -ForegroundColor Green
+            }
+            catch{
+                Write-Host "Error while updating QuickLaunch - Item.Title:" $_.Exception.Message -ForegroundColor Red
+            }
+        }        
+    }
 }
 
 # update navigationSettings
-function Update-Site-Navigation($web){
+function Update-Site-Navigation-Setting($web){
 
     # loading left navigation configuration
-    Write-Host "- loading CurrentNavigation & GlobalNavigation at sub site:" $web.Title
-    Write-Host "- site url:" $web.Url
+    Write-Host " 1.Loading navigation settings at sub site:" $web.Title -ForegroundColor Magenta
+    Write-Host "- url:" $web.Url
     $taxonomySession = [Microsoft.SharePoint.Client.Taxonomy.TaxonomySession]::GetTaxonomySession($ctx)
     $navigationSettings = New-Object Microsoft.SharePoint.Client.Publishing.Navigation.WebNavigationSettings $ctx, $web    
     try
@@ -108,7 +244,7 @@ function Update-Site-Navigation($web){
     }
     catch
     {
-        Write-Host "Error while setting both CurrentNavigation and GlobalNavigation settings:" $_.Exception.Message -foregroundcolor black -backgroundcolor Red
+        Write-Host "Error while setting both CurrentNavigation and GlobalNavigation settings:" $_.Exception.Message -ForegroundColor Red
     }
 
     # disable quick launch navigation including subsites and pages
@@ -117,20 +253,24 @@ function Update-Site-Navigation($web){
     $web.AllProperties["__IncludeSubSitesInNavigation"] = "False"
     $web.Update()
     $ctx.ExecuteQuery()
+    Write-Host "- update property: [__IncludeSubSitesInNavigation] completed"
 
     $web.AllProperties["__IncludePagesInNavigation"] = "False"
     $web.Update()
     $ctx.ExecuteQuery()
+    Write-Host "- update property: [__IncludePagesInNavigation] completed"
 
     # set dynamic child limit for CurrentNavigation
     $web.AllProperties["__CurrentDynamicChildLimit"] = 30
     $web.Update()
     $ctx.ExecuteQuery()
+    Write-Host "- update property: [__CurrentDynamicChildLimit] completed"
 
     # set dynamic child limit for GlobalNavigation
     $web.AllProperties["__GlobalDynamicChildLimit"] = 30
     $web.Update()
-    $ctx.ExecuteQuery()    
+    $ctx.ExecuteQuery()
+    Write-Host "- update property: [__GlobalDynamicChildLimit] completed"
 }
 
 
@@ -164,39 +304,39 @@ if (!$ctx.ServerObjectIsNull.Value) {
     }
 
     Write-Host "File Xml loaded success." -ForegroundColor Green
-    $xmlContent.sites.site | ForEach-Object {
-        Write-Host "- authenticate to SharePoint Online site collection" $xmlContent.sites.site.Url " and get ClientContext object"
-        $ctx1 = New-Object Microsoft.SharePoint.Client.ClientContext($_.Url)
-        $ctx1.Credentials = $credentials
-        $ctx1.RequestTimeOut = 5000 * 60 * 10;
-        $web1 = $ctx1.Web
-        $site1 = $ctx1.Site
-        $ctx1.Load($web1)
-        $ctx1.Load($site1)
-        try
-        {
-            $ctx1.ExecuteQuery()
-            Write-Host "authenticate to SharePoint Online site collection" $xmlContent.sites.site.Url "and get ClientContext object" -ForegroundColor Green
-        }
-        catch{
-            Write-Host "Not able to authenticate to SharePoint Online site collection" $xmlContent.sites.site.Url "$_.Exception.Message" -ForegroundColor Red
-        }
-        return;
-    }
+    #$xmlContent.sites.site | ForEach-Object {
+    #    Write-Host "- authenticate to SharePoint Online site collection" $xmlContent.sites.site.Url " and get ClientContext object"
+    #    $ctx1 = New-Object Microsoft.SharePoint.Client.ClientContext($_.Url)
+    #    $ctx1.Credentials = $credentials
+    #    $ctx1.RequestTimeOut = 5000 * 60 * 10;
+    #    $web1 = $ctx1.Web
+    #    $site1 = $ctx1.Site
+    #    $ctx1.Load($web1)
+    #    $ctx1.Load($site1)
+    #    try
+    #    {
+    #        $ctx1.ExecuteQuery()
+    #        Write-Host "authenticate to SharePoint Online site collection" $xmlContent.sites.site.Url "and get ClientContext object" -ForegroundColor Green
+    #    }
+    #    catch{
+    #        Write-Host "Not able to authenticate to SharePoint Online site collection" $xmlContent.sites.site.Url "$_.Exception.Message" -ForegroundColor Red
+    #    }
+    #    return;
+    #}
 
 
     # update CurrentNavigation & GlobalNavigation for Root Site
-    #Write-Host "======================== Web:" $web.Title "========================" -ForegroundColor Yellow
-    #Update-Site-Navigation -web $web
-    #Update-Global-Navigation -web $web
-    #Update-Current-Navigation -web $web
+    # Write-Host "======================== Web:" $web.Title "========================" -ForegroundColor Yellow
+    # Update-Site-Navigation -web $web
+    # Update-Global-Navigation -web $web
+    # Update-Current-Navigation -web $web
     
     
     # update CurrentNavigation & GlobalNavigation for Sub Sites        
     foreach ($subWeb in $subWebs){
-        Write-Host "======================== SubWeb:" $subWeb.Title "========================" -ForegroundColor Yellow        
-        #Update-Site-Navigation -web $subWeb
-        if($subWeb.Title -eq "Structemp Project"){
+        Write-Host "======================== SubWeb:" $subWeb.Title "========================" -ForegroundColor Yellow
+        if($subWeb.Title -eq "SPO-develop"){
+            Update-Site-Navigation-Setting -web $subWeb
             Update-Global-Navigation -web $subWeb
             Update-Current-Navigation -web $subWeb
         }
