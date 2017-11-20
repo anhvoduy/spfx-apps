@@ -98,7 +98,8 @@ function Update-Global-Navigation($web){
     $topNavigationBar = $context.Web.Navigation.TopNavigationBar
     $context.Load($topNavigationBar)
     $context.ExecuteQuery()    
-    Write-Host "- loading TopNavigationBar success with TopNavigationBar.Count(s):" $topNavigationBar.Count    
+    Write-Host "- loading TopNavigationBar success with TopNavigationBar.Count(s):" $topNavigationBar.Count
+    #Write-Host "- QuickLaunch.AreItemsAvailable:" $quickLaunch.AreItemsAvailable
 
     # clean up old TopNavigationBar
     if($topNavigationBar.AreItemsAvailable -eq $true -and $topNavigationBar.Count -gt 0){        
@@ -106,7 +107,7 @@ function Update-Global-Navigation($web){
         {                        
             [Microsoft.SharePoint.Client.NavigationNode] $topNavigationItem = $topNavigationBar[0];
             Write-Host "- clean up topNavigationItem.Title:" $topNavigationItem.Title;
-            $topNavigationItem.DeleteObject();            
+            $topNavigationItem.DeleteObject();
             $context.ExecuteQuery();
         }
         while($topNavigationBar.Count -gt 0);
@@ -167,8 +168,9 @@ function Update-Current-Navigation($web){
     if($quickLaunch.AreItemsAvailable -eq $true -and $quickLaunch.Count -gt 0){
         do
         {
-            Write-Host "- clean up QuickLaunch.Item:" $quickLaunch[0].Title;
-            $quickLaunch[0].DeleteObject();            
+            [Microsoft.SharePoint.Client.NavigationNode] $quickLaunchItem = $quickLaunch[0];
+            Write-Host "- clean up quickLaunchItem.Title:" $quickLaunchItem.Title;
+            $quickLaunchItem.DeleteObject();
             $context.ExecuteQuery();
         }
         while($quickLaunch.Count -gt 0);
@@ -304,41 +306,43 @@ if (!$ctx.ServerObjectIsNull.Value) {
     [xml]$xmlContent = (Get-Content $xmlFilePath)
     if(-not $xmlContent){
         Write-Host "File Xml was not loaded success." -ForegroundColor Red
-        return
+        return;
     }
 
     Write-Host "File Xml loaded success." -ForegroundColor Green
     $xmlContent.sites.site | ForEach-Object {
         Write-Host "- try to authenticate SharePoint Online site url:" $_.Url
         $clientContext = Get-SPOContext -Url $_.Url -UserName $AdminUsername -SecurePassword $AdminPassword
-        $clientWeb = $clientContext.Web
-        $clientSite = $clientContext.Site
-        $clientContext.Load($clientWeb)
-        $clientContext.Load($clientSite)        
-        try{
-            $clientContext.ExecuteQuery()
+        $clientWeb = $clientContext.Web;
+        $clientSite = $clientContext.Site;
+        $clientContext.Load($clientWeb);
+        $clientContext.Load($clientSite);
+        try
+        {
+            $clientContext.ExecuteQuery();
             Write-Host "- authenticate to SharePoint Online site url success:" $_.Url "and get ClientContext object" -ForegroundColor Green
         }
-        catch{
+        catch
+        {
             Write-Host "- Not able to authenticate to SharePoint Online site url:" $_.Url "$_.Exception.Message" -ForegroundColor Red
         }
     }
 
 
     # update CurrentNavigation & GlobalNavigation for Root Site
-    Write-Host "======================== RootWeb:" $web.Title "========================" -ForegroundColor Yellow
+    Write-Host "========== RootWeb:" $web.Title "==========" -ForegroundColor Yellow
+    Write-Host "========== Url:" $web.Url -ForegroundColor Yellow
     Update-Site-Navigation-Setting -web $web -isRootWeb $true
     Update-Global-Navigation -web $web
     Update-Current-Navigation -web $web
     
     
-    # update CurrentNavigation & GlobalNavigation for Sub Sites        
+    # update CurrentNavigation & GlobalNavigation for Sub Sites
     foreach ($subWeb in $subWebs){
-        Write-Host "======================== SubWeb:" $subWeb.Title "========================" -ForegroundColor Yellow
-        if($subWeb.Title -eq "SPO-develop"){
-            Update-Site-Navigation-Setting -web $subWeb -isRootWeb $false
-            Update-Global-Navigation -web $subWeb
-            Update-Current-Navigation -web $subWeb
-        }
+        Write-Host "========== SubWeb:" $subWeb.Title "==========" -ForegroundColor Yellow
+        Write-Host "========== Url:" $subWeb.Url -ForegroundColor Yellow
+        Update-Site-Navigation-Setting -web $subWeb -isRootWeb $false
+        Update-Global-Navigation -web $subWeb
+        Update-Current-Navigation -web $subWeb
     }
 }
