@@ -7,14 +7,15 @@
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SharePoint.Client.UserProfiles")
 [System.Reflection.Assembly]::LoadWithPartialName("Microsoft.SharePoint.Client.WorkflowServices")
 
+# Reference: https://www.sharepoint-journey.com/adding-links-to-global-navigation-in-Office-365-using-powershell-and-csom.html
+
 $SiteUrl = "https://structemp.sharepoint.com/sites/Projects/"
 $AdminUsername = "IT.Admin@structemp.co.uk"
 
 Write-Host "Please enter password for $($SiteUrl):"
-#$AdminPassword = Read-Host -AsSecureString
-$AdminPassword = "sonyv@io2020"
-$AdminPassword = ConvertTo-SecureString $AdminPassword -AsPlainText -Force
-#https://www.sharepoint-journey.com/adding-links-to-global-navigation-in-Office-365-using-powershell-and-csom.html
+$AdminPassword = Read-Host -AsSecureString
+#$AdminPassword = ""
+#$AdminPassword = ConvertTo-SecureString $AdminPassword -AsPlainText -Force
 
 # Default Language is English
 $lcid = "1033"
