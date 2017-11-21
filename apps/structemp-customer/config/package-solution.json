@@ -1,0 +1,11 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spfx-angular-search-client-side-solution",
+    "id": "2ed1b132-8ca5-4351-bba9-19e04574495c",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-angular-search.sppkg"
+  }
+}
