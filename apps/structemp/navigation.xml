@@ -1,7 +1,8 @@
 <sites>
 	<site Url="https://structemp.sharepoint.com/sites/Projects/" >
 		<globalnav>
-			<nav Title="Projects" Url="/sites/Projects/"/>			
+			<!-- TO DO: set default page for root site collection -->
+			<nav Title="Projects" Url="/sites/Projects/"/>
 			<nav Title="225 City Road" Url="/sites/Projects/17P002/">
 				<link Title="Belmont" Url="/sites/Projects/17P003/"/>				
 				<link Title="Cambridge Assessment" Url="/sites/Projects/17P010/"/>
