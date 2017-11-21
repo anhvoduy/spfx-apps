@@ -13,9 +13,9 @@ $SiteUrl = "https://structemp.sharepoint.com/sites/Projects/"
 $AdminUsername = "IT.Admin@structemp.co.uk"
 
 Write-Host "Please enter password for $($SiteUrl):"
-#$AdminPassword = Read-Host -AsSecureString
-$AdminPassword = "sonyv@io2020"
-$AdminPassword = ConvertTo-SecureString $AdminPassword -AsPlainText -Force
+$AdminPassword = Read-Host -AsSecureString
+#$AdminPassword = ""
+#$AdminPassword = ConvertTo-SecureString $AdminPassword -AsPlainText -Force
 
 # Default Language is English
 $lcid = "1033"
