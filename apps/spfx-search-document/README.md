@@ -1,6 +1,7 @@
 ## spfx-search-document
 
 This is where you include your WebPart documentation.
+This is SPFX webpart + react js
 
 ### Building the code
 
