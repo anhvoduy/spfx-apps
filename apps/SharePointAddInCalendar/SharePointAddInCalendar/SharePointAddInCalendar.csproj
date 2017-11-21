@@ -43,8 +43,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Develop\app.js" />
+    <Content Include="Develop\controllers\calendarController.js" />
+    <Content Include="Develop\directives\calendarDirective.js" />
+    <Content Include="Develop\services\calendarService.js" />
     <Content Include="Develop\Elements.xml" />
     <Content Include="Content\fullcalendar.css" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\angular.min.js" />
     <Content Include="Scripts\fullcalendar.js" />
     <Content Include="Content\fullcalendar.min.css" />
     <Content Include="Scripts\fullcalendar.min.js" />
@@ -57,7 +62,9 @@
     <None Include="Develop\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{bedaca81-0681-4d5b-8acb-6fe0946d6fcb}</SharePointProjectItemId>
     </None>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{7f22d06c-7f4c-4642-a4e7-4f1afa157bc7}</SharePointProjectItemId>
     </None>
@@ -65,6 +72,7 @@
     <Content Include="Pages\Default.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Scripts\angular.min.js.map" />
     <None Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Scripts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{0033dea9-8bb4-484b-b576-f7fb288cfedc}</SharePointProjectItemId>
@@ -107,6 +115,7 @@
       <SubType>Designer</SubType>
     </AppManifestFile>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
