@@ -1,0 +1,322 @@
+<sites>
+	<site Url="https://structemp.sharepoint.com/sites/Projects/" >
+		<globalnav>
+			<!-- TO DO: set default page for root site collection -->
+			<nav Title="Projects" Url="/sites/Projects/"/>
+			<nav Title="225 City Road" Url="/sites/Projects/17P002/">
+				<link Title="Belmont" Url="/sites/Projects/17P003/"/>				
+				<link Title="Cambridge Assessment" Url="/sites/Projects/17P010/"/>
+				<link Title="Structemp Project" Url="/sites/Projects/17P00200/"/>
+			</nav>
+			<nav Title="Charlotte Street" Url="/sites/Projects/17P009/">
+				<link Title="Hounslow Civic Centre" Url="/sites/Projects/17P011/"/>
+				<link Title="Morley House" Url="/sites/Projects/17P008/"/>
+				<link Title="MPS HAMMERSMITH" Url="/sites/Projects/17P007/"/>
+			</nav>
+			<nav Title="Nile Street" Url="/sites/Projects/17P006/">
+				<link Title="Swiss Cottage" Url="/sites/Projects/17P001/"/>
+				<link Title="Wembley W03" Url="/sites/Projects/17P004/"/>
+				<link Title="Wembley W06" Url="/sites/Projects/17P005/"/>
+			</nav>
+			<nav Title="SPO Develop" Url="/sites/Projects/spo-develop/">
+				<link Title="BrightWork Project" Url="/sites/Projects/17P100/"/>
+			</nav>
+		</globalnav>
+		<currentnav>
+			<nav Title="Project HomePage" Url="/sites/Projects/" />
+			<nav Title="Project Customers" Url="/sites/Projects/SitePages/Customers.aspx"/>
+			<nav Title="Project Info" Url="/sites/Projects/Lists/Tasks/gantt.aspx">
+				<link Title="All Tasks" Url="/sites/Projects/Lists/Tasks/AllItems.aspx"/>
+				<link Title="My Tasks" Url="/sites/Projects/Lists/Tasks/MyItems.aspx"/>
+				<link Title="Calendar" Url="/sites/Projects/Lists/Tasks/calendar.aspx"/>
+				<link Title="Gantt Chart" Url="/sites/Projects/Lists/Tasks/gantt.aspx"/>				
+			</nav>
+			<nav Title="Project Documents" Url="/sites/Projects/WorkInProjectDocument/Forms/AllItems.aspx">
+				<link Title="01-Work In Project Documents" Url="/sites/Projects/WorkInProjectDocument/Forms/AllItems.aspx"/>
+				<link Title="02-Shared Documents" Url="/sites/Projects/PublishDocument/Forms/Publish%20Documents.aspx"/>
+			</nav>
+			<nav Title="Site Content" Url="/sites/Projects/_layouts/15/viewlsts.aspx"/>
+			<nav Title="Site Settings" Url="/sites/Projects/_layouts/15/settings.aspx"/>
+		</currentnav>
+    </site>
+	
+	<!-- Sub Site: spo-develop -->
+	<site Url="https://structemp.sharepoint.com/sites/Projects/spo-develop/" >		
+		<currentnav>
+			<nav Title="Project HomePage" Url="/sites/Projects/spo-develop/"/>			
+			<nav Title="Project Customers" Url="/sites/Projects/SitePages/Customers.aspx"/>
+			<nav Title="Project Info" Url="/sites/Projects/spo-develop/Lists/Tasks/gantt.aspx">
+				<link Title="All Tasks" Url="/sites/Projects/spo-develop/Lists/Tasks/AllItems.aspx"/>
+				<link Title="My Tasks" Url="/sites/Projects/spo-develop/Lists/Tasks/MyItems.aspx"/>
+				<link Title="Calendar" Url="/sites/Projects/spo-develop/Lists/Tasks/calendar.aspx"/>
+				<link Title="Gantt Chart" Url="/sites/Projects/spo-develop/Lists/Tasks/gantt.aspx"/>				
+			</nav>
+			<nav Title="Project Documents" Url="/sites/Projects/spo-develop/WorkInProjectDocument/Forms/AllItems.aspx">
+				<link Title="01-Work In Project Documents" Url="/sites/Projects/spo-develop/WorkInProjectDocument/Forms/AllItems.aspx"/>
+				<link Title="02-Shared Documents" Url="/sites/Projects/spo-develop/PublishDocument/Forms/Publish%20Documents.aspx"/>
+			</nav>
+			<nav Title="Site Content" Url="/sites/Projects/spo-develop/_layouts/15/viewlsts.aspx"/>
+			<nav Title="Site Settings" Url="/sites/Projects/spo-develop/_layouts/15/settings.aspx"/>
+		</currentnav>
+	</site>
+	
+	<!-- Sub Site: 17P001 -->
+	<site Url="https://structemp.sharepoint.com/sites/Projects/17P001/" >
+		<currentnav>
+			<nav Title="Project HomePage" Url="/sites/Projects/17P001/" />
+			<nav Title="Project Customers" Url="/sites/Projects/SitePages/Customers.aspx"/>
+			<nav Title="Project Info" Url="/sites/Projects/17P001/Lists/Tasks/gantt.aspx">
+				<link Title="All Tasks" Url="/sites/Projects/17P001/Lists/Tasks/AllItems.aspx"/>
+				<link Title="My Tasks" Url="/sites/Projects/17P001/Lists/Tasks/MyItems.aspx"/>
+				<link Title="Calendar" Url="/sites/Projects/17P001/Lists/Tasks/calendar.aspx"/>
+				<link Title="Gantt Chart" Url="/sites/Projects/17P001/Lists/Tasks/gantt.aspx"/>				
+			</nav>
+			<nav Title="Project Documents" Url="/sites/Projects/17P001/WorkInProjectDocument/Forms/AllItems.aspx">
+				<link Title="01-Work In Project Documents" Url="/sites/Projects/17P001/WorkInProjectDocument/Forms/AllItems.aspx"/>
+				<link Title="02-Shared Documents" Url="/sites/Projects/17P001/PublishDocument/Forms/Publish%20Documents.aspx"/>
+			</nav>
+			<nav Title="Site Content" Url="/sites/Projects/17P001/_layouts/15/viewlsts.aspx"/>
+			<nav Title="Site Settings" Url="/sites/Projects/17P001/_layouts/15/settings.aspx"/>
+		</currentnav>
+	</site>
+	
+	<!-- Sub Site: 17P002 -->
+	<site Url="https://structemp.sharepoint.com/sites/Projects/17P002/" >
+		<currentnav>
+			<nav Title="Project HomePage" Url="/sites/Projects/17P002/" />
+			<nav Title="Project Customers" Url="/sites/Projects/SitePages/Customers.aspx"/>
+			<nav Title="Project Info" Url="/sites/Projects/17P002/Lists/Tasks/gantt.aspx">
+				<link Title="All Tasks" Url="/sites/Projects/17P002/Lists/Tasks/AllItems.aspx"/>
+				<link Title="My Tasks" Url="/sites/Projects/17P002/Lists/Tasks/MyItems.aspx"/>
+				<link Title="Calendar" Url="/sites/Projects/17P002/Lists/Tasks/calendar.aspx"/>
+				<link Title="Gantt Chart" Url="/sites/Projects/17P002/Lists/Tasks/gantt.aspx"/>				
+			</nav>
+			<nav Title="Project Documents" Url="/sites/Projects/17P002/WorkInProjectDocument/Forms/AllItems.aspx">
+				<link Title="01-Work In Project Documents" Url="/sites/Projects/17P002/WorkInProjectDocument/Forms/AllItems.aspx"/>
+				<link Title="02-Shared Documents" Url="/sites/Projects/17P002/PublishDocument/Forms/Publish%20Documents.aspx"/>
+			</nav>
+			<nav Title="Site Content" Url="/sites/Projects/17P002/_layouts/15/viewlsts.aspx"/>
+			<nav Title="Site Settings" Url="/sites/Projects/17P002/_layouts/15/settings.aspx"/>
+		</currentnav>
+	</site>
+	
+	<!-- Sub Site: 17P003 -->
+	<site Url="https://structemp.sharepoint.com/sites/Projects/17P003/" >
+		<currentnav>
+			<nav Title="Project HomePage" Url="/sites/Projects/17P003/" />
+			<nav Title="Project Customers" Url="/sites/Projects/SitePages/Customers.aspx"/>
+			<nav Title="Project Info" Url="/sites/Projects/17P003/Lists/Tasks/gantt.aspx">
+				<link Title="All Tasks" Url="/sites/Projects/17P003/Lists/Tasks/AllItems.aspx"/>
+				<link Title="My Tasks" Url="/sites/Projects/17P003/Lists/Tasks/MyItems.aspx"/>
+				<link Title="Calendar" Url="/sites/Projects/17P003/Lists/Tasks/calendar.aspx"/>
+				<link Title="Gantt Chart" Url="/sites/Projects/17P003/Lists/Tasks/gantt.aspx"/>				
+			</nav>
+			<nav Title="Project Documents" Url="/sites/Projects/17P003/WorkInProjectDocument/Forms/AllItems.aspx">
+				<link Title="01-Work In Project Documents" Url="/sites/Projects/17P003/WorkInProjectDocument/Forms/AllItems.aspx"/>
+				<link Title="02-Shared Documents" Url="/sites/Projects/17P003/PublishDocument/Forms/Publish%20Documents.aspx"/>
+			</nav>			
+			<nav Title="Site Content" Url="/sites/Projects/17P003/_layouts/15/viewlsts.aspx"/>
+			<nav Title="Site Settings" Url="/sites/Projects/17P003/_layouts/15/settings.aspx"/>
+		</currentnav>
+	</site>
+	
+	<!-- Sub Site: 17P004 -->
+	<site Url="https://structemp.sharepoint.com/sites/Projects/17P004/" >
+		<currentnav>
+			<nav Title="Project HomePage" Url="/sites/Projects/17P004/" />
+			<nav Title="Project Customers" Url="/sites/Projects/SitePages/Customers.aspx"/>
+			<nav Title="Project Info" Url="/sites/Projects/17P004/Lists/Tasks/gantt.aspx">
+				<link Title="All Tasks" Url="/sites/Projects/17P004/Lists/Tasks/AllItems.aspx"/>
+				<link Title="My Tasks" Url="/sites/Projects/17P004/Lists/Tasks/MyItems.aspx"/>
+				<link Title="Calendar" Url="/sites/Projects/17P004/Lists/Tasks/calendar.aspx"/>
+				<link Title="Gantt Chart" Url="/sites/Projects/17P004/Lists/Tasks/gantt.aspx"/>				
+			</nav>
+			<nav Title="Project Documents" Url="/sites/Projects/17P004/WorkInProjectDocument/Forms/AllItems.aspx">
+				<link Title="01-Work In Project Documents" Url="/sites/Projects/17P004/WorkInProjectDocument/Forms/AllItems.aspx"/>
+				<link Title="02-Shared Documents" Url="/sites/Projects/17P004/PublishDocument/Forms/Publish%20Documents.aspx"/>
+			</nav>			
+			<nav Title="Site Content" Url="/sites/Projects/17P004/_layouts/15/viewlsts.aspx"/>
+			<nav Title="Site Settings" Url="/sites/Projects/17P004/_layouts/15/settings.aspx"/>
+		</currentnav>
+	</site>
+	
+	<!-- Sub Site: 17P005 -->
+	<site Url="https://structemp.sharepoint.com/sites/Projects/17P005/" >
+		<currentnav>
+			<nav Title="Project HomePage" Url="/sites/Projects/17P005/" />
+			<nav Title="Project Customers" Url="/sites/Projects/SitePages/Customers.aspx"/>
+			<nav Title="Project Info" Url="/sites/Projects/17P005/Lists/Tasks/gantt.aspx">
+				<link Title="All Tasks" Url="/sites/Projects/17P005/Lists/Tasks/AllItems.aspx"/>
+				<link Title="My Tasks" Url="/sites/Projects/17P005/Lists/Tasks/MyItems.aspx"/>
+				<link Title="Calendar" Url="/sites/Projects/17P005/Lists/Tasks/calendar.aspx"/>
+				<link Title="Gantt Chart" Url="/sites/Projects/17P005/Lists/Tasks/gantt.aspx"/>				
+			</nav>
+			<nav Title="Project Documents" Url="/sites/Projects/17P005/WorkInProjectDocument/Forms/AllItems.aspx">
+				<link Title="01-Work In Project Documents" Url="/sites/Projects/17P005/WorkInProjectDocument/Forms/AllItems.aspx"/>
+				<link Title="02-Shared Documents" Url="/sites/Projects/17P005/PublishDocument/Forms/Publish%20Documents.aspx"/>
+			</nav>
+			<nav Title="Site Content" Url="/sites/Projects/17P005/_layouts/15/viewlsts.aspx"/>
+			<nav Title="Site Settings" Url="/sites/Projects/17P005/_layouts/15/settings.aspx"/>
+		</currentnav>
+	</site>
+	
+	<!-- Sub Site: 17P006 -->
+	<site Url="https://structemp.sharepoint.com/sites/Projects/17P006/" >
+		<currentnav>
+			<nav Title="Project HomePage" Url="/sites/Projects/17P006/" />
+			<nav Title="Project Customers" Url="/sites/Projects/SitePages/Customers.aspx"/>
+			<nav Title="Project Info" Url="/sites/Projects/17P006/Lists/Tasks/gantt.aspx">
+				<link Title="All Tasks" Url="/sites/Projects/17P006/Lists/Tasks/AllItems.aspx"/>
+				<link Title="My Tasks" Url="/sites/Projects/17P006/Lists/Tasks/MyItems.aspx"/>
+				<link Title="Calendar" Url="/sites/Projects/17P006/Lists/Tasks/calendar.aspx"/>
+				<link Title="Gantt Chart" Url="/sites/Projects/17P006/Lists/Tasks/gantt.aspx"/>				
+			</nav>
+			<nav Title="Project Documents" Url="/sites/Projects/17P006/WorkInProjectDocument/Forms/AllItems.aspx">
+				<link Title="01-Work In Project Documents" Url="/sites/Projects/17P006/WorkInProjectDocument/Forms/AllItems.aspx"/>
+				<link Title="02-Shared Documents" Url="/sites/Projects/17P006/PublishDocument/Forms/Publish%20Documents.aspx"/>
+			</nav>
+			<nav Title="Site Content" Url="/sites/Projects/17P006/_layouts/15/viewlsts.aspx"/>
+			<nav Title="Site Settings" Url="/sites/Projects/17P006/_layouts/15/settings.aspx"/>
+		</currentnav>
+	</site>
+	
+	<!-- Sub Site: 17P007 -->
+	<site Url="https://structemp.sharepoint.com/sites/Projects/17P007/" >
+		<currentnav>
+			<nav Title="Project HomePage" Url="/sites/Projects/17P007/" />
+			<nav Title="Project Customers" Url="/sites/Projects/SitePages/Customers.aspx"/>
+			<nav Title="Project Info" Url="/sites/Projects/17P007/Lists/Tasks/gantt.aspx">
+				<link Title="All Tasks" Url="/sites/Projects/17P007/Lists/Tasks/AllItems.aspx"/>
+				<link Title="My Tasks" Url="/sites/Projects/17P007/Lists/Tasks/MyItems.aspx"/>
+				<link Title="Calendar" Url="/sites/Projects/17P007/Lists/Tasks/calendar.aspx"/>
+				<link Title="Gantt Chart" Url="/sites/Projects/17P007/Lists/Tasks/gantt.aspx"/>				
+			</nav>
+			<nav Title="Project Documents" Url="/sites/Projects/17P007/WorkInProjectDocument/Forms/AllItems.aspx">
+				<link Title="01-Work In Project Documents" Url="/sites/Projects/17P007/WorkInProjectDocument/Forms/AllItems.aspx"/>
+				<link Title="02-Shared Documents" Url="/sites/Projects/17P007/PublishDocument/Forms/Publish%20Documents.aspx"/>
+			</nav>
+			<nav Title="Site Content" Url="/sites/Projects/17P007/_layouts/15/viewlsts.aspx"/>
+			<nav Title="Site Settings" Url="/sites/Projects/17P007/_layouts/15/settings.aspx"/>
+		</currentnav>
+	</site>
+	
+	<!-- Sub Site: 17P008 -->
+	<site Url="https://structemp.sharepoint.com/sites/Projects/17P008/" >
+		<currentnav>
+			<nav Title="Project HomePage" Url="/sites/Projects/17P008/" />
+			<nav Title="Project Customers" Url="/sites/Projects/SitePages/Customers.aspx"/>
+			<nav Title="Project Info" Url="/sites/Projects/17P008/Lists/Tasks/gantt.aspx">
+				<link Title="All Tasks" Url="/sites/Projects/17P008/Lists/Tasks/AllItems.aspx"/>
+				<link Title="My Tasks" Url="/sites/Projects/17P008/Lists/Tasks/MyItems.aspx"/>
+				<link Title="Calendar" Url="/sites/Projects/17P008/Lists/Tasks/calendar.aspx"/>
+				<link Title="Gantt Chart" Url="/sites/Projects/17P008/Lists/Tasks/gantt.aspx"/>				
+			</nav>
+			<nav Title="Project Documents" Url="/sites/Projects/17P008/WorkInProjectDocument/Forms/AllItems.aspx">
+				<link Title="01-Work In Project Documents" Url="/sites/Projects/17P008/WorkInProjectDocument/Forms/AllItems.aspx"/>
+				<link Title="02-Shared Documents" Url="/sites/Projects/17P008/PublishDocument/Forms/Publish%20Documents.aspx"/>
+			</nav>
+			<nav Title="Site Content" Url="/sites/Projects/17P008/_layouts/15/viewlsts.aspx"/>
+			<nav Title="Site Settings" Url="/sites/Projects/17P008/_layouts/15/settings.aspx"/>
+		</currentnav>
+	</site>
+	
+	<!-- Sub Site: 17P009 -->
+	<site Url="https://structemp.sharepoint.com/sites/Projects/17P009/" >
+		<currentnav>
+			<nav Title="Project HomePage" Url="/sites/Projects/17P009/" />
+			<nav Title="Project Customers" Url="/sites/Projects/SitePages/Customers.aspx"/>
+			<nav Title="Project Info" Url="/sites/Projects/17P009/Lists/Tasks/gantt.aspx">
+				<link Title="All Tasks" Url="/sites/Projects/17P009/Lists/Tasks/AllItems.aspx"/>
+				<link Title="My Tasks" Url="/sites/Projects/17P009/Lists/Tasks/MyItems.aspx"/>
+				<link Title="Calendar" Url="/sites/Projects/17P009/Lists/Tasks/calendar.aspx"/>
+				<link Title="Gantt Chart" Url="/sites/Projects/17P009/Lists/Tasks/gantt.aspx"/>				
+			</nav>
+			<nav Title="Project Documents" Url="/sites/Projects/17P009/WorkInProjectDocument/Forms/AllItems.aspx">
+				<link Title="01-Work In Project Documents" Url="/sites/Projects/17P009/WorkInProjectDocument/Forms/AllItems.aspx"/>
+				<link Title="02-Shared Documents" Url="/sites/Projects/17P009/PublishDocument/Forms/Publish%20Documents.aspx"/>
+			</nav>
+			<nav Title="Site Content" Url="/sites/Projects/17P009/_layouts/15/viewlsts.aspx"/>
+			<nav Title="Site Settings" Url="/sites/Projects/17P009/_layouts/15/settings.aspx"/>
+		</currentnav>
+	</site>
+	
+	<!-- Sub Site: 17P010 -->
+	<site Url="https://structemp.sharepoint.com/sites/Projects/17P010/" >
+		<currentnav>
+			<nav Title="Project HomePage" Url="/sites/Projects/17P010/" />
+			<nav Title="Project Customers" Url="/sites/Projects/SitePages/Customers.aspx"/>
+			<nav Title="Project Info" Url="/sites/Projects/17P010/Lists/Tasks/gantt.aspx">
+				<link Title="All Tasks" Url="/sites/Projects/17P010/Lists/Tasks/AllItems.aspx"/>
+				<link Title="My Tasks" Url="/sites/Projects/17P010/Lists/Tasks/MyItems.aspx"/>
+				<link Title="Calendar" Url="/sites/Projects/17P010/Lists/Tasks/calendar.aspx"/>
+				<link Title="Gantt Chart" Url="/sites/Projects/17P010/Lists/Tasks/gantt.aspx"/>				
+			</nav>
+			<nav Title="Project Documents" Url="/sites/Projects/17P010/WorkInProjectDocument/Forms/AllItems.aspx">
+				<link Title="01-Work In Project Documents" Url="/sites/Projects/17P010/WorkInProjectDocument/Forms/AllItems.aspx"/>
+				<link Title="02-Shared Documents" Url="/sites/Projects/17P010/PublishDocument/Forms/Publish%20Documents.aspx"/>
+			</nav>
+			<nav Title="Site Content" Url="/sites/Projects/17P010/_layouts/15/viewlsts.aspx"/>
+			<nav Title="Site Settings" Url="/sites/Projects/17P010/_layouts/15/settings.aspx"/>
+		</currentnav>
+	</site>
+	
+	<!-- Sub Site: 17P011 -->
+	<site Url="https://structemp.sharepoint.com/sites/Projects/17P011/" >
+		<currentnav>
+			<nav Title="Project HomePage" Url="/sites/Projects/17P011/" />
+			<nav Title="Project Customers" Url="/sites/Projects/SitePages/Customers.aspx"/>
+			<nav Title="Project Info" Url="/sites/Projects/17P011/Lists/Tasks/gantt.aspx">
+				<link Title="All Tasks" Url="/sites/Projects/17P011/Lists/Tasks/AllItems.aspx"/>
+				<link Title="My Tasks" Url="/sites/Projects/17P011/Lists/Tasks/MyItems.aspx"/>
+				<link Title="Calendar" Url="/sites/Projects/17P011/Lists/Tasks/calendar.aspx"/>
+				<link Title="Gantt Chart" Url="/sites/Projects/17P011/Lists/Tasks/gantt.aspx"/>				
+			</nav>
+			<nav Title="Project Documents" Url="/sites/Projects/17P011/WorkInProjectDocument/Forms/AllItems.aspx">
+				<link Title="01-Work In Project Documents" Url="/sites/Projects/17P011/WorkInProjectDocument/Forms/AllItems.aspx"/>
+				<link Title="02-Shared Documents" Url="/sites/Projects/17P011/PublishDocument/Forms/Publish%20Documents.aspx"/>
+			</nav>
+			<nav Title="Site Content" Url="/sites/Projects/17P011/_layouts/15/viewlsts.aspx"/>
+			<nav Title="Site Settings" Url="/sites/Projects/17P011/_layouts/15/settings.aspx"/>
+		</currentnav>
+	</site>
+	
+	<!-- Sub Site: 17P00200 -->
+	<site Url="https://structemp.sharepoint.com/sites/Projects/17P00200/" >
+		<currentnav>
+			<nav Title="Project HomePage" Url="/sites/Projects/17P00200/" />
+			<nav Title="Project Customers" Url="/sites/Projects/SitePages/Customers.aspx"/>
+			<nav Title="Project Info" Url="/sites/Projects/17P00200/Lists/Tasks/gantt.aspx">
+				<link Title="All Tasks" Url="/sites/Projects/17P00200/Lists/Tasks/AllItems.aspx"/>
+				<link Title="My Tasks" Url="/sites/Projects/17P00200/Lists/Tasks/MyItems.aspx"/>
+				<link Title="Calendar" Url="/sites/Projects/17P00200/Lists/Tasks/calendar.aspx"/>
+				<link Title="Gantt Chart" Url="/sites/Projects/17P00200/Lists/Tasks/gantt.aspx"/>				
+			</nav>
+			<nav Title="Project Documents" Url="/sites/Projects/17P00200/WorkInProjectDocument/Forms/AllItems.aspx">
+				<link Title="01-Work In Project Documents" Url="/sites/Projects/17P00200/WorkInProjectDocument/Forms/AllItems.aspx"/>
+				<link Title="02-Shared Documents" Url="/sites/Projects/17P00200/PublishDocument/Forms/Publish%20Documents.aspx"/>
+			</nav>
+			<nav Title="Site Content" Url="/sites/Projects/17P00200/_layouts/15/viewlsts.aspx"/>
+			<nav Title="Site Settings" Url="/sites/Projects/17P00200/_layouts/15/settings.aspx"/>
+		</currentnav>
+	</site>
+	
+	<!-- Sub Site: 17P100 -->
+	<site Url="https://structemp.sharepoint.com/sites/Projects/17P100/" >
+		<currentnav>
+			<nav Title="Project HomePage" Url="/sites/Projects/17P100/" />
+			<nav Title="Project Customers" Url="/sites/Projects/SitePages/Customers.aspx"/>
+			<nav Title="Project Info" Url="/sites/Projects/17P100/Lists/Tasks/gantt.aspx">
+				<link Title="All Tasks" Url="/sites/Projects/17P100/Lists/Tasks/AllItems.aspx"/>
+				<link Title="My Tasks" Url="/sites/Projects/17P100/Lists/Tasks/MyItems.aspx"/>
+				<link Title="Calendar" Url="/sites/Projects/17P100/Lists/Tasks/calendar.aspx"/>
+				<link Title="Gantt Chart" Url="/sites/Projects/17P100/Lists/Tasks/gantt.aspx"/>				
+			</nav>
+			<nav Title="Project Documents" Url="/sites/Projects/17P100/WorkInProjectDocument/Forms/AllItems.aspx">
+				<link Title="01-Work In Project Documents" Url="/sites/Projects/17P100/WorkInProjectDocument/Forms/AllItems.aspx"/>
+				<link Title="02-Shared Documents" Url="/sites/Projects/17P100/PublishDocument/Forms/Publish%20Documents.aspx"/>
+			</nav>
+			<nav Title="Site Content" Url="/sites/Projects/17P100/_layouts/15/viewlsts.aspx"/>
+			<nav Title="Site Settings" Url="/sites/Projects/17P100/_layouts/15/settings.aspx"/>
+		</currentnav>
+	</site>
+</sites>

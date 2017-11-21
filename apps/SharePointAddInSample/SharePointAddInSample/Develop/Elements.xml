@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Module Name="Develop">
+    <File Path="Develop\app.js" Url="Develop/app.js" ReplaceContent="TRUE" />
+    <File Path="Develop\img\logo.png" Url="Develop/img/logo.png" ReplaceContent="TRUE" />
+  </Module>
+</Elements>
