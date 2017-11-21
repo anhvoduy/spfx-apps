@@ -26,10 +26,10 @@
     <%--<script type="text/javascript" src="../Scripts/App.js"></script>--%>
 
     <!-- Development Mode -->
-    <script type="text/javascript" src="https://development365.sharepoint.com/Style%20Library/SharePointAddInCalendar/app.js"></script>
-    <script type="text/javascript" src="https://development365.sharepoint.com/Style%20Library/SharePointAddInCalendar/controllers/calendarController.js"></script>
-    <script type="text/javascript" src="https://development365.sharepoint.com/Style%20Library/SharePointAddInCalendar/directives/calendarDirective.js"></script>
-    <script type="text/javascript" src="https://development365.sharepoint.com/Style%20Library/SharePointAddInCalendar/services/calendarService.js"></script>
+    <script type="text/javascript" src="/Style%20Library/SharePointAddInCalendar/app.js"></script>
+    <script type="text/javascript" src="/Style%20Library/SharePointAddInCalendar/controllers/calendarController.js"></script>
+    <script type="text/javascript" src="/Style%20Library/SharePointAddInCalendar/directives/calendarDirective.js"></script>
+    <script type="text/javascript" src="/Style%20Library/SharePointAddInCalendar/services/calendarService.js"></script>
 </asp:Content>
 
 <%-- The markup in the following Content element will be placed in the TitleArea of the page --%>
@@ -39,5 +39,7 @@
 
 <%-- The markup and script in the following Content element will be placed in the <body> of the page --%>
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">    
-    <div id='calendar'></div>
+    <div id='calendar'>
+        <div ng-calendar></div>
+    </div>    
 </asp:Content>
