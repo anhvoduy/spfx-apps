@@ -1,0 +1,18 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "spfx-angular-search-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/spfxAngularSearch/SpfxAngularSearchWebPart.js",
+          "manifest": "./src/webparts/spfxAngularSearch/SpfxAngularSearchWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "SpfxAngularSearchWebPartStrings": "lib/webparts/spfxAngularSearch/loc/{locale}.js"
+  }
+}
