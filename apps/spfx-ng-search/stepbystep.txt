@@ -1,0 +1,32 @@
+### step by step
+https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part
+https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/use-fabric-react-components
+https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/provision-sp-assets-from-package
+
+### install the latest version of the Yeoman templates
+npm install -g @microsoft/generator-sharepoint
+
+### missing npm package
+    npm install --save-dev style-loader
+    npm install --save-dev css-loader
+
+
+### setup environment
+    yo @microsoft/sharepoint
+    gulp trust-dev-cert
+    gulp serve
+    gulp serve --nobrowser
+
+
+### package & deploy solution
+    gulp bundle
+    gulp package-solution
+    gulp --ship
+    gulp package-solution --ship
+	
+### Notes:
+- check to delete files below before running gulp serve
+SpfxNgSearch.module.scss.ts
+SpfxNgTodo.module.scss.ts
+
+	

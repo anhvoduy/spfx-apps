@@ -49,7 +49,7 @@ export default class SearchController {
             this.searchNotConfigured = true;
         }
         
-        this.status = this.searchNotConfigured ? 'Please select a contenet type in the Web Part properties' : 'Ready';
+        this.status = this.searchNotConfigured ? 'Please select a content type in the Web Part properties' : 'Ready';
         if ($scope && this._contentType !== undefined) {
             //$scope.$digest();
             //get search results as long as it isn't our mock dataService
@@ -99,5 +99,5 @@ export default class SearchController {
         }else{
             return [];
         }
-    }    
+    }
 }
